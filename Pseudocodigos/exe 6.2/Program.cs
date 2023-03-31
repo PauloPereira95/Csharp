@@ -10,6 +10,7 @@ namespace exe_6._2
     {
         static void Main(string[] args)
         {
+            // Testa se o numero definido pelo utilizador é positivo negativo ou zero
             int number;
             Console.WriteLine("Type the number to check:");
             number = int.Parse(Console.ReadLine());
