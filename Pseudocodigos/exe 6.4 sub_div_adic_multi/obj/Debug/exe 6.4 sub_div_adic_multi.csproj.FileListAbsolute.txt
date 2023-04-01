@@ -1,0 +1,8 @@
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\bin\Debug\exe 6.4 sub_div_adic_multi.exe.config
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\bin\Debug\exe 6.4 sub_div_adic_multi.exe
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\bin\Debug\exe 6.4 sub_div_adic_multi.pdb
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\obj\Debug\exe 6.4 sub_div_adic_multi.csproj.AssemblyReference.cache
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\obj\Debug\exe 6.4 sub_div_adic_multi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\obj\Debug\exe 6.4 sub_div_adic_multi.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\obj\Debug\exe 6.4 sub_div_adic_multi.exe
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.4 sub_div_adic_multi\obj\Debug\exe 6.4 sub_div_adic_multi.pdb
