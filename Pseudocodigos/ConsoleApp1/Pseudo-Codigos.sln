@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.4 sub_div_adic_multi"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.5 menor", "..\exe 6.5 menor\exe 6.5 menor.csproj", "{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe6.6 soma primeiros numeros", "..\exe6.6\exe6.6 soma primeiros numeros.csproj", "{9F6FAC6C-293F-466B-B5B6-70FDA928F467}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,8 @@
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\bin\Debug\exe6.6.exe.config
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\bin\Debug\exe6.6.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\bin\Debug\exe6.6.pdb
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\obj\Debug\exe6.6 soma primeiros numeros.csproj.AssemblyReference.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\obj\Debug\exe6.6 soma primeiros numeros.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\obj\Debug\exe6.6 soma primeiros numeros.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\obj\Debug\exe6.6.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.6\obj\Debug\exe6.6.pdb

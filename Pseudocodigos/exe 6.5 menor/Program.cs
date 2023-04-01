@@ -33,6 +33,7 @@ namespace exe_6._5_menor
                     // res receives the value of the array
                     res = i;
                }
+
             }
             // show result
             Console.WriteLine(res);
