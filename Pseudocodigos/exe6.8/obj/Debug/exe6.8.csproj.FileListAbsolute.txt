@@ -1,0 +1,8 @@
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\bin\Debug\exe6.8.exe.config
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\bin\Debug\exe6.8.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\bin\Debug\exe6.8.pdb
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\obj\Debug\exe6.8.csproj.AssemblyReference.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\obj\Debug\exe6.8.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\obj\Debug\exe6.8.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\obj\Debug\exe6.8.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe6.8\obj\Debug\exe6.8.pdb
