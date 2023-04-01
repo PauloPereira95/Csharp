@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.5 menor", "..\exe 6.5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe6.6 soma primeiros numeros", "..\exe6.6\exe6.6 soma primeiros numeros.csproj", "{9F6FAC6C-293F-466B-B5B6-70FDA928F467}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.7 Maior de Idade", "..\exe 6.7 Maior de Idade\exe 6.7 Maior de Idade.csproj", "{3A4D5593-45A3-4EDF-A720-CB517716FB9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6FAC6C-293F-466B-B5B6-70FDA928F467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A4D5593-45A3-4EDF-A720-CB517716FB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A4D5593-45A3-4EDF-A720-CB517716FB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A4D5593-45A3-4EDF-A720-CB517716FB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A4D5593-45A3-4EDF-A720-CB517716FB9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
