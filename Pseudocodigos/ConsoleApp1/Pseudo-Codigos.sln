@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.3 IMC", "..\exe 6.2 I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.4 sub_div_adic_multi", "..\exe 6.4 sub_div_adic_multi\exe 6.4 sub_div_adic_multi.csproj", "{BF0958B0-D79D-4764-B4EC-8AE678EDDBC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 6.5 menor", "..\exe 6.5 menor\exe 6.5 menor.csproj", "{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{BF0958B0-D79D-4764-B4EC-8AE678EDDBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF0958B0-D79D-4764-B4EC-8AE678EDDBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF0958B0-D79D-4764-B4EC-8AE678EDDBC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B57C12F-5EBC-44F6-AAF3-C9861C919AE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
