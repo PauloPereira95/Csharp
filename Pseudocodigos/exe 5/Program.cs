@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace exe_5
 {
@@ -10,7 +6,7 @@ namespace exe_5
     {
         static void Main(string[] args)
         {
-            double valOne, valTwo, valThree,avg = 0;
+            double valOne, valTwo, valThree, avg = 0;
             // ask for the values
             Console.WriteLine("Type the First Value : ");
             valOne = double.Parse(Console.ReadLine());
