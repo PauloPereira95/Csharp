@@ -1,0 +1,8 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\bin\Debug\exe4.exe.config
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\bin\Debug\exe4.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\bin\Debug\exe4.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\obj\Debug\exe 4.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\obj\Debug\exe 4.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\obj\Debug\exe 4.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\obj\Debug\exe4.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe4\obj\Debug\exe4.pdb
