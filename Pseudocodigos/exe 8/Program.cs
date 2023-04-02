@@ -11,16 +11,23 @@ namespace exe_8
         static void Main(string[] args)
         {
             int age;
-            // ask age
-            Console.WriteLine("Tell me, whats your age ? ");
-            age = int.Parse(Console.ReadLine());
-            // check if as adult or not
-            if (age >= 18)
+            try
             {
-                Console.WriteLine("You are a adult");
-            } else
+                // ask age
+                Console.WriteLine("Tell me, whats your age ? ");
+                age = int.Parse(Console.ReadLine());
+                // check if as adult or not
+                if (age >= 18)
+                {
+                    Console.WriteLine("You are a adult");
+                } else
+                {
+                    Console.WriteLine("You are a minor");
+                }
+
+            } catch (Exception ex)
             {
-                Console.WriteLine("You are a minor");
+                Console.WriteLine("Error ->" + ex.Message);
             }
             Console.ReadLine();
         }
