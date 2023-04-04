@@ -21,7 +21,6 @@ namespace exe2
 
             // find radius 
             radius = radius / 2;
-
             // area
             area = Math.PI * Math.Pow(radius, 2);
             // perimeter
