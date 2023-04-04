@@ -30,15 +30,15 @@ namespace exe_13
                 {
                     Console.WriteLine("Escaleno");
                 }
+                semiP = (valOne + valTwo + valThree);
+                area = Math.Sqrt(semiP * (semiP - valOne) * (semiP - valTwo) * (semiP - valThree));
+                Console.WriteLine($"SemiPimetro -> {semiP}");
+                Console.WriteLine($"Area -> {area}");
             } else
             {
                 Console.WriteLine("Não é possivel formar um triangulo");
 
             }
-            semiP = (valOne + valTwo + valThree);
-            area = Math.Sqrt(semiP * (semiP - valOne) * (semiP - valTwo) * (semiP - valThree));
-            Console.WriteLine($"SemiPimetro -> {semiP}");
-            Console.WriteLine($"Area -> {area}");
             Console.ReadLine();
         }
     }
