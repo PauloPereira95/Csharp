@@ -24,13 +24,11 @@ namespace Pseudocodigos_MaisExercicios
 
                 //show results
                 Console.WriteLine($"Area: {area} cm || Permiter: {per} cm");
-                Console.ReadLine();
-
             } catch
             {
                 Console.WriteLine("Wrong Data ! Try Again !");
             }
-            Console.ReadLine();
+                Console.ReadLine();
         }
     }
 }

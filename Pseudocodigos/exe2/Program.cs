@@ -10,24 +10,24 @@ namespace exe2
     {
         static void Main(string[] args)
         {
-            const double pi = 3.14;
-            double volume, raio, heigth, diameter,area,perimiter;
+
+            double volume, radius, heigth,area,perimiter;
             // ask de diameter
             Console.WriteLine("Insert the cylinder diameter in centimeters: ");
-            diameter = double.Parse(Console.ReadLine());
+            radius = double.Parse(Console.ReadLine());
             // ask the heigth
             Console.WriteLine("Insert the heigth in centimeters :");
             heigth = double.Parse(Console.ReadLine());
 
-            // find raio 
-            raio = diameter / 2;
+            // find radius 
+            radius = radius / 2;
 
             // area
-            area = pi * Math.Pow(raio, 2);
+            area = Math.PI * Math.Pow(radius, 2);
             // perimeter
-            perimiter = 2 * pi * raio;
+            perimiter = 2 * Math.PI * radius;
             // volume
-            volume = pi * Math.Pow(raio, 2) * heigth;
+            volume = Math.PI * Math.Pow(radius, 2) * heigth;
 
             // show results
             Console.WriteLine($"Area : {area} || Perimeter: {perimiter} || Volume: {volume}");
