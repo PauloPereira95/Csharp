@@ -10,7 +10,7 @@ namespace exe_13
     {
         static void Main(string[] args)
         {
-            double valOne, valTwo, valThree, semiP, Per, area;
+            double valOne, valTwo, valThree, semiP, area;
             Console.WriteLine("Insert Value One :");
             valOne = double.Parse(Console.ReadLine());
             Console.WriteLine("Insert Value Two :");
@@ -36,9 +36,8 @@ namespace exe_13
 
             }
             semiP = (valOne + valTwo + valThree);
-            Per = semiP + semiP;
-            area = Math.Sqrt(Per * (Per - valOne) * (Per - valTwo) * (Per - valThree));
-            Console.WriteLine($"SemiPerimetro -> {semiP}");
+            area = Math.Sqrt(semiP * (semiP - valOne) * (semiP - valTwo) * (semiP - valThree));
+            Console.WriteLine($"SemiPimetro -> {semiP}");
             Console.WriteLine($"Area -> {area}");
             Console.ReadLine();
         }
