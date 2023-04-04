@@ -26,23 +26,20 @@ namespace exe_7
                 // if yes the division is 0 because its not possible to divde by 0
                 if (n2 == 0)
                 {
-                    div = 0;
-                } else
+                    // if divison is 0 tel the user is not possible  to devide by 0
+
+                    Console.WriteLine($" Its not possibel divide by 0");
+                }
+                else
                 {
                     div = n1 / n2;
+                    Console.WriteLine($"/ -> {div}");
+
                 }
 
-                    Console.WriteLine($"+ -> {sum}");
+                Console.WriteLine($"+ -> {sum}");
                     Console.WriteLine($"- -> {sub} ");
                     Console.WriteLine($"* -> {multi}");
-                // if divison is 0 tel the user is not possible  to devide by 0
-                if (div == 0)
-                {
-                    Console.WriteLine($" Its not possibel divide by 0");
-                } else
-                {
-                    Console.WriteLine($"/ -> {div}");
-                }
             } catch (Exception ex)
             {
                 Console.WriteLine("Error -> " + ex.Message);
