@@ -19,12 +19,12 @@ namespace exe_9
                 if (age <= 12)
                 {
                     Console.WriteLine("You are adolescent !");
-                } else if (age >= 12 && age <= 16){
+                } else if (age <= 16){
                     Console.WriteLine("You are a Juvenile ");
-                } else if (age >= 16 && age <= 22 )
+                } else if (age <= 22 )
                 {
                     Console.WriteLine("You are a Youth");
-                } else if (age >= 22 && age <= 64) 
+                } else if (age <= 64) 
                 {
                     Console.WriteLine("You are a Adult ");
                 } else
