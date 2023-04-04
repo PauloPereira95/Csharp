@@ -37,7 +37,7 @@ namespace exe_7
 
                 }
 
-                Console.WriteLine($"+ -> {sum}");
+                    Console.WriteLine($"+ -> {sum}");
                     Console.WriteLine($"- -> {sub} ");
                     Console.WriteLine($"* -> {multi}");
             } catch (Exception ex)
