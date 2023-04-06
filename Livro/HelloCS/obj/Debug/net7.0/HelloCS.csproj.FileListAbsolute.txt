@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\bin\Debug\net7.0\HelloCS.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\bin\Debug\net7.0\HelloCS.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\bin\Debug\net7.0\HelloCS.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\bin\Debug\net7.0\HelloCS.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\bin\Debug\net7.0\HelloCS.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\refint\HelloCS.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\HelloCS.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Livro\HelloCS\obj\Debug\net7.0\ref\HelloCS.dll
