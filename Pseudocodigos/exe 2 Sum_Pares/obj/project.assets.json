@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2 Sum_Pares\\exe 2 Sum_Pares.csproj",
-      "projectName": "exe 2 Sum_Pares",
-      "projectPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2 Sum_Pares\\exe 2 Sum_Pares.csproj",
+      "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2 Sum_Pares\\exe 1_2 Sum_Pares.csproj",
+      "projectName": "exe 1_2 Sum_Pares",
+      "projectPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2 Sum_Pares\\exe 1_2 Sum_Pares.csproj",
       "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2 Sum_Pares\\obj\\",
       "projectStyle": "PackageReference",

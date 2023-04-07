@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             int val, inverse = 0, temp;
-            Console.WriteLine("Type teh number");
+            Console.WriteLine("Type the number");
             val = int.Parse(Console.ReadLine());
             
             while (val != 0)

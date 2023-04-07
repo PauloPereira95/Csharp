@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\bin\Debug\net7.0\exe 1_4 inverter.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\bin\Debug\net7.0\exe 1_4 inverter.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\bin\Debug\net7.0\exe 1_4 inverter.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\bin\Debug\net7.0\exe 1_4 inverter.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\bin\Debug\net7.0\exe 1_4 inverter.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\refint\exe 1_4 inverter.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\exe 1_4 inverter.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3 decompor\obj\Debug\net7.0\ref\exe 1_4 inverter.dll

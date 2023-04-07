@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 3 decompor\\exe 4 inverter.csproj",
-      "projectName": "exe 4 inverter",
-      "projectPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 3 decompor\\exe 4 inverter.csproj",
+      "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 3 decompor\\exe 1_4 inverter.csproj",
+      "projectName": "exe 1_4 inverter",
+      "projectPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 3 decompor\\exe 1_4 inverter.csproj",
       "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 3 decompor\\obj\\",
       "projectStyle": "PackageReference",
