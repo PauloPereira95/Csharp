@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2_5 Para_primo_composto\\exe 2_7 Para_primo_composto.csproj",
-      "projectName": "exe 2_7 Para_primo_composto",
-      "projectPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2_5 Para_primo_composto\\exe 2_7 Para_primo_composto.csproj",
+      "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2_8\\exe 2_8.csproj",
+      "projectName": "exe 2_8",
+      "projectPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2_8\\exe 2_8.csproj",
       "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2_5 Para_primo_composto\\obj\\",
+      "outputPath": "C:\\Users\\Paulo\\Documents\\Code Developer\\Csharp\\Pseudocodigos\\exe 2_8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
