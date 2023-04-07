@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe1", "exe1.csproj", "{4F1C9B71-709F-4B57-8228-45FC62E77019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exe1", "exe1.csproj", "{4F1C9B71-709F-4B57-8228-45FC62E77019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exe 2 Sum_Pares", "..\exe 2 Sum_Pares\exe 2 Sum_Pares.csproj", "{0B8C7CA8-177F-4FA5-8224-4E900120D4CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exe 2 Sum_Pares", "..\exe 2 Sum_Pares\exe 2 Sum_Pares.csproj", "{0B8C7CA8-177F-4FA5-8224-4E900120D4CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exe 4 inverter", "..\exe 3 decompor\exe 4 inverter.csproj", "{F781D0B3-5B74-49DC-9DE5-CA4C654D9F16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0B8C7CA8-177F-4FA5-8224-4E900120D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B8C7CA8-177F-4FA5-8224-4E900120D4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B8C7CA8-177F-4FA5-8224-4E900120D4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F781D0B3-5B74-49DC-9DE5-CA4C654D9F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F781D0B3-5B74-49DC-9DE5-CA4C654D9F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F781D0B3-5B74-49DC-9DE5-CA4C654D9F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F781D0B3-5B74-49DC-9DE5-CA4C654D9F16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
