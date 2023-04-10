@@ -12,7 +12,7 @@
                 Console.WriteLine("Type the number :");
                 num = int.Parse(Console.ReadLine());
                 // do the cicle to verifiy dividers
-                for (int i = 1; i<= num; i ++)
+                for (int i = 2; i<= num/ 2; i ++)
                 {
                     //if  remainder of division is 0 then increment there variable div
                     if ( num % i == 0)
@@ -22,7 +22,7 @@
                     }
                 }
                 // if dividers is 2 then is a prime if not is a not prime
-                if (div == 2)
+                if (div == 0)
                 {   
 
                     Console.WriteLine("Prime");
