@@ -6,7 +6,7 @@
         {
            int num;
             // try do this
-                try
+            try
             {
 
                 // ask for the value 
