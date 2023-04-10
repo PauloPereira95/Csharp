@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            int valor, temp;
+            long valor, temp;
             Console.WriteLine("Insert the numbner ! ;)");
-            valor = int.Parse(Console.ReadLine());
+            valor = long.Parse(Console.ReadLine());
 
             while (valor!= 0)
             {

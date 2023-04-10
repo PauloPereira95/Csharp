@@ -12,8 +12,11 @@
 
                 while (i <= val)
                 {
-                    sum += i;
-                    i += 2;
+                    if ( i % 2 == 0) { 
+                        sum += i;
+                       
+                    }
+                    i++;
                 }
                 Console.WriteLine($"Total -> {sum}");
 
