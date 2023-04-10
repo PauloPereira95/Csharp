@@ -4,15 +4,17 @@
     {
         static void Main(string[] args)
         {
-            double num, major=0, minor=0;
+            double num, major, minor;
             try
             {
                 Console.Write("Type the number : ");
                 num = double.Parse(Console.ReadLine());
                 major = num;
                 minor = num;
-                for ( int i = 1; i<=10;i++)
+                for ( int i = 1; i<=9;i++)
                 {
+                    Console.Write("Type the number : ");
+                    num = double.Parse(Console.ReadLine());
                     if ( num > major)
                     {
                         major = num;
