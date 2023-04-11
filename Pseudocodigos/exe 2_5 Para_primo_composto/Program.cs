@@ -12,7 +12,7 @@
                 Console.WriteLine("Type the number :");
                 num = int.Parse(Console.ReadLine());
                 // do the cicle to verifiy dividers
-                // It is only necessary to tstart the cycle in 2 up to half of the used number
+                // It is only necessary to start the cycle in 2 up to half of the used number
                 // because this is the range of value where we can find the ramaining divisors besides 
                 // 1 and the number itself
                 for (int i = 2; i<= num/ 2; i ++)
