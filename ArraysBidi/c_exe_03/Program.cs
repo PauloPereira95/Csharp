@@ -12,7 +12,7 @@ namespace c_exe_03
         static void exeFicArrayBiDois()
         {
             int[,] matriz = new int[4, 4];
-            int sum = 0, min = Int32.MaxValue, max = matriz[0, 0], neg = 0, pos = 0, zero = 0;
+            int sum = 0, min = matriz[0, 0], max = matriz[0, 0], neg = 0, pos = 0, zero = 0;
             double media = 0;
             for (int i = 0; i < matriz.GetLength(0); i++)
             {
@@ -21,7 +21,6 @@ namespace c_exe_03
                     matriz[i, j] = gerarValores();
                     // Pergunta 2.1
                     sum += matriz[i, j];
-                    media = (double)sum / 16;
                     //-----------------
 
                     // Pergunta 2.2
@@ -40,6 +39,7 @@ namespace c_exe_03
                     //------------------
                 }
             }
+            media = (double)sum / matriz.Length;
             Console.WriteLine("\nValores definidos:\n");
             for (int i = 0; i < matriz.GetLength(0); i++)
             {
@@ -53,14 +53,8 @@ namespace c_exe_03
             Console.WriteLine("\nDiagonal Principal\n");
             for (int i = 0; i < matriz.GetLength(0); i++) // coluna
             {
-                for (int j = 0; j < matriz.GetLength(1); j++) // linha
-                {
-                    if (i == j)
-                        Console.Write($"{matriz[i, j]}\t");
-                    else
-                        Console.Write($" \t");
-                }
-                Console.WriteLine(" ");
+                        Console.Write($"{matriz[i,i]}\t");
+   
             }
             // Pergunta 2.5
             Console.WriteLine("\n Diagonal Secundária");
@@ -68,24 +62,42 @@ namespace c_exe_03
             //o método GetLength permite obter o número de elementos em cada dimensão:
             //  0 para o número de linhas
             //  1 para o número de colunas
-            for (int i = 0; i < matriz.GetLength(0); i++)
+
+            /* for (int i = 0; i < matriz.GetLength(0); i++)
+             {
+                 for (int j = 0; j < matriz.GetLength(1); j++)
+                 {
+
+                     if (i != j && i + j == (matriz.GetLength(0) - 1)) //(matriz.GetLength(0) - 1) porque o
+                                                                       //array começa em 0 e o metodo em começa com 1
+                         Console.Write($"{matriz[i, j]}\t");
+                     else
+                         Console.Write("\t");
+
+                 }
+                 Console.WriteLine(" ");
+             }------------------OU-------------------------------------------*/
+            int k = matriz.GetLength(0) -1;
+            int l = 0;
+            do
             {
-                for (int j = 0; j < matriz.GetLength(1); j++)
-                {
-
-                    if (i != j && i + j == (matriz.GetLength(0) - 1)) //(matriz.GetLength(0) - 1) porque o
-                                                                      //array começa em 0 e o metodo em começa com 1
-                        Console.Write($"{matriz[i, j]}\t");
-                    else
-                        Console.Write("\t");
-
-                }
-                Console.WriteLine(" ");
-            }
+                Console.WriteLine(matriz[k,l]);
+                k--;
+                l++;
+            } while ( k>= 0 && l <= matriz.GetLength(0) - 1);
             Console.WriteLine();
             Console.WriteLine($"Soma ->{sum} || Media -> {Math.Round(media, 2)}");
             Console.WriteLine($"Minimo -> {min} || Maximo -> {max}");
             Console.WriteLine($"Neg -> {neg} || Pos -> {pos} || Zeros -> {zero}");
+            //------------------------------------------------------------------------  
+            //------------------------------OU-(cOM O CICLO FOR)----------------------
+            Console.WriteLine("--- Diagonal Sec com for --------------");
+            for (int i =0;i < matriz.GetLength(0);i++)
+            {
+                Console.WriteLine($"{matriz[i, (matriz.GetLength(0)-1) - i]}");
+            }
+            Console.WriteLine("\n\n");
+        //------------------------------------------------------------------------
         }
         static void exeFicArrayBiTres()
         {
@@ -96,19 +108,12 @@ namespace c_exe_03
             int[,] matrizDois = new int[3, 3];
             int[] arraySoma = new int[2];
             int[,] arrayTemp = new int[3, 3];
-            // insere valores no primeiro array
+            // insere valores no primeiro e segundo array
             for (int i = 0; i < matrizUm.GetLength(0); i++)
             {
                 for (int j = 0; j < matrizUm.GetLength(1); j++)
                 {
                     matrizUm[i, j] = gerarValores();
-                }
-            }
-            // insere valores no segundo array
-            for (int i = 0; i < matrizDois.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrizDois.GetLength(1); j++)
-                {
                     matrizDois[i, j] = gerarValores();
                 }
             }
@@ -179,27 +184,10 @@ namespace c_exe_03
                 for (int j = 0; j < matrizUm.GetLength(1); j++) // colunas
                 {
                     arrayTemp[i, j] = matrizUm[i, j];
-                }
-            }
-            // Colocar os valores do Dois no UM Para o dois Receber os valores do Um(Que estão
-            // no temp)
-            for (int i = 0; i < matrizDois.GetLength(0); i++) // linhas
-            {
-                for (int j = 0; j < matrizDois.GetLength(1); j++) // colunas
-                {
                     matrizUm[i, j] = matrizDois[i, j];
+                    matrizDois[i, j] = arrayTemp[i, j];
                 }
             }
-            // colocar os valores do Dois no Um(Temporario)
-
-             for (int i = 0; i < arrayTemp.GetLength(0); i++) // linhas
-             {
-                for (int j = 0; j < arrayTemp.GetLength(1); j++) // colunas
-                {
-                    matrizDois[i,j] = arrayTemp[i,j];
-                }
-
-             }
             // mostrar os 2 Arrays
             // array 1
             Console.WriteLine("---Matriz 1----------");
