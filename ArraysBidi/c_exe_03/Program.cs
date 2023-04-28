@@ -190,6 +190,7 @@ namespace c_exe_03
             }
             // mostrar os 2 Arrays
             // array 1
+            Console.WriteLine("Apos a troca de valores");
             Console.WriteLine("---Matriz 1----------");
             for (int i = 0; i < matrizUm.GetLength(0); i++) // linhas
             {
