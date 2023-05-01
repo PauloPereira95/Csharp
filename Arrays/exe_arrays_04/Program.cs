@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 
 namespace exe_arrays_04
@@ -8,17 +9,16 @@ namespace exe_arrays_04
     {
         static void Main(string[] args)
         {
-            //teste();
-            exeAvaliacao();
+            FicArrays04_05();
         }
-        static void FicArrays04()
+        static void FicArrays04_01_02()
         {
             int[] arrNum = new int[10];
             int soma = 0;
-            int end = arrNum.Length - 1, meio = arrNum.Length/2,temp=0;
+            int end = arrNum.Length - 1, meio = arrNum.Length / 2, temp = 0;
             Console.WriteLine("->" + meio);
             // adiciona os valores ao array
-            for (int i = 0; i < arrNum.Length;i++)
+            for (int i = 0; i < arrNum.Length; i++)
             {
                 arrNum[i] = RandomNumb();
             }
@@ -39,7 +39,7 @@ namespace exe_arrays_04
             // Trocar os valores no array - posição 0 com a posição 10, posição 1 com
             // a posição 11, 2 com a 12
             // e assim sucessivamente); após a troca, mostrar valores do array;
-            for (int i =0; i < arrNum.Length/2; i++)
+            for (int i = 0; i < arrNum.Length / 2; i++)
             {
                 temp = arrNum[i];
                 arrNum[i] = arrNum[meio];
@@ -54,18 +54,18 @@ namespace exe_arrays_04
             Console.WriteLine();
 
         }
-        static void exeAvaliacao()
+        static void FicArrays04_03()
         {
             int[] arrGrupUm = new int[10];
             int[] arrGrupDois = new int[10];
-            
-            int piorNota = Int16.MaxValue, reprovacoes =0,aprovaçõesA=0,aprovaçõesB =0;
+
+            int piorNota = Int16.MaxValue, reprovacoes = 0, aprovaçõesA = 0, aprovaçõesB = 0;
             string grupo = "";
-            double mediaGUm = 0, mediaGDois = 0,somaGUm = 0, somaGDois = 0;
+            double mediaGUm = 0, mediaGDois = 0, somaGUm = 0, somaGDois = 0;
             double mediaAproA = 0;
-            double mediaAproB= 0;
+            double mediaAproB = 0;
             Console.WriteLine("----Grupo Um-------------------------------");
-            for (int i =0; i< arrGrupUm.Length;i++)
+            for (int i = 0; i < arrGrupUm.Length; i++)
             {
                 arrGrupUm[i] = RandomNumb();
                 somaGUm += arrGrupUm[i];
@@ -86,7 +86,7 @@ namespace exe_arrays_04
             mediaGUm = (double)somaGUm / arrGrupUm.Length;
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("----Grupo Dois------------------------------");
-            for (int i =0; i< arrGrupDois.Length;i++)
+            for (int i = 0; i < arrGrupDois.Length; i++)
             {
                 arrGrupDois[i] = RandomNumb();
                 somaGDois += arrGrupDois[i];
@@ -118,138 +118,80 @@ namespace exe_arrays_04
             Console.WriteLine($"Reprovações -> {reprovacoes}\n");
             Console.WriteLine($"Percentagem de Aprovacões Grupo A -> {mediaAproA} % || Media Grupo B -> {mediaAproB} % \n");
             //--------------------------------------
-            /* calcular Moda
-            int[] listaValoresOrdenada = arrGrupUm.ToArray();
-            // Ordena o Valor
-            Array.Sort(listaValoresOrdenada);
-            //Obtem o primeiro valor da lista Ordenada
-            int valorAtual = listaValoresOrdenada[0];
-            int contadorActual = 0;
-
-            int[] listaNumRepeticoes = new int[listaValoresOrdenada.Length];
-            listaNumRepeticoes[0] = contadorActual;
-            // Define o numero de repeticao de cada Numero
-            for (int i = 1; i <= listaValoresOrdenada.Length - 1; i++)
+            //--------- Calcular Moda --------------------
+            Console.WriteLine();
+            Console.WriteLine("------------MODA---------------");
+            // Declara as arrTotalGRupo que vai receber todos os valores dos dois Arrays
+            // GRupo 1 e Grupo 2
+            // Para então comparar o valores mais vezes repetido
+            int[] arrTotalGRupo = new int[arrGrupUm.Length + arrGrupDois.Length];
+            // Junta o primeiro array GRupo UM
+            for (int i =0; i < arrGrupUm.Length;i++)
             {
-                if (listaValoresOrdenada[i] != valorAtual)
-                {
-                    valorAtual = listaValoresOrdenada[i];
-                    contadorActual++;
-                }
-                listaNumRepeticoes[i] = contadorActual;
+                arrTotalGRupo[i] = arrGrupUm[i];
             }
-            // Exemplo: 
-            //   listaValoresOrdenada {3,3,3,5,6,7,8,9,9,9,9}
-            // Resultado:
-            //   listaNumRepeticoes   {0,1,2,0,0,0,0,0,1,2,3}
+            // junta o segundo apartir da ultima posição do segundo
+            for (int j = arrGrupUm.Length; j < arrTotalGRupo.Length; j++)
+            {
+
+                arrTotalGRupo[j] = arrGrupDois[j-10];
+            }
+
+
+            Array.Sort(arrTotalGRupo);
+
+            int valorAtual = arrTotalGRupo[0];
+            int contadorVAlorAtual = 0;
+
+            int[] listaNumRepeticoes = new int[arrTotalGRupo.Length];
+            listaNumRepeticoes[0] = contadorVAlorAtual;
+
+
+            for (int i = 1; i<= arrTotalGRupo.Length-1; i++)
+            {
+                if (arrTotalGRupo[i] != valorAtual)
+                {
+                    valorAtual = arrTotalGRupo[i];
+                    contadorVAlorAtual = 0;
+                } else
+                {
+                    contadorVAlorAtual++;
+                }
+                listaNumRepeticoes[i] = contadorVAlorAtual;
+            }
+
             int maiorRepeticao = listaNumRepeticoes.Max();
 
             if (maiorRepeticao > 0)
             {
-                // obtem os valores que mais se repetirem
-                int contadorRepeticaoMaior = 0;
-                for (int i = 0; i < listaNumRepeticoes.Length; i++)
+                int contadorNumRepeticaoMaior = 0;
+                for (int i = 0; i < listaNumRepeticoes.Length;i++)
                 {
                     if (listaNumRepeticoes[i] == maiorRepeticao)
                     {
-                        contadorRepeticaoMaior++;
+                        contadorNumRepeticaoMaior++;
                     }
                 }
-                // popula a lista para retornar os valores que mais se repetem
-                int[] listaRetorno = new int[contadorRepeticaoMaior];
+                int[] listaRetorno = new int[contadorNumRepeticaoMaior];
                 int contadorRetorno = 0;
-                for (int i = 0; i < listaNumRepeticoes.Length; i++)
+                for (int i =0; i < listaNumRepeticoes.Length;i++)
                 {
                     if (listaNumRepeticoes[i] == maiorRepeticao)
                     {
-                        listaRetorno[contadorRetorno] += listaValoresOrdenada[i];
+                        listaRetorno[contadorRetorno] = arrTotalGRupo[i];
                         contadorRetorno++;
                     }
                 }
-                for (int i = 0; i < listaRetorno.Length;i++)
+                Console.WriteLine(" Moda: ");
+                foreach (int valor in listaRetorno)
                 {
-                    Console.WriteLine($"Moda->{listaRetorno[i]}");
-
+                    Console.Write($"{valor}\t");
                 }
-            }*/
-            //int[] arrRep = new int[arrGrupUm.Length];
-            //int rep = 0;
-            //int repTemp = 0;
-            //int moda = 0;
-            //for (int i =0; i < arrGrupUm.Length;i++)
-            //{
-            //    arrRep[i] = arrGrupUm[i];
-            //} 
-            //for (int i =0; i < arrGrupUm.Length;i++)
-            //{
-            //    repTemp = 0;
-            //    for (int j = 0; j < arrRep.Length;j++)
-            //    {
-            //        if (rep == 0)
-            //        {
-            //            rep = repTemp;
-            //        }
-            //        else if(arrRep[j] == arrGrupUm[j])
-            //        {
-            //            repTemp++;
-            //        }
-            //        Console.WriteLine(repTemp);
-            //    }
-            //    if (repTemp > rep)
-            //    {
-            //        rep = repTemp;
-            //        moda = arrRep[i];
-            //    }
-            //}
-
-            //Console.WriteLine($"Moda -> {moda} -> Repeticoes  {rep}");
-            //------------------------------------------------------------
-            //Solicitar ao utilizador a definição de um valor;
-            //verificar o número de vezes que o valor definido se encontra em ambos os Arrays;
-            //string numUserString = "";
-            //int numUser,presencas =0;
-
-
-            //Console.WriteLine("Digite o numero que deseja verificar");
-            //numUserString = Console.ReadLine();
-            //int.TryParse(numUserString, out numUser);
-
-            //foreach (int valor in arrGrupUm)
-            //{
-            //    if (valor == numUser) 
-            //        presencas++;
-            //}
-
-            //foreach (int valor in arrGrupDois)
-            //{
-            //    if(valor == numUser)
-            //        presencas++;
-            //}
-            //Console.WriteLine($"O numero esta {presencas} x nos arrays");
-            //-----------------------------------------------------------
-            ////Escrever de forma ascendente o conjunto das avaliações de ambos os grupos;
-            //// Ordena de forma ascendente
-            //Array.Sort(arrGrupUm);
-            //Array.Sort(arrGrupDois);
-            //// Mostra aos arrays ordenados
-            //Console.WriteLine("-------------Array Grupo Um ----------------");
-            //foreach (int valor in arrGrupUm)
-            //{
-            //    Console.Write($"{valor}\t");
-
-            //}
-            //Console.WriteLine();
-            //Console.WriteLine("-------------Array Grupo Dois ----------------");
-            //foreach (int valor in arrGrupDois)
-            //{
-            //    Console.Write($"{valor}\t");
-
-            //}
-            //Console.WriteLine("------------------------");
-            ////------------------------------------------------------------------------
-            
+                Console.WriteLine();
+            }            
+            //--------------------------------------------
             //3.9  Escrever as 5 melhores avaliações do conjunto dos dois grupos;
-           
+
             // declaração da array valores que vai ser a jagged array da grupo 1 + grupo 2
             int[][] valores = new int[2][];
             // declarar da array top que vai receber os melhores 5 de cada grupo
@@ -257,14 +199,14 @@ namespace exe_arrays_04
             // atribuir cada espaço da jagged array as arrays respetivas
             valores[0] = new int[arrGrupUm.Length];
             valores[1] = new int[arrGrupDois.Length];
-            
+
 
             for (int i = 0; i < valores.Length; i++)
             {
                 for (int j = 0; j < valores[i].Length; j++)
                 {
                     // se estiver na primeira linha adicionar o grupo 1
-                    if(i==0)
+                    if (i == 0)
                         valores[i][j] = arrGrupUm[j];
                     else
                         // se estiver na segunda linh adiciona o grupo 2
@@ -272,6 +214,7 @@ namespace exe_arrays_04
 
                 }
             }
+            Console.WriteLine("--------Jagged Array ------------------");
             // Mostra o Jagged Array
             for (int i = 0; i < valores.Length; i++)
             {
@@ -286,7 +229,6 @@ namespace exe_arrays_04
             for (int i = 0; i < valores.Length; i++)
             {
                 Array.Sort(valores[i]);
-                Array.Reverse(valores[i]);
             }
             Console.WriteLine();
             // Mostra ao array ordenado
@@ -300,20 +242,20 @@ namespace exe_arrays_04
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("-------------");
             // adiciona ao Array Top os 5 Melhores de cada array(Grupo 1 e Grupo 2 respetivamente)
             for (int i = 0; i < valores.Length; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
 
-                    if (i==0)
+                    if (i == 0)
                     {
                         top[j] = valores[i][j];
 
-                    } else if (i > 0)
+                    }
+                    else if (i > 0)
                     {
-                        top[j+5] = valores[i][j];
+                        top[j + 5] = valores[i][j];
                     }
                 }
                 Console.WriteLine();
@@ -327,36 +269,370 @@ namespace exe_arrays_04
             {
                 Console.Write($" {i + 1}º-> {top[i]}\t");
             }
-            Console.WriteLine() ;
+            Console.WriteLine();
+
+        }
+        static void FicArrays04_04()
+        {
+            // Declaração do Jagged Array que vai gaudar os respetivos arrays
+            int[][] jaaggedPaises = new int[5][];
+            jaaggedPaises[0] = new int [6];
+            jaaggedPaises[1] = new int[11];
+            jaaggedPaises[2] = new int[10];
+            jaaggedPaises[3] = new int[14];
+            jaaggedPaises[4] = new int[11];
+
+            int somaPop = 0, contador = 0, somaTemp = 0, soma = 0, posArray = 0;
+            double mediaPais = 0;
+            string paisMaisPop = "",paisMenorPop ="";
+            // Preenche com valores aleatorios
+            for (int i = 0; i < jaaggedPaises.Length;i++)
+            {
+                for(int j = 0; j < jaaggedPaises[i].Length; j++)
+                {
+                    jaaggedPaises[i][j] = RandomNumb_Positivos();
+                }
+            }
+            for (int i = 0; i < jaaggedPaises.Length; i++)
+            {
+                for (int j = 0; j < jaaggedPaises[i].Length; j++)
+                {
+                    Console.Write($"{jaaggedPaises[i][j]}\t");
+                }
+                Console.WriteLine();
+            }
+            // 4.1. Calcular a média global da população;
+            // Acessamos ao jagged array e somamos cada valor
+            // e para alem disso contamos quantas vezes vamos fazer a soma
+            // porque assim saberemos qual o numero de "casas" tem a jagged array no total
+            for (int i = 0; i < jaaggedPaises.Length; i++)
+            {
+                for (int j = 0; j < jaaggedPaises[i].Length; j++)
+                {
+                    somaPop += jaaggedPaises[i][j];
+                    contador++;
+                }
+            }
+            Console.WriteLine($"Total População {somaPop}");
+            Console.WriteLine($"Media População {somaPop / contador}");
+            // 4.2. O país com mais população;
+            for(int i = 0; i< jaaggedPaises.Length; i++)
+            {
+                somaTemp = jaaggedPaises[i].Sum();
+                if ( somaTemp > soma )
+                {
+                    soma = somaTemp;
+                    switch (i)
+                    {
+                        case 0:
+                            paisMaisPop = "Portugal";
+                            break;
+                        case 1:
+                            paisMaisPop = "Espanha";
+                            break;
+                        case 2:
+                            paisMaisPop = "Itália";
+                            break;
+                        case 3:
+                            paisMaisPop = "França";
+                            break;
+                        case 4:
+                            paisMaisPop = "UK";
+                            break;
+                    }
+                }
+            }
+            Console.WriteLine($"País mais populado -> {paisMaisPop}");
+            //4.3.A cidade com menor população(indicar valor
+            //da população e posição no array);
+            soma = Int16.MaxValue;
+            for (int i = 0; i < jaaggedPaises.Length; i++)
+            {
+                somaTemp = jaaggedPaises[i].Sum();
+                
+                if (somaTemp < soma)
+                {
+                    soma = somaTemp;
+                    switch (i)
+                    {
+                        case 0:
+                            paisMenorPop = "Portugal";
+                            posArray = i;
+                            break;
+                        case 1:
+                            paisMenorPop = "Espanha";
+                            posArray = i;
+                            break;
+                        case 2:
+                            paisMenorPop = "Itália";
+                            posArray = i;
+                            break;
+                        case 3:
+                            paisMenorPop = "França";
+                            posArray = i;
+                            break;
+                        case 4:
+                            paisMenorPop = "UK";
+                            posArray = i;
+                            break;
+                    }
+                }
+            }
+            Console.WriteLine($"Pais com menor População -> {paisMenorPop} || Posicão Array -> {posArray}");
+            // 4.4. A soma e a média da população por país
+            soma = 0;
+            for (int i = 0; i< jaaggedPaises.Length;i++)
+            {
+                    soma =jaaggedPaises[i].Sum();
+                    mediaPais = jaaggedPaises[i].Average();
+                switch (i)
+                {
+                    case 0:
+                        Console.WriteLine($" Soma PT -> {soma} || Media -> {Math.Round(mediaPais, 2)}");
+                        break;
+                    case 1:
+                        Console.WriteLine($" Soma ES -> {soma} || Media -> {Math.Round(mediaPais, 2)}");
+                        break;
+                    case 2:
+                        Console.WriteLine($" Soma IT -> {soma} || Media -> {Math.Round(mediaPais, 2)}");
+                        break;
+                    case 3:
+                        Console.WriteLine($" Soma FR -> {soma} || Media -> {Math.Round(mediaPais, 2)}");
+                        break;
+                    case 4:
+                        Console.WriteLine($" Soma UK -> {soma} || Media -> {Math.Round(mediaPais, 2)}");
+                        break;
+                }
+            }
+        }
+        static void FicArrays04_05()
+        {
+            // Declaração do Jagged Array
+            double[][] jaggedTemp = new double[5][];
+            // Atribuição das arrays ao jagged array
+            jaggedTemp[0] = new double[4];
+            jaggedTemp[1] = new double[6];
+            jaggedTemp[2] = new double[3];
+            jaggedTemp[3] = new double[3];
+            jaggedTemp[4] = new double[5];
+            // Preenchimento do array
+            for (int i =0; i < jaggedTemp.Length;i++)
+            {
+                for (int j =0; j < jaggedTemp[i].Length; j++)
+                {
+                    jaggedTemp[i][j] = GerarValorReal(-5,11);
+                }
+            }
+            // Mostrar Array
+            for (int i = 0; i < jaggedTemp.Length; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        Console.Write("Lisboa --> ");
+                        break; 
+                    case 1:
+                        Console.Write("Beja --> ");
+                        break; 
+                    case 2:
+                        Console.Write("Guarda --> ");
+                        break; 
+                    case 3:
+                        Console.Write("Bragança --> ");
+                        break;
+                    case 4:
+                        Console.Write("Braga --> ");
+                        break;
+                }
+                for (int j = 0; j < jaggedTemp[i].Length; j++)
+                {
+                    
+                    Console.Write($"{jaggedTemp[i][j]}\t");
+                }
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+            Console.WriteLine("----------------------------------------");
+            // 5.1. A temperatura média global do dia 1 de Janeiro;
+            int contador = 0;
+            double media = 0, soma = 0;
+            for (int i =0; i < jaggedTemp.Length;i++)
+            {
+                for (int j =0; j < jaggedTemp[i].Length;j++)
+                {
+                    soma += jaggedTemp[i][j];
+                    contador++;
+                }
+
+            }
+            Console.WriteLine($"Media Global -> {Math.Round(soma/ contador++,2)}º");
+            Console.WriteLine("----------------------------------------");
+            // 5.2. A temperatura média por local;
+
+            for (int i =0; i < jaggedTemp.Length;i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        Console.WriteLine($"Temp Media Lisboa -> {Math.Round(jaggedTemp[0].Average(),2)}º");
+                        break;
+                    case 1:
+                        Console.WriteLine($"Temp Media  Beja -> {Math.Round(jaggedTemp[i].Average(),2)}º");
+                        break;
+                    case 2:
+                        Console.WriteLine($"Temp Media Guarda -> {Math.Round(jaggedTemp[i].Average(),2)}º");
+
+                        break;
+                    case 3:
+                        Console.WriteLine($"Temp Media Bragança -> {Math.Round(jaggedTemp[i].Average(),2)}º");
+
+                        break;
+                    case 4:
+                        Console.WriteLine($"Temp Media Braga -> {Math.Round(jaggedTemp[i].Average(),2)}º");
+                        break;
+                }
+            }
+            Console.WriteLine("----------------------------------------");
+            //5.3. A zona onde se verificou a menor temperatura;
+            double menorTemp = jaggedTemp[0][0];
+            int zona = 0;
+            
+            for (int i = 0; i < jaggedTemp.Length;i++)
+            {
+               
+                if (jaggedTemp[i].Min() < menorTemp)
+                {
+                    menorTemp = jaggedTemp[i].Min();
+                    zona = i;
+                }
+            }
+            switch (zona)
+            {
+                case 0:
+                    Console.WriteLine($"A Temperatura mais baixa foi Registada em Lisboa {menorTemp}");
+                    break;
+                case 1:
+                    Console.WriteLine($"A Temperatura mais baixa foi Registada em Beja {menorTemp}");
+                    break;
+                case 2:
+                    Console.WriteLine($"A Temperatura mais baixa foi Registada em Guarda {menorTemp}");
+
+                    break;
+                case 3:
+                    Console.WriteLine($"A Temperatura mais baixa foi Registada em Bragança {menorTemp}");
+
+                    break;
+                case 4:
+                    Console.WriteLine($"A Temperatura mais baixa foi Registada em Braga {menorTemp}");
+                    break;
+            }
+            // 5.4 A zona com temperatura média mais elevada;
+            double mediaMaisElevada = 0;
+            zona = 0;
+            for (int i = 0; i < jaggedTemp.Length; i++) 
+            {
+                if (jaggedTemp[i].Average() > mediaMaisElevada)
+                {
+                    mediaMaisElevada = jaggedTemp[i].Average();
+                    zona = i;
+                }
+            }
+            switch (zona)
+            {
+                case 0:
+                    Console.WriteLine($"A Temperatura media mais alta foi Registada em Lisboa -> {Math.Round(mediaMaisElevada, 2)}º");
+                    break;
+                case 1:
+                    Console.WriteLine($"A Temperatura media mais alta foi Registada em Beja -> {Math.Round(mediaMaisElevada, 2)}º");
+                    break;
+                case 2:
+                    Console.WriteLine($"A Temperatura media mais alta foi Registada em Guarda -> {Math.Round(mediaMaisElevada, 2)}º");
+
+                    break;
+                case 3:
+                    Console.WriteLine($"A Temperatura media mais alta foi Registada em Bragança -> {Math.Round(mediaMaisElevada, 2)}º");
+
+                    break;
+                case 4:
+                    Console.WriteLine($"A Temperatura media mais alta foi Registada em Braga -> {Math.Round(mediaMaisElevada, 2)}º");
+                    break;
+            }
+            //5.5. A zona onde se verificaram maior número de temperaturas negativas;
+            zona = 0;
+            int numTempNegTemp = 0;
+            int numTempNega = 0;
+            for (int i =0; i< jaggedTemp.Length;i++)
+            {
+                for (int j =0; j < jaggedTemp[i].Length;j++)
+                {
+                    if (jaggedTemp[i][j] < 0)
+                    {
+                        numTempNegTemp++;
+                    }
+                }
+                    if (numTempNegTemp > numTempNega)
+                    {
+                        numTempNega = numTempNegTemp;
+                        zona = i;
+                    }
+                numTempNegTemp = 0;
+
+            }
+            switch (zona)
+            {
+                case 0:
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Lisboa -> {numTempNega}");
+                    break;
+                case 1:
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Beja -> {numTempNega}");
+                    break;
+                case 2:
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Guarda -> {numTempNega}");
+
+                    break;
+                case 3:
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Bragança -> {numTempNega}");
+
+                    break;
+                case 4:
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Braga -> {numTempNega}");
+                    break;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
         static int RandomNumb()
         {
             Random r = new Random();
-            return r.Next(-10,10);
+            return r.Next(-10, 10);
         }
-        static void teste()
+        static int RandomNumb_Positivos()
         {
-            int[][] valores = new int[4][];
-            valores[0] = new int[4];
-            valores[1] = new int[6];
-            valores[2] = new int[10];
-            valores[3] = new int[5];
-            for (int i = 0; i < valores.Length; i++)
-            {
-                for (int j = 0; j < valores[i].Length; j++)
-                {
-                    valores[i][j] = RandomNumb();
-                }
-            }
-            for (int i = 0; i < valores.Length; i++)
-            {
-                for (int j = 0; j < valores[i].Length; j++)
-                {
-                }
-                Console.WriteLine();
-            }
-
+            Random r = new Random();
+            return r.Next(0, 10);
         }
+        static double GerarValorReal(double minimo, double maximo)
+        {
+            Random random = new Random();
+            double result = random.NextDouble() * (maximo - minimo) + minimo;
+            return Math.Round(result, 1);
+        }
+
     }
 }
