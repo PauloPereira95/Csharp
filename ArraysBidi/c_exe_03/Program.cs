@@ -7,7 +7,8 @@ namespace c_exe_03
         static void Main(string[] args)
         {
             //exeFicArrayBiDois();
-            exeFicArrayBiTres();
+            //exeFicArrayBiTres();
+            exeFicArrayQuatro();
         }
         static void exeFicArrayBiDois()
         {
@@ -53,8 +54,8 @@ namespace c_exe_03
             Console.WriteLine("\nDiagonal Principal\n");
             for (int i = 0; i < matriz.GetLength(0); i++) // coluna
             {
-                        Console.Write($"{matriz[i,i]}\t");
-   
+                Console.Write($"{matriz[i, i]}\t");
+
             }
             // Pergunta 2.5
             Console.WriteLine("\n Diagonal Secundária");
@@ -77,14 +78,14 @@ namespace c_exe_03
                  }
                  Console.WriteLine(" ");
              }------------------OU-------------------------------------------*/
-            int k = matriz.GetLength(0) -1;
+            int k = matriz.GetLength(0) - 1;
             int l = 0;
             do
             {
-                Console.WriteLine(matriz[k,l]);
+                Console.WriteLine(matriz[k, l]);
                 k--;
                 l++;
-            } while ( k>= 0 && l <= matriz.GetLength(0) - 1);
+            } while (k >= 0 && l <= matriz.GetLength(0) - 1);
             Console.WriteLine();
             Console.WriteLine($"Soma ->{sum} || Media -> {Math.Round(media, 2)}");
             Console.WriteLine($"Minimo -> {min} || Maximo -> {max}");
@@ -92,12 +93,12 @@ namespace c_exe_03
             //------------------------------------------------------------------------  
             //------------------------------OU-(cOM O CICLO FOR)----------------------
             Console.WriteLine("--- Diagonal Sec com for --------------");
-            for (int i =0;i < matriz.GetLength(0);i++)
+            for (int i = 0; i < matriz.GetLength(0); i++)
             {
-                Console.WriteLine($"{matriz[i, (matriz.GetLength(0)-1) - i]}");
+                Console.WriteLine($"{matriz[i, (matriz.GetLength(0) - 1) - i]}");
             }
             Console.WriteLine("\n\n");
-        //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
         }
         static void exeFicArrayBiTres()
         {
@@ -106,7 +107,7 @@ namespace c_exe_03
             double avgMatrizUm = 0, avgMatrizDois = 0;
             int[,] matrizUm = new int[3, 3];
             int[,] matrizDois = new int[3, 3];
-            int[] arraySoma = new int[2];
+            int[,] arraySoma = new int[3, 3];
             int[,] arrayTemp = new int[3, 3];
             // insere valores no primeiro e segundo array
             for (int i = 0; i < matrizUm.GetLength(0); i++)
@@ -123,7 +124,6 @@ namespace c_exe_03
             {
                 for (int j = 0; j < matrizUm.GetLength(1); j++)
                 {
-                    somaMatrizUm += matrizUm[i, j];
 
                     if (matrizUm[i, j] < 0)
                         negUm++;
@@ -138,7 +138,6 @@ namespace c_exe_03
             {
                 for (int j = 0; j < matrizDois.GetLength(1); j++)
                 {
-                    somaMatrizDois += matrizDois[i, j];
                     if (matrizDois[i, j] < 0)
                         negDois++;
                     Console.Write($"{matrizDois[i, j]}\t");
@@ -168,8 +167,6 @@ namespace c_exe_03
             else Console.WriteLine("Os duas matrizes tem o mesmo numero de negativos !");
 
             // Guarda a Soma de Cada array no Terceiro Array
-            arraySoma[0] = somaMatrizUm;
-            arraySoma[1] = somaMatrizDois;
 
             // Mostra o terceiro aRray com as somas
             foreach (int valor in arraySoma)
@@ -210,10 +207,57 @@ namespace c_exe_03
                 }
                 Console.WriteLine();
             }
+            // somar Arrays
+            for (int i = 0; i < matrizUm.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrizUm.GetLength(1); j++)
+                {
+                    Console.WriteLine($"{matrizUm[i, j] + matrizDois[i, j]}\t");
+                }
+            }
+        }
 
-
-
-
+        static void exeFicArrayQuatro()
+        {
+            int[][] valores = new int[4][]; // jagged arrays
+            valores[0] = new int[4];
+            valores[1] = new int[6];
+            valores[2] = new int[10];
+            valores[3] = new int[5];
+            int min = valores[0][0], max = valores[0][0];
+            Random r = new Random();
+            for (int i = 0; i < valores.Length; i++)
+            {
+                for (int j = 0; j < valores[i].Length; j++)
+                {
+                    valores[i][j] = r.Next(1, 21);
+                }
+            }
+            for (int i = 0; i < valores.Length; i++)
+            {
+                for (int j = 0; j < valores[i].Length; j++)
+                {
+                    Console.Write("{0}\t", valores[i][j]);
+                }
+                Console.WriteLine();
+            }
+            // soma e media
+            // maximo e minimo
+            int soma = 0, totalElementos = 0;
+            for (int i = 0; i < valores.Length; i++)
+            {
+                for (int j = 0; j < valores[i].Length; j++)
+                {
+                    if (valores[i][j] < min)
+                        min = valores[i][j];
+                    else if (valores[i][j] > max)
+                        max = valores[i][j];
+                    soma += valores[i][j];
+                }
+                totalElementos += valores.Length;
+            }
+            double media = (double)soma / totalElementos;
+            Console.WriteLine($"\nSoma = {soma} , media = {media}");
         }
         static int gerarValores()
         {
