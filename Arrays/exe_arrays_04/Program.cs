@@ -56,7 +56,7 @@ namespace exe_arrays_04
         }
         static void FicArrays04_03()
         {
-            
+            // Declaração dos array que vao receber as notas do grupo Um e Dois
             int[] arrGrupUm = new int[10];
             int[] arrGrupDois = new int[10];
 
@@ -65,6 +65,10 @@ namespace exe_arrays_04
             double mediaGUm = 0, mediaGDois = 0, somaGUm = 0, somaGDois = 0;
             double mediaAproA = 0;
             double mediaAproB = 0;
+            // Preenche com numeros aleatorios
+            // Calcula a soma 
+            // Encontra a pior nota
+            // Ve os reprovados e nao reporvados
             Console.WriteLine("----Grupo Um-------------------------------");
             for (int i = 0; i < arrGrupUm.Length; i++)
             {
@@ -82,9 +86,13 @@ namespace exe_arrays_04
                     aprovaçõesA++;
             }
             Console.WriteLine();
+            // Calcula a Media do Grupo Um , aprovados  e media notas
             mediaAproA = ((double)aprovaçõesA / arrGrupDois.Length) * 100;
-
             mediaGUm = (double)somaGUm / arrGrupUm.Length;
+            // Preenche com numeros aleatorios
+            // Calcula a soma 
+            // Encontra a pior nota
+            // Ve os reprovados e nao reporvados
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("----Grupo Dois------------------------------");
             for (int i = 0; i < arrGrupDois.Length; i++)
@@ -105,16 +113,17 @@ namespace exe_arrays_04
             }
             Console.WriteLine();
 
-            //
+            // Calcula a Media do Grupo Dois , aprovados  e media notas
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("-----------------Resultados-----------------\n");
             mediaGDois = (double)somaGDois / arrGrupDois.Length;
             mediaAproB = ((double)aprovaçõesB / arrGrupDois.Length) * 100;
-
+            // Mostra o grupo com a maior media
             if (mediaGUm > mediaGDois)
                 Console.WriteLine($"Grupo Um tem a maior media, {mediaGUm}\n");
             else if (mediaGDois > mediaGUm)
                 Console.WriteLine($"Grupo Dois tem a maior media ,{mediaGUm}\n");
+            
             Console.WriteLine($"Pior nota -> {piorNota} Grupo {grupo}\n");
             Console.WriteLine($"Reprovações -> {reprovacoes}\n");
             Console.WriteLine($"Percentagem de Aprovacões Grupo A -> {mediaAproA} % || Media Grupo B -> {mediaAproB} % \n");
@@ -555,6 +564,7 @@ namespace exe_arrays_04
                     break;
             }
         }
+        // Gera numeros de 1 a 20, Notas para avaliação
         static int RandomNumb()
         {
             Random r = new Random();
