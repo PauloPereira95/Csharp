@@ -9,7 +9,7 @@ namespace exe_arrays_04
     {
         static void Main(string[] args)
         {
-            FicArrays04_05();
+            FicArrays04_03();
         }
         static void FicArrays04_01_02()
         {
@@ -56,6 +56,7 @@ namespace exe_arrays_04
         }
         static void FicArrays04_03()
         {
+            
             int[] arrGrupUm = new int[10];
             int[] arrGrupDois = new int[10];
 
@@ -121,74 +122,29 @@ namespace exe_arrays_04
             //--------- Calcular Moda --------------------
             Console.WriteLine();
             Console.WriteLine("------------MODA---------------");
-            // Declara as arrTotalGRupo que vai receber todos os valores dos dois Arrays
-            // GRupo 1 e Grupo 2
-            // Para então comparar o valores mais vezes repetido
-            int[] arrTotalGRupo = new int[arrGrupUm.Length + arrGrupDois.Length];
-            // Junta o primeiro array GRupo UM
-            for (int i =0; i < arrGrupUm.Length;i++)
-            {
-                arrTotalGRupo[i] = arrGrupUm[i];
-            }
-            // junta o segundo apartir da ultima posição do segundo
-            for (int j = arrGrupUm.Length; j < arrTotalGRupo.Length; j++)
-            {
+            // Declaração do Array que vai guardar o numero de vezes que cada nota se repete
+            int[] arrModa = new int[21];
 
-                arrTotalGRupo[j] = arrGrupDois[j-10];
-            }
-
-
-            Array.Sort(arrTotalGRupo);
-
-            int valorAtual = arrTotalGRupo[0];
-            int contadorVAlorAtual = 0;
-
-            int[] listaNumRepeticoes = new int[arrTotalGRupo.Length];
-            listaNumRepeticoes[0] = contadorVAlorAtual;
-
-
-            for (int i = 1; i<= arrTotalGRupo.Length-1; i++)
-            {
-                if (arrTotalGRupo[i] != valorAtual)
+            // Declaração variavel(repeticoes) que vai receber o numero maior de repeticoes 
+            // e moda que vai receber o index que Moda, a nota mais vezes repetida
+            int repeticoes = 0,moda =0;
+                // percorre os array dos dois grupos
+                // e sempre que encontrar um nota ele acrescenta +1 ha posicao da nota
+                foreach (int item in arrGrupUm )
                 {
-                    valorAtual = arrTotalGRupo[i];
-                    contadorVAlorAtual = 0;
-                } else
-                {
-                    contadorVAlorAtual++;
+                    arrModa[item]++;
                 }
-                listaNumRepeticoes[i] = contadorVAlorAtual;
-            }
-
-            int maiorRepeticao = listaNumRepeticoes.Max();
-
-            if (maiorRepeticao > 0)
-            {
-                int contadorNumRepeticaoMaior = 0;
-                for (int i = 0; i < listaNumRepeticoes.Length;i++)
+                foreach (int item in arrGrupDois )
                 {
-                    if (listaNumRepeticoes[i] == maiorRepeticao)
-                    {
-                        contadorNumRepeticaoMaior++;
-                    }
+                        arrModa[item]++;
                 }
-                int[] listaRetorno = new int[contadorNumRepeticaoMaior];
-                int contadorRetorno = 0;
-                for (int i =0; i < listaNumRepeticoes.Length;i++)
-                {
-                    if (listaNumRepeticoes[i] == maiorRepeticao)
-                    {
-                        listaRetorno[contadorRetorno] = arrTotalGRupo[i];
-                        contadorRetorno++;
-                    }
-                }
-                Console.WriteLine(" Moda: ");
-                foreach (int valor in listaRetorno)
-                {
-                    Console.Write($"{valor}\t");
-                }
-                Console.WriteLine();
-            }            
+            
+            // recebe o numero maior de vezes que alguma foi repetida
+            repeticoes = arrModa.Max();
+            // recebe o seu respetivo index
+            moda = Array.IndexOf(arrModa, repeticoes);
+            // Mostra ao utilizador os resultado
+            Console.WriteLine($"Moda -> {moda} || Nº vezes  Repetidas -> {repeticoes}");
             //--------------------------------------------
             //3.9  Escrever as 5 melhores avaliações do conjunto dos dois grupos;
 
@@ -598,29 +554,11 @@ namespace exe_arrays_04
                     Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Braga -> {numTempNega}");
                     break;
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
         static int RandomNumb()
         {
             Random r = new Random();
-            return r.Next(-10, 10);
+            return r.Next(1, 21);
         }
         static int RandomNumb_Positivos()
         {
