@@ -9,7 +9,7 @@ namespace exe_arrays_04
     {
         static void Main(string[] args)
         {
-            FicArrays04_03();
+            FicArrays04_05();
         }
         static void FicArrays04_01_02()
         {
@@ -62,7 +62,7 @@ namespace exe_arrays_04
 
             int piorNota = Int16.MaxValue, reprovacoes = 0, aprovaçõesA = 0, aprovaçõesB = 0;
             string grupo = "";
-            double mediaGUm = 0, mediaGDois = 0, somaGUm = 0, somaGDois = 0;
+            double  somaGUm = 0, somaGDois = 0;
             double mediaAproA = 0;
             double mediaAproB = 0;
             // Preenche com numeros aleatorios
@@ -75,11 +75,11 @@ namespace exe_arrays_04
                 arrGrupUm[i] = RandomNumb();
                 somaGUm += arrGrupUm[i];
                 Console.Write($"{arrGrupUm[i]}\t");
-                if (arrGrupUm[i] < piorNota)
-                {
-                    piorNota = arrGrupUm[i];
-                    grupo = "Um";
-                }
+                //if (arrGrupUm[i] < piorNota)
+                //{
+                //    piorNota = arrGrupUm[i];
+                //    grupo = "Um";
+                //}
                 if (arrGrupUm[i] < 10)
                     reprovacoes++;
                 else
@@ -88,7 +88,7 @@ namespace exe_arrays_04
             Console.WriteLine();
             // Calcula a Media do Grupo Um , aprovados  e media notas
             mediaAproA = ((double)aprovaçõesA / arrGrupDois.Length) * 100;
-            mediaGUm = (double)somaGUm / arrGrupUm.Length;
+            //mediaGUm = arrGrupUm.Average();
             // Preenche com numeros aleatorios
             // Calcula a soma 
             // Encontra a pior nota
@@ -100,11 +100,11 @@ namespace exe_arrays_04
                 arrGrupDois[i] = RandomNumb();
                 somaGDois += arrGrupDois[i];
                 Console.Write($"{arrGrupDois[i]}\t");
-                if (arrGrupDois[i] <= piorNota)
-                {
-                    piorNota = arrGrupDois[i];
-                    grupo = "Dois";
-                }
+                //if (arrGrupDois[i] <= piorNota)
+                //{
+                //    piorNota = arrGrupDois[i];
+                //    grupo = "Dois";
+                //}
                 if (arrGrupDois[i] < 10)
                     reprovacoes++;
                 else
@@ -116,17 +116,56 @@ namespace exe_arrays_04
             // Calcula a Media do Grupo Dois , aprovados  e media notas
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("-----------------Resultados-----------------\n");
-            mediaGDois = (double)somaGDois / arrGrupDois.Length;
-            mediaAproB = ((double)aprovaçõesB / arrGrupDois.Length) * 100;
+            mediaAproB = arrGrupDois.Average();
             // Mostra o grupo com a maior media
-            if (mediaGUm > mediaGDois)
-                Console.WriteLine($"Grupo Um tem a maior media, {mediaGUm}\n");
-            else if (mediaGDois > mediaGUm)
-                Console.WriteLine($"Grupo Dois tem a maior media ,{mediaGUm}\n");
+            if (arrGrupUm.Average() > arrGrupDois.Average())
+                Console.WriteLine($"Grupo Um tem a maior media, {arrGrupUm.Average()}\n");
+            else if (arrGrupUm.Average() < arrGrupDois.Average())
+
+                Console.WriteLine($"Grupo Dois tem a maior media , {arrGrupDois.Average()}\n");
+            else
+                Console.WriteLine($"A Média dos Grupos é igual !");
+
+            //Console.WriteLine($"Pior nota -> {piorNota} Grupo {grupo}\n");
+            if (arrGrupUm.Max() > arrGrupDois.Max())
+
+                Console.WriteLine($"Melhor Avaliação -> Grupo Um , {arrGrupUm.Max()}");
+            else
+                Console.WriteLine($"Melhor Avaliação -> Grupo Um ,{arrGrupDois.Max()}");
+            //-------------- OU ---------------------------------------
+
+            if (arrGrupUm.Min() > arrGrupDois.Min())
+
+                Console.WriteLine($"Pior Avaliação -> Grupo Um , {arrGrupUm.Min()}");
+            else
+                Console.WriteLine($"Pior Avaliação -> Grupo Dois ,{arrGrupDois.Min()}");
+            //IF - Ternario int min = arrGrupUm.Min() < arrGrupDois.Min() ? arrGrupUm.Min() : arrGrupDois.Min();
+
+
+
+            //Console.WriteLine($"Reprovações -> {reprovacoes}\n");
+            // OU 
+            int rep_grupoUm = 0; int rep_grupoDois = 0;
+            rep_grupoUm = arrGrupUm.Where(x => x < 10).Count();
+            rep_grupoDois = arrGrupDois.Where(x => x < 10).Count();
+            if (rep_grupoUm > rep_grupoDois)
+
+                Console.WriteLine($"Mais Reprovações no Grupo 1 = {rep_grupoUm}");
+            else
+                Console.WriteLine($"Mais Reprovações no Grupo 2 = {rep_grupoDois}");
+
+            //Console.WriteLine($"Percentagem de Aprovacões Grupo A -> {mediaAproA} % || Media Grupo B -> {mediaAproB} % \n");
+            // CORRIGIR !!!!!
+            double per_rep_grup1 = ((double)rep_grupoUm / arrGrupUm.Length) * 100;
+            double per_apr_grup1 = (((double)arrGrupUm.Length - rep_grupoUm) / arrGrupUm.Length * 100);
+            double per_rep_grup2 = ((double)rep_grupoDois / arrGrupDois.Length) * 100;
+            double per_apr_grup2 = (((double)arrGrupDois.Length - rep_grupoDois) / arrGrupDois.Length * 100);
+
+            Console.WriteLine($"Arpovações Grupo 1 -> {per_apr_grup1} || Reprovações Grupo 1 -> {per_apr_grup1}" );
+            Console.WriteLine($"Arpovações Grupo 2 -> {per_apr_grup2} || Reprovações Grupo 2 -> {per_apr_grup2}" );
+
             
-            Console.WriteLine($"Pior nota -> {piorNota} Grupo {grupo}\n");
-            Console.WriteLine($"Reprovações -> {reprovacoes}\n");
-            Console.WriteLine($"Percentagem de Aprovacões Grupo A -> {mediaAproA} % || Media Grupo B -> {mediaAproB} % \n");
+            
             //--------------------------------------
             //--------- Calcular Moda --------------------
             Console.WriteLine();
@@ -155,6 +194,16 @@ namespace exe_arrays_04
             // Mostra ao utilizador os resultado
             Console.WriteLine($"Moda -> {moda} || Nº vezes  Repetidas -> {repeticoes}");
             //--------------------------------------------
+            // 3.7
+            int avaliação = 0;
+            Console.WriteLine("Qual é a avaliação que pretende vereificar: ");
+            avaliação = int.Parse(Console.ReadLine());
+
+            int total = 0;
+            total = arrGrupUm.Where(x => x == avaliação).Count() + arrGrupDois.Where(x => x == avaliação).Count();
+            Console.WriteLine($"O valor {total} regista-se {total} vezes");
+
+            //-----------------------------------------------
             //3.9  Escrever as 5 melhores avaliações do conjunto dos dois grupos;
 
             // declaração da array valores que vai ser a jagged array da grupo 1 + grupo 2
@@ -239,7 +288,7 @@ namespace exe_arrays_04
         }
         static void FicArrays04_04()
         {
-            // Declaração do Jagged Array que vai gaudar os respetivos arrays
+            // Declaração do Jagged Array que vai guadar os respetivos arrays
             int[][] jaaggedPaises = new int[5][];
             jaaggedPaises[0] = new int [6];
             jaaggedPaises[1] = new int[11];
@@ -385,7 +434,7 @@ namespace exe_arrays_04
             {
                 for (int j =0; j < jaggedTemp[i].Length; j++)
                 {
-                    jaggedTemp[i][j] = GerarValorReal(-5,11);
+                    jaggedTemp[i][j] = GerarValorReal(0,200);
                 }
             }
             // Mostrar Array
@@ -568,7 +617,7 @@ namespace exe_arrays_04
         static int RandomNumb()
         {
             Random r = new Random();
-            return r.Next(1, 21);
+            return r.Next(0, 21);
         }
         static int RandomNumb_Positivos()
         {
