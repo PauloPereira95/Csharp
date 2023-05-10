@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\bin\Debug\net7.0\exeFic05.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\bin\Debug\net7.0\exeFic05.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\bin\Debug\net7.0\exeFic05.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\bin\Debug\net7.0\exeFic05.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\bin\Debug\net7.0\exeFic05.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\refint\exeFic05.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\exeFic05.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\exeFic05\obj\Debug\net7.0\ref\exeFic05.dll

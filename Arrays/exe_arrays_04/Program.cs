@@ -9,7 +9,7 @@ namespace exe_arrays_04
     {
         static void Main(string[] args)
         {
-            FicArrays04_05();
+            teste();
         }
         static void FicArrays04_01_02()
         {
@@ -290,9 +290,13 @@ namespace exe_arrays_04
         {
             // Declaração do Jagged Array que vai guadar os respetivos arrays
             int[][] jaaggedPaises = new int[5][];
+            // PT
             jaaggedPaises[0] = new int [6];
+            // ESP
             jaaggedPaises[1] = new int[11];
+            // IT
             jaaggedPaises[2] = new int[10];
+            // f
             jaaggedPaises[3] = new int[14];
             jaaggedPaises[4] = new int[11];
 
@@ -319,80 +323,69 @@ namespace exe_arrays_04
             // Acessamos ao jagged array e somamos cada valor
             // e para alem disso contamos quantas vezes vamos fazer a soma
             // porque assim saberemos qual o numero de "casas" tem a jagged array no total
-            for (int i = 0; i < jaaggedPaises.Length; i++)
+            //for (int i = 0; i < jaaggedPaises.Length; i++)
+            //{
+            //    for (int j = 0; j < jaaggedPaises[i].Length; j++)
+            //    {
+            //        somaPop += jaaggedPaises[i][j];
+            //        contador++;
+            //    }
+            //}
+            // --------------- ou -----------------------
+            for(int i =0; i < jaaggedPaises.Length;i++)
             {
-                for (int j = 0; j < jaaggedPaises[i].Length; j++)
-                {
-                    somaPop += jaaggedPaises[i][j];
-                    contador++;
-                }
+                somaPop += jaaggedPaises[i].Sum();
+                contador++;
             }
             Console.WriteLine($"Total População {somaPop}");
-            Console.WriteLine($"Media População {somaPop / contador}");
+            Console.WriteLine($"Media População {Math.Round((double)somaPop / contador,2)}");
             // 4.2. O país com mais população;
+            int linha_max = 0;
             for(int i = 0; i< jaaggedPaises.Length; i++)
             {
                 somaTemp = jaaggedPaises[i].Sum();
                 if ( somaTemp > soma )
                 {
                     soma = somaTemp;
-                    switch (i)
-                    {
-                        case 0:
-                            paisMaisPop = "Portugal";
-                            break;
-                        case 1:
-                            paisMaisPop = "Espanha";
-                            break;
-                        case 2:
-                            paisMaisPop = "Itália";
-                            break;
-                        case 3:
-                            paisMaisPop = "França";
-                            break;
-                        case 4:
-                            paisMaisPop = "UK";
-                            break;
-                    }
+                    linha_max = i;
                 }
+                    switch (linha_max)
+                    {
+                        case 0: paisMaisPop = "Portugal";break;
+                        case 1: paisMaisPop = "Espanha"; break;
+                        case 2: paisMaisPop = "Itália";  break;
+                        case 3: paisMaisPop = "França";  break;
+                        case 4: paisMaisPop = "UK";      break;
+                    }
             }
-            Console.WriteLine($"País mais populado -> {paisMaisPop}");
+            Console.WriteLine($"País mais populado -> {paisMaisPop}, {soma}");
             //4.3.A cidade com menor população(indicar valor
             //da população e posição no array);
             soma = Int16.MaxValue;
-            for (int i = 0; i < jaaggedPaises.Length; i++)
+            int minPopCidade = jaaggedPaises[0][0], minCidadeI = 0, minCidadeJ = 0;
+            for (int i=0; i < jaaggedPaises.Length; i++)
             {
-                somaTemp = jaaggedPaises[i].Sum();
-                
-                if (somaTemp < soma)
+                for (int j = 0; j < jaaggedPaises[i].Length;j++)
                 {
-                    soma = somaTemp;
-                    switch (i)
+                    if (jaaggedPaises[i][j] < minPopCidade)
                     {
-                        case 0:
-                            paisMenorPop = "Portugal";
-                            posArray = i;
-                            break;
-                        case 1:
-                            paisMenorPop = "Espanha";
-                            posArray = i;
-                            break;
-                        case 2:
-                            paisMenorPop = "Itália";
-                            posArray = i;
-                            break;
-                        case 3:
-                            paisMenorPop = "França";
-                            posArray = i;
-                            break;
-                        case 4:
-                            paisMenorPop = "UK";
-                            posArray = i;
-                            break;
+                        minPopCidade = jaaggedPaises[i][j];
+                        minCidadeI = i;
+                        minCidadeJ = j;
                     }
                 }
+
             }
-            Console.WriteLine($"Pais com menor População -> {paisMenorPop} || Posicão Array -> {posArray}");
+                switch (minCidadeI)
+                {
+                    case 0: paisMaisPop = "Portugal"; break;
+                    case 1: paisMaisPop = "Espanha"; break;
+                    case 2: paisMaisPop = "Itália"; break;
+                    case 3: paisMaisPop = "França"; break;
+                    case 4: paisMaisPop = "UK"; break;
+                }
+                Console.WriteLine($"A cidade com menos pop tem {minPopCidade} habitantes, é a " +
+                    $"{minCidadeJ + 1}º cidade de {paisMaisPop}");
             // 4.4. A soma e a média da população por país
             soma = 0;
             for (int i = 0; i< jaaggedPaises.Length;i++)
@@ -434,7 +427,7 @@ namespace exe_arrays_04
             {
                 for (int j =0; j < jaggedTemp[i].Length; j++)
                 {
-                    jaggedTemp[i][j] = GerarValorReal(0,200);
+                    jaggedTemp[i][j] = GerarValorReal(-10,30);
                 }
             }
             // Mostrar Array
@@ -468,47 +461,63 @@ namespace exe_arrays_04
             }
             Console.WriteLine("----------------------------------------");
             // 5.1. A temperatura média global do dia 1 de Janeiro;
-            int contador = 0;
-            double media = 0, soma = 0;
+            int totalEl = 0;
+            double soma = 0;
             for (int i =0; i < jaggedTemp.Length;i++)
             {
                 for (int j =0; j < jaggedTemp[i].Length;j++)
                 {
                     soma += jaggedTemp[i][j];
-                    contador++;
+                    totalEl += jaggedTemp[i].Length;
                 }
 
             }
-            Console.WriteLine($"Media Global -> {Math.Round(soma/ contador++,2)}º");
+            Console.WriteLine($"Media Global -> {Math.Round(soma/ totalEl,2)}º");
             Console.WriteLine("----------------------------------------");
             // 5.2. A temperatura média por local;
 
-            for (int i =0; i < jaggedTemp.Length;i++)
+            //for (int i =0; i < jaggedTemp.Length;i++)
+            //{
+            //    switch (i)
+            //    {
+            //        case 0:
+            //            Console.WriteLine($"Temp Media Lisboa -> {Math.Round(jaggedTemp[0].Average(),1)}º");
+            //            break;
+            //        case 1:
+            //            Console.WriteLine($"Temp Media  Beja -> {Math.Round(jaggedTemp[i].Average(),1)}º");
+            //            break;
+            //        case 2:
+            //            Console.WriteLine($"Temp Media Guarda -> {Math.Round(jaggedTemp[i].Average(),1)}º");
+
+            //            break;
+            //        case 3:
+            //            Console.WriteLine($"Temp Media Bragança -> {Math.Round(jaggedTemp[i].Average(),1)}º");
+
+            //            break;
+            //        case 4:
+            //            Console.WriteLine($"Temp Media Braga -> {Math.Round(jaggedTemp[i].Average(),1)}º");
+            //            break;
+            //    }
+            //}
+            //-----------------------------------------------
+            int c = 0;
+            foreach (var item in jaggedTemp)
             {
-                switch (i)
+                string cidade = "";
+                switch (c)
                 {
-                    case 0:
-                        Console.WriteLine($"Temp Media Lisboa -> {Math.Round(jaggedTemp[0].Average(),2)}º");
-                        break;
-                    case 1:
-                        Console.WriteLine($"Temp Media  Beja -> {Math.Round(jaggedTemp[i].Average(),2)}º");
-                        break;
-                    case 2:
-                        Console.WriteLine($"Temp Media Guarda -> {Math.Round(jaggedTemp[i].Average(),2)}º");
-
-                        break;
-                    case 3:
-                        Console.WriteLine($"Temp Media Bragança -> {Math.Round(jaggedTemp[i].Average(),2)}º");
-
-                        break;
-                    case 4:
-                        Console.WriteLine($"Temp Media Braga -> {Math.Round(jaggedTemp[i].Average(),2)}º");
-                        break;
+                    case 0: cidade = "Lisboa"; break;
+                    case 1: cidade = "Beja"; break;
+                    case 2: cidade = "Guarda"; break;
+                    case 3: cidade = "Bragança"; break;
+                    case 4: cidade = "Braga"; break;
                 }
+                c++;
+                Console.WriteLine($" A temperatua meida em {cidade} foi {Math.Round(item.Average(),0)}");
             }
             Console.WriteLine("----------------------------------------");
             //5.3. A zona onde se verificou a menor temperatura;
-            double menorTemp = jaggedTemp[0][0];
+            double menorTemp = jaggedTemp[0].Min();
             int zona = 0;
             
             for (int i = 0; i < jaggedTemp.Length;i++)
@@ -572,47 +581,80 @@ namespace exe_arrays_04
                     break;
             }
             //5.5. A zona onde se verificaram maior número de temperaturas negativas;
-            zona = 0;
-            int numTempNegTemp = 0;
-            int numTempNega = 0;
-            for (int i =0; i< jaggedTemp.Length;i++)
-            {
-                for (int j =0; j < jaggedTemp[i].Length;j++)
-                {
-                    if (jaggedTemp[i][j] < 0)
-                    {
-                        numTempNegTemp++;
-                    }
-                }
-                    if (numTempNegTemp > numTempNega)
-                    {
-                        numTempNega = numTempNegTemp;
-                        zona = i;
-                    }
-                numTempNegTemp = 0;
+            // Declaração de variavel que vai receber a zona com mais temperaturas negativas
+            #region switch
+            //zona = 0;
+            // Declaração variavel que vai receber de forma temporaria o numero de
+            // temperaturas negativas (numTempNegTemp) // Numero de Temperaturas Negativas Temporaria
+            // para mais tarde comparar com a proxima cidade 
+            //int numTempNegTemp = 0;
 
+
+            // Declaração da variavel que vai receber o numero de temperaturas negativas final
+            //int numTempNega = 0;
+
+            //// percorre o jaggedArray
+            //for (int i =0; i< jaggedTemp.Length;i++)
+            //{
+            //    for (int j =0; j < jaggedTemp[i].Length;j++)
+            //    {
+            //        // se o valor for menor que 0 
+            //        if (jaggedTemp[i][j] < 0)
+            //        {
+            //            // adicionamos +1
+            //            // ou seja contamos + 1
+            //            numTempNegTemp++;
+            //        }
+            //    }
+            //        // depois de percorrer a primeira linha
+            //        // verificamos se a linha anterior tem mais temperaturas negativas
+            //        // que a linha que acabamos de percorrer
+            //        if (numTempNegTemp > numTempNega)
+            //        {   
+            //            // se sim recebe o valor guardado temporariamente 
+            //            numTempNega = numTempNegTemp;
+            //            // recebe a respetiva zona (posição da linha no jagged Array)
+            //            zona = i;
+            //        }
+            //    // reinicaiamos a variavel temporaria
+            //    numTempNegTemp = 0;
+
+            //}
+            // Apartir da zona recebida mostramos a respetiva mensagem
+            int  contadorTempNegativas = jaggedTemp[0].Where(t => t < 0).Count();
+            for (int i = 1; i < jaggedTemp.Length;i++)
+            {
+                int temp = jaggedTemp[i].Where(t => t < 0).Count();
+                if (temp > contadorTempNegativas)
+                {
+                    contadorTempNegativas = temp;
+                    zona = i;
+                }
             }
+           
             switch (zona)
             {
                 case 0:
-                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Lisboa -> {numTempNega}");
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Lisboa -> {contadorTempNegativas}");
                     break;
                 case 1:
-                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Beja -> {numTempNega}");
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Beja -> {contadorTempNegativas}");
                     break;
                 case 2:
-                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Guarda -> {numTempNega}");
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Guarda -> {contadorTempNegativas}");
 
                     break;
                 case 3:
-                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Bragança -> {numTempNega}");
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Bragança -> {contadorTempNegativas}");
 
                     break;
                 case 4:
-                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Braga -> {numTempNega}");
+                    Console.WriteLine($"A Região com mais Temp Negativas foi Registada em Braga -> {contadorTempNegativas}");
                     break;
             }
+            #endregion Fim Switch
         }
+        //--------------------------------------------------
         // Gera numeros de 1 a 20, Notas para avaliação
         static int RandomNumb()
         {
@@ -630,6 +672,15 @@ namespace exe_arrays_04
             double result = random.NextDouble() * (maximo - minimo) + minimo;
             return Math.Round(result, 1);
         }
+        static void teste()
+        {
+            int[] numeros = { 1, 2, 3, 4, 5, 6, 5, 6 };
+            int index1 = Array.IndexOf(numeros, 3);
+            Console.WriteLine(index1);
+            int index2 = Array.LastIndexOf(numeros, 6);
+            Console.WriteLine(index2);
 
+            Array.Resize(ref numeros, 10);
+        }
     }
 }
