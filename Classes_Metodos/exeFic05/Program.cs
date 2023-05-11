@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics.Metrics;
+using System.Globalization;
+using System.Linq;
 using System.Net;
 using System.Net.Http.Headers;
 
@@ -239,6 +241,34 @@ namespace exeFic05
             foreach (var i in produtos.OrderByDescending(p => p.preco))
             {
                 Console.WriteLine($"{i.nome,-50}\t{i.preco,20:C}\t");
+            }
+            // 4.5. Listar os produtos em função da data de início de venda, do mais recente para o mais antigo (ordenação descendente pelo atributo data de início de venda);
+            Console.WriteLine();
+            Console.WriteLine("---- 4.6 Ordenar Por Data Inicio De Venda ----------------");
+            foreach (var item in produtos.OrderByDescending(p => p.dataInicioVenda))
+            {
+                Console.WriteLine($"{item.nome, -50}\t {item.dataInicioVenda.ToShortDateString()}\t");
+            }
+            //4.6. Indicar o preço médio dos produtos da categoria Som;
+            Console.WriteLine();
+            Console.WriteLine("----- 4.6 Preço Medio dos Produtos de Som ----------------");
+            decimal precoMedioProdSom = produtos.Where(x => x.categoria == "Som").Average(p => p.preco);
+            Console.WriteLine(Math.Round(precoMedioProdSom, 2));
+            // 4.7. Listar todos os produtos cujo nome inclua a palavra SAMSUNG;
+            Console.WriteLine();
+            Console.WriteLine("---- 4.7 Produtos Samsung --------------------------------");
+            var prodSamsung = produtos.Where(c => c.nome.Contains("SAMSUNG")).ToList();
+            foreach (var i in prodSamsung)
+            {
+                Console.WriteLine(i.nome, -10);
+            }
+            // 4.8. Listar todos os produtos cuja venda se iniciou antes de 2021;
+            Console.WriteLine();
+            Console.WriteLine("-- 4.8 Produtos Vendidos antes de 2021");
+            var prodVendasAntigas = produtos.Where(x => x.dataInicioVenda.Year < 2021);
+            foreach (var i in prodVendasAntigas)
+            {
+                Console.WriteLine(i.nome);
             }
         }
     }
