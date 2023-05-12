@@ -11,8 +11,8 @@ namespace exeFic05
         static void Main(string[] args)
         {
 
-           // exe2();
-           exe3();
+            exe2();
+           //exe3();
         }
         static void exe2()
         {
@@ -37,23 +37,24 @@ namespace exeFic05
             Console.WriteLine("\n------ 2.1 Soma / Media ---------------");
 
             // 2.1. Indicar a soma e a média dos valores da lista
-            int soma = numeros.Sum(); // calcula a soma
-            double media = numeros.Average(); // calcula a media
-            Console.WriteLine($"Soma -> {soma}");
-            Console.WriteLine($"Media -> {media}");
+            Console.WriteLine($"Soma -> {numeros.Sum()}");
+            Console.WriteLine($"Media -> {numeros.Average()}");
 
             // 2.2 Indicar os valores máximo e mínimo existentes na lista;
             Console.WriteLine("\n------ 2.1 Minimo ---------------");
-            int valMax = numeros.Max(); // Calcula o Maximo
-            int valMin = numeros.Min(); // Calcula o Minimo
-            Console.WriteLine($"Valor Maximo -> {valMax}");
-            Console.WriteLine($"Valor Minimo -> {valMin}");
+            Console.WriteLine($"Valor Maximo -> {numeros.Max()}");
+            Console.WriteLine($"Valor Minimo -> {numeros.Min()}");
 
             Console.WriteLine("\n------ 2.3 Ordenados de Forma Decrescente ---------------");
             // 2.3. Apresentar os valores da lista ordenados de forma decrescente;
-            numeros.Sort(); // Ordena de Forma Crescente
-            numeros.Reverse(); // Ordena de Forma Decrescente
-            foreach (var item in numeros)
+            //numeros.Sort(); // Ordena de Forma Crescente
+            //numeros.Reverse(); // Ordena de Forma Decrescente
+            //foreach (var item in numeros)
+            //{
+            //    Console.Write($"{item,-10}");
+            //}
+            // -------------- OU --------------
+            foreach (var item in numeros.OrderByDescending(v => v))
             {
                 Console.Write($"{item,-10}");
             }
