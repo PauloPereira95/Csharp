@@ -41,6 +41,7 @@ namespace ConsoleApp1
             // A opção AppDomain.CurrentDomain.BaseDirectory aponta para
             // a pasta \bin\Debug\Net7.0 (onde é colocada a Assembly - exe, do projeto)
             string path = AppDomain.CurrentDomain.BaseDirectory + @"\produtos.txt";
+            //string path = AppDomain.CurrentDomain.BaseDirectory + @"\produtos.txt";
 
             // A Class StreamReader permite ler informação do ficheiro texto
             using (StreamReader sr = new StreamReader(path))

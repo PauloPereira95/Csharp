@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "winFuncoes/1.0.0": {
+        "dependencies": {
+          "libraryFuncoes": "1.0.0"
+        },
+        "runtime": {
+          "winFuncoes.dll": {}
+        }
+      },
+      "libraryFuncoes/1.0.0": {
+        "runtime": {
+          "libraryFuncoes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "winFuncoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "libraryFuncoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
