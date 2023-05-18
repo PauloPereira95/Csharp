@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\bin\Debug\net7.0\12deMaio_POO.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\bin\Debug\net7.0\12deMaio_POO.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\bin\Debug\net7.0\12deMaio_POO.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\bin\Debug\net7.0\12deMaio_POO.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\bin\Debug\net7.0\12deMaio_POO.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\refint\12deMaio_POO.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\12deMaio_POO.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos\12deMaio_POO\obj\Debug\net7.0\ref\12deMaio_POO.dll

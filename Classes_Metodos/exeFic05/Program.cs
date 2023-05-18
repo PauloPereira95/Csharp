@@ -11,8 +11,8 @@ namespace exeFic05
         static void Main(string[] args)
         {
 
-            exe2();
-           //exe3();
+            //exe2();
+           exe3();
         }
         static void exe2()
         {
@@ -60,17 +60,12 @@ namespace exeFic05
             }
             // 2.4.Indicar o total de valores negativos, iguais a zero e negativos;
             Console.WriteLine("\n------ 2.4 Total Negativos , = 0 e Positivos ---------------");
-            int totalNeg = numeros.Where(x => x < 0).Count();
-            int totalZero = numeros.Where(x => x == 0).Count();
-            int totalPos = numeros.Where(x => x > 0).Count();
-
-            Console.WriteLine($"Positivos -> {totalPos}");
-            Console.WriteLine($"Zero -> {totalZero}");
-            Console.WriteLine($"Negativos -> {totalNeg}");
+            Console.WriteLine($"Positivos -> {numeros.Where(x => x > 0).Count()}");
+            Console.WriteLine($"Zero -> {numeros.Where(x => x == 0).Count()}");
+            Console.WriteLine($"Negativos -> {numeros.Where(x => x < 0).Count()}");
             //2.5.Indicar a média dos valores positivos;
             Console.WriteLine("\n------ 2.5 Media Positivos ---------------");
-            double mediaNumPositivos = Math.Round(numeros.Where(x => x > 0).Average(), 2);
-            Console.WriteLine($"Media dos Numeros Positivos -> {mediaNumPositivos}");
+            Console.WriteLine($"Media dos Numeros Positivos -> {Math.Round(numeros.Where(x => x > 0).Average(), 2)}");
             // 2.6. Criar uma nova lista com os valores ímpares existentes na lista;
             Console.WriteLine("\n------ 2.6 Lista Impares ---------------");
             var total_pares = numeros.Where(n => n % 2 != 0).ToList();
@@ -81,16 +76,29 @@ namespace exeFic05
             Console.WriteLine();
             // 2.7. Solicitar um valor ao utilizador e verificar se o valor se encontra na lista;
             Console.WriteLine("\n------ 2.7 Vereificar Valor ---------------");
+            //string numuserString = "";
+            //int numUser = 0;
+            //Console.WriteLine("Digite o numero que deseja verificar :");
+            //numuserString = Console.ReadLine();
+            //int.TryParse(numuserString, out numUser);
+
+            //int resultado = numeros.Where(c => c == numUser).Count();
+            //if (resultado > 0)
+            //    Console.WriteLine($"O valor esta na lisa {resultado}x !");
+            //else
+            //    Console.WriteLine("O valor não esta na lista !");
             string numuserString = "";
             int numUser = 0;
             Console.WriteLine("Digite o numero que deseja verificar :");
             numuserString = Console.ReadLine();
             int.TryParse(numuserString, out numUser);
-            int resultado = numeros.Where(c => c == numUser).Count();
-            if (resultado > 0)
-                Console.WriteLine($"O valor esta na lisa {resultado}x !");
-            else
-                Console.WriteLine("O valor não esta na lista !");
+
+            bool existe = numeros.Contains(numUser);
+            if (existe == true)
+                Console.WriteLine($"O nUmero {numUser} está na lista !");
+             else
+                Console.WriteLine($"O nUmero {numUser} não está na lista !");
+
             // 2.8. Solicitar um valor ao utilizador e remover todas as ocorrências do valor na lista; depois de remover, mostrar valores da lista;
             Console.WriteLine("\n------ 2.8 Eliminar Valor ---------------");
             Console.WriteLine("Digite o numero que pretende Eliminar :");
@@ -238,8 +246,8 @@ namespace exeFic05
             Console.WriteLine($"Total de Stock -> {produtos.Sum(p => p.stock)}");
             // 4.4. Listar os produtos ordenados de forma ascendente pelo atributo preço;
             Console.WriteLine();
-            Console.WriteLine("---- 4.4 Ordenação Desc Preço ----------------------------");
-            foreach (var i in produtos.OrderByDescending(p => p.preco))
+            Console.WriteLine("---- 4.4 Ordenação Asc Preço ----------------------------");
+            foreach (var i in produtos.OrderBy(p => p.preco))
             {
                 Console.WriteLine($"{i.nome,-50}\t{i.preco,20:C}\t");
             }
@@ -258,18 +266,16 @@ namespace exeFic05
             // 4.7. Listar todos os produtos cujo nome inclua a palavra SAMSUNG;
             Console.WriteLine();
             Console.WriteLine("---- 4.7 Produtos Samsung --------------------------------");
-            var prodSamsung = produtos.Where(c => c.nome.Contains("SAMSUNG")).ToList();
-            foreach (var i in prodSamsung)
+            foreach (var i in produtos.Where(c => c.nome.Contains("SAMSUNG")))
             {
                 Console.WriteLine(i.nome, -10);
             }
             // 4.8. Listar todos os produtos cuja venda se iniciou antes de 2021;
             Console.WriteLine();
             Console.WriteLine("-- 4.8 Produtos Vendidos antes de 2021");
-            var prodVendasAntigas = produtos.Where(x => x.dataInicioVenda.Year < 2021);
-            foreach (var i in prodVendasAntigas)
+            foreach (var i in produtos.Where(x => x.dataInicioVenda.Year < 2021))
             {
-                Console.WriteLine(i.nome);
+                Console.WriteLine($"{i.nome,-35} | {i.dataInicioVenda.ToShortDateString()}");
             }
         }
     }

@@ -1,0 +1,9 @@
+Asus 20:42 17/05/2023P215-53|764,90|0|3|2021, 10, 20|Asus|Computador
+Asus G678|594,90|23|3|2019, 10, 20|Asus|Tablet
+Torree HP|764,90|6|3|2020, 10, 20|HP|Computador
+SSD Kingston|60,20|23|3|2020, 10, 20|Kingston|Computador
+Torree HP|764,90|6|3|2019, 10, 20|HP|Computador
+Monitor AOC |150,90|23|3|2018, 10, 20|AOC|Periféricos
+Rato Glorius|54,90|23|23|2021, 10, 20|Glorius|Periféricos
+Tapete Mars|14,90|13|23|2021, 10, 20|Mars|Periféricos
+SSD GR |4  0,0|23|23|2021, 10, 20|Green|Periféricos
