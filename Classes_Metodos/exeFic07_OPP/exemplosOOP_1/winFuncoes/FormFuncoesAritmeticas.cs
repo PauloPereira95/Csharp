@@ -14,8 +14,7 @@ namespace winFuncoes
             double.TryParse(textValor1.Text, out v1);
             double.TryParse(textValor2.Text, out v2);
 
-            resultado = libraryFuncoes.FuncoesAritmeticas.Somar(v1, v2);
-            textResultado.Text = resultado.ToString();
+            textResultado.Text = libraryFuncoes.FuncoesAritmeticas.Somar(v1, v2).ToString();
 
         }
 
@@ -27,8 +26,7 @@ namespace winFuncoes
             double.TryParse(textValor1.Text, out v1);
             double.TryParse(textValor2.Text, out v2);
 
-            resultado = libraryFuncoes.FuncoesAritmeticas.Subtrair(v1, v2);
-            textResultado.Text = resultado.ToString();
+            textResultado.Text = libraryFuncoes.FuncoesAritmeticas.Subtrair(v1, v2).ToString();
         }
 
         private void btnMultiplicar_Click(object sender, EventArgs e)
@@ -39,20 +37,22 @@ namespace winFuncoes
             double.TryParse(textValor1.Text, out v1);
             double.TryParse(textValor2.Text, out v2);
 
-            resultado = libraryFuncoes.FuncoesAritmeticas.Multiplicar(v1, v2);
-            textResultado.Text = resultado.ToString();
+            textResultado.Text = libraryFuncoes.FuncoesAritmeticas.Multiplicar(v1, v2).ToString();
         }
 
         private void btnDividir_Click(object sender, EventArgs e)
         {
             textResultado.Text = "";
-
             double v1 = 0, v2 = 0, resultado = 0;
             double.TryParse(textValor1.Text, out v1);
             double.TryParse(textValor2.Text, out v2);
 
-            resultado = libraryFuncoes.FuncoesAritmeticas.Dividir(v1, v2);
-            textResultado.Text = resultado.ToString();
+            textResultado.Text = Math.Round(libraryFuncoes.FuncoesAritmeticas.Dividir(v1, v2),2).ToString();
+        }
+
+        private void FormFuncoesAritmeticas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

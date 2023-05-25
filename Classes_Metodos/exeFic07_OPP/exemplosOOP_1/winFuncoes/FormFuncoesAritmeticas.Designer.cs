@@ -42,9 +42,9 @@
             // 
             // btnSomar
             // 
-            btnSomar.Location = new Point(47, 123);
+            btnSomar.Location = new Point(54, 139);
             btnSomar.Name = "btnSomar";
-            btnSomar.Size = new Size(75, 23);
+            btnSomar.Size = new Size(86, 26);
             btnSomar.TabIndex = 0;
             btnSomar.Text = "Somar";
             btnSomar.UseVisualStyleBackColor = true;
@@ -52,58 +52,58 @@
             // 
             // textResultado
             // 
-            textResultado.Location = new Point(117, 174);
+            textResultado.Location = new Point(134, 198);
             textResultado.Name = "textResultado";
             textResultado.ReadOnly = true;
-            textResultado.Size = new Size(100, 23);
+            textResultado.Size = new Size(114, 25);
             textResultado.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(47, 30);
+            label1.Location = new Point(54, 34);
             label1.Name = "label1";
-            label1.Size = new Size(42, 15);
+            label1.Size = new Size(50, 17);
             label1.TabIndex = 2;
             label1.Text = "Valor 1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(47, 71);
+            label2.Location = new Point(54, 81);
             label2.Name = "label2";
-            label2.Size = new Size(42, 15);
+            label2.Size = new Size(50, 17);
             label2.TabIndex = 3;
             label2.Text = "Valor 2";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(47, 182);
+            label3.Location = new Point(54, 207);
             label3.Name = "label3";
-            label3.Size = new Size(59, 15);
+            label3.Size = new Size(66, 17);
             label3.TabIndex = 4;
             label3.Text = "Resultado";
             // 
             // textValor1
             // 
-            textValor1.Location = new Point(106, 27);
+            textValor1.Location = new Point(121, 31);
             textValor1.Name = "textValor1";
-            textValor1.Size = new Size(100, 23);
+            textValor1.Size = new Size(114, 25);
             textValor1.TabIndex = 5;
             // 
             // textValor2
             // 
-            textValor2.Location = new Point(106, 68);
+            textValor2.Location = new Point(121, 77);
             textValor2.Name = "textValor2";
-            textValor2.Size = new Size(100, 23);
+            textValor2.Size = new Size(114, 25);
             textValor2.TabIndex = 6;
             // 
             // btnSubtrair
             // 
-            btnSubtrair.Location = new Point(128, 123);
+            btnSubtrair.Location = new Point(146, 139);
             btnSubtrair.Name = "btnSubtrair";
-            btnSubtrair.Size = new Size(75, 23);
+            btnSubtrair.Size = new Size(86, 26);
             btnSubtrair.TabIndex = 7;
             btnSubtrair.Text = "Subtrair";
             btnSubtrair.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@
             // 
             // btnMultiplicar
             // 
-            btnMultiplicar.Location = new Point(209, 123);
+            btnMultiplicar.Location = new Point(239, 139);
             btnMultiplicar.Name = "btnMultiplicar";
-            btnMultiplicar.Size = new Size(75, 23);
+            btnMultiplicar.Size = new Size(86, 26);
             btnMultiplicar.TabIndex = 8;
             btnMultiplicar.Text = "Multiplicar";
             btnMultiplicar.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             // 
             // btnDividir
             // 
-            btnDividir.Location = new Point(290, 123);
+            btnDividir.Location = new Point(331, 139);
             btnDividir.Name = "btnDividir";
-            btnDividir.Size = new Size(75, 23);
+            btnDividir.Size = new Size(86, 26);
             btnDividir.TabIndex = 9;
             btnDividir.Text = "Dividir";
             btnDividir.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@
             // 
             // FormFuncoesAritmeticas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(547, 274);
+            ClientSize = new Size(625, 310);
             Controls.Add(btnDividir);
             Controls.Add(btnMultiplicar);
             Controls.Add(btnSubtrair);
@@ -144,8 +144,10 @@
             Controls.Add(label1);
             Controls.Add(textResultado);
             Controls.Add(btnSomar);
+            Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "FormFuncoesAritmeticas";
             Text = "Form1";
+            Load += FormFuncoesAritmeticas_Load;
             ResumeLayout(false);
             PerformLayout();
         }

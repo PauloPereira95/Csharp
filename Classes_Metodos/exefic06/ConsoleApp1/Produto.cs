@@ -10,13 +10,12 @@ namespace ConsoleApp1
     {
         // fields
         private string _nome;
+        private string _marca;
+        private string _categoria;
         private decimal _preco;
         private short stock;
         private DateTime _dataInicioVenda;
-        private string _marca;
-        private string _categoria;
-        private decimal _precoFinal;
-        internal TaxasIva Iva;
+        private TaxasIva Iva;
 
         // propriedades
         public string Nome { get => _nome; set => _nome = value; }
@@ -24,23 +23,17 @@ namespace ConsoleApp1
         public DateTime DataInicioVenda { get => _dataInicioVenda; set => _dataInicioVenda = value; }
         public string Marca { get => _marca; set => _marca = value; }
         public string Categoria { get => _categoria; set => _categoria = value; }
+        public short Stock { get => stock; set => stock = value; }
+        public TaxasIva Iva1 { get => Iva; set => Iva = value; }
         public decimal PrecoFinal { 
             get
             {
 
-                return _preco * (1 + (decimal)Iva / 100);
+                return _preco * (1 + (decimal)Iva1 / 100);
             }
         }
-        public short Stock { get => stock; set => stock = value; }
-
-        // Construtores
-        //public Produto (string nome, decimal preco, DateTime DataInicVenda,string marca, string categoria,
-        //    decimal pre)
-        //{
-
-        //}
     }
-    enum TaxasIva
+    public enum TaxasIva : byte
     {
         Isento = 0,
         Reduzida = 6,
