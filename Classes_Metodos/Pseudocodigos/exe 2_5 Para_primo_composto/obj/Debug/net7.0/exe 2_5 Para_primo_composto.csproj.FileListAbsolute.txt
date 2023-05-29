@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\bin\Debug\net7.0\exe 2_5 Para_primo_composto.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\bin\Debug\net7.0\exe 2_5 Para_primo_composto.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\bin\Debug\net7.0\exe 2_5 Para_primo_composto.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\bin\Debug\net7.0\exe 2_5 Para_primo_composto.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\bin\Debug\net7.0\exe 2_5 Para_primo_composto.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\refint\exe 2_5 Para_primo_composto.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\exe 2_5 Para_primo_composto.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 2_5 Para_primo_composto\obj\Debug\net7.0\ref\exe 2_5 Para_primo_composto.dll

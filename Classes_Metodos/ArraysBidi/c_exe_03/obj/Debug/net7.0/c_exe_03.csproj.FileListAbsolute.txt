@@ -1,0 +1,34 @@
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.exe
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.deps.json
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.pdb
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\refint\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.pdb
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\ref\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.Properties.Resources.resources
+C:\Users\Paulo\Documents\Code Developer\02 - Fundamentos de Programação em C#\Array's\arraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.csproj.GenerateResource.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\bin\Debug\net7.0\c_exe_03.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.Properties.Resources.resources
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.csproj.GenerateResource.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\refint\c_exe_03.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\c_exe_03.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\ArraysBidi\c_exe_03\obj\Debug\net7.0\ref\c_exe_03.dll

@@ -1,0 +1,8 @@
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\bin\Debug\exe 6.5 menor.exe.config
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\bin\Debug\exe 6.5 menor.exe
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\bin\Debug\exe 6.5 menor.pdb
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\obj\Debug\exe 6.5 menor.csproj.AssemblyReference.cache
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\obj\Debug\exe 6.5 menor.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\obj\Debug\exe 6.5 menor.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\obj\Debug\exe 6.5 menor.exe
+C:\Users\Paulo\source\repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.5 menor\obj\Debug\exe 6.5 menor.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "c_09_cidades/1.0.0": {
+        "runtime": {
+          "c_09_cidades.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "c_09_cidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

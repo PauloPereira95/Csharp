@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\bin\Debug\net7.0\c_09_cidades.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\bin\Debug\net7.0\c_09_cidades.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\bin\Debug\net7.0\c_09_cidades.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\bin\Debug\net7.0\c_09_cidades.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\bin\Debug\net7.0\c_09_cidades.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\refint\c_09_cidades.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\c_09_cidades.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\EXE EXTRA\c_09_cidades\c_09_cidades\obj\Debug\net7.0\ref\c_09_cidades.dll

@@ -1,0 +1,8 @@
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\bin\Debug\exe 6.7 Maior de Idade.exe.config
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\bin\Debug\exe 6.7 Maior de Idade.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\bin\Debug\exe 6.7 Maior de Idade.pdb
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\obj\Debug\exe 6.7 Maior de Idade.csproj.AssemblyReference.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\obj\Debug\exe 6.7 Maior de Idade.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\obj\Debug\exe 6.7 Maior de Idade.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\obj\Debug\exe 6.7 Maior de Idade.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.7 Maior de Idade\obj\Debug\exe 6.7 Maior de Idade.pdb

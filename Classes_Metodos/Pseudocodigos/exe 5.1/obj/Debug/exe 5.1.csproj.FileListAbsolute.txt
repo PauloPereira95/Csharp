@@ -1,0 +1,8 @@
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\bin\Debug\exe 5.1.exe.config
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\bin\Debug\exe 5.1.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\bin\Debug\exe 5.1.pdb
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\obj\Debug\exe 5.1.csproj.AssemblyReference.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\obj\Debug\exe 5.1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\obj\Debug\exe 5.1.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\obj\Debug\exe 5.1.exe
+C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 5.1\obj\Debug\exe 5.1.pdb

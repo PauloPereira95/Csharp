@@ -1,0 +1,8 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\bin\Debug\Pseudocodigos_MaisExercicios.exe.config
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\bin\Debug\Pseudocodigos_MaisExercicios.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\bin\Debug\Pseudocodigos_MaisExercicios.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\obj\Debug\exe 1.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\obj\Debug\exe 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\obj\Debug\exe 1.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\obj\Debug\Pseudocodigos_MaisExercicios.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\Pseudocodigos_MaisExercicios\obj\Debug\Pseudocodigos_MaisExercicios.pdb

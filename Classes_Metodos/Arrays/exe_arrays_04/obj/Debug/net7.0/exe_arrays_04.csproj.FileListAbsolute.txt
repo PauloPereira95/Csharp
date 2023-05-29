@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\bin\Debug\net7.0\exe_arrays_04.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\bin\Debug\net7.0\exe_arrays_04.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\bin\Debug\net7.0\exe_arrays_04.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\bin\Debug\net7.0\exe_arrays_04.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\bin\Debug\net7.0\exe_arrays_04.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\refint\exe_arrays_04.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\exe_arrays_04.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Arrays\exe_arrays_04\obj\Debug\net7.0\ref\exe_arrays_04.dll

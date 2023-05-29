@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "exe 3 decompor/1.0.0": {
+        "runtime": {
+          "exe 3 decompor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "exe 3 decompor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
