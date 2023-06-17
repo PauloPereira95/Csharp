@@ -1,8 +1,0 @@
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\bin\Debug\exe 6.2 IMC.exe.config
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\bin\Debug\exe 6.2 IMC.exe
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\bin\Debug\exe 6.2 IMC.pdb
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\obj\Debug\exe 6.3 IMC.csproj.AssemblyReference.cache
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\obj\Debug\exe 6.3 IMC.csproj.SuggestedBindingRedirects.cache
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\obj\Debug\exe 6.3 IMC.csproj.CoreCompileInputs.cache
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\obj\Debug\exe 6.2 IMC.exe
-C:\Users\Paulo\Source\Repos\PauloPereira95\Csharp\Pseudocodigos\exe 6.2 IMC\obj\Debug\exe 6.2 IMC.pdb

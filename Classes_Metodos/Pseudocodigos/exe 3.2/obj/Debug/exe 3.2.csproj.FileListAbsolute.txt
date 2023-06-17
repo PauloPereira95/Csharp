@@ -1,8 +1,0 @@
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\bin\Debug\exe 3.2.exe.config
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\bin\Debug\exe 3.2.exe
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\bin\Debug\exe 3.2.pdb
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\obj\Debug\exe 3.2.csproj.AssemblyReference.cache
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\obj\Debug\exe 3.2.csproj.SuggestedBindingRedirects.cache
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\obj\Debug\exe 3.2.csproj.CoreCompileInputs.cache
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\obj\Debug\exe 3.2.exe
-C:\Users\Paulo\Documents\Code Developer\01 - Principios Fundamentais da Programacao\Pseudocodigos\exe 3.2\obj\Debug\exe 3.2.pdb

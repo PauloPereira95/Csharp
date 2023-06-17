@@ -1,0 +1,21 @@
+ASUS 15.6" F515EP-51DM3SB1|749,9000|23|5|23/01/2022|Asus|Computadores
+ASUS Laptop 15.6" F515EA-71BLHDSS1|799,0000|23|4|25/02/2022|Asus|Computadores
+Auriculares CREATIVE Bluetooth Outlier Active V2 In Ear Black|24,9000|6|0|20/12/2021|JBL|Mobilidade
+Auriculares JBL T290|22,9000|6|9|28/10/2020|JBL|Mobilidade
+Auriculares JBL Tune 130C True Wireless|87,9000|6|9|28/09/2021|JBL|Mobilidade
+Impressora CANON LBP633Cdw Laser a Cores|239,9000|13|0|08/11/2021|Canon|Periféricos
+Impressora HP LaserJet M110we|109,9000|13|7|20/10/2020|HP|Periféricos
+KINGSTON A400 240GB SATA III – SA400S37/240G|32,9000|23|12|25/11/2019|Kingston|Armazenamento
+KINGSTON Fury Renegade RGB16GB (2x8GB) DDR4 3200MHz CL16|70,9000|23|1|12/10/2021|Kingston|Componentes
+LG gram 14U70Q-G.AA75P|999,9000|23|0|20/09/2022|LG|Computadores
+Memória KINGSTON FURY Beast RGB 16GB DDR4 3200MHz CL16 Black|75,9000|23|6|20/08/2021|Kingston|Componentes
+Rato ASUS Wireless WT425 Preto|23,9000|23|12|26/04/2018|Asus|Periféricos
+Rato LOGITECH Wireless M325 Cinza Escuro|29,9000|23|5|29/06/2019|Logitech|Periféricos
+SSD SAMSUNG 2TB SATA III Serie 870 QVO – MZ-77Q2T0BW|205,9000|23|2|16/02/2021|Samsung|Armazenamento
+SSD SAMSUNG 500GB SATA III Serie 870 EVO – MZ-77E500B/EU|469,9000|23|6|28/05/2020|Samsung|Armazenamento
+SSD WESTERN DIGITAL 480GB SATA III Green – WDS480G2G0A|57,9000|23|4|28/05/2019|Western Digital|Armazenamento
+SSD WESTERN DIGITAL SA500 1TB SATA III Red TLC|159,9000|23|6|06/03/2021|Western Digital|Armazenamento
+Tablet SAMSUNG Galaxy TAB A7 LITE 8.7" Wi-Fi 3GB/32GB Gray|155,9000|23|4|24/03/2021|Samsung|Mobilidade
+Tablet SAMSUNG Galaxy TAB A8 X200 10.5" Wi-Fi 3GB/32GB Gray|199,9000|23|2|04/01/2021|Samsung|Mobilidade
+Teclado LOGITECH G413 Carbon Red Romer-G Switch – 920-008532|78,9000|23|3|04/02/2021|Logitech|Periféricos
+TravelMate P215-53|764,9000|23|8|20/10/2021|Acer|Computadores

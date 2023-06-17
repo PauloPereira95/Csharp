@@ -1,0 +1,15 @@
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\bin\Debug\net7.0\c_Linq_Exemplos.exe
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\bin\Debug\net7.0\c_Linq_Exemplos.deps.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\bin\Debug\net7.0\c_Linq_Exemplos.runtimeconfig.json
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\bin\Debug\net7.0\c_Linq_Exemplos.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\bin\Debug\net7.0\c_Linq_Exemplos.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\refint\c_Linq_Exemplos.dll
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.pdb
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\c_Linq_Exemplos.genruntimeconfig.cache
+C:\Users\Paulo\Documents\Code Developer\Csharp\Classes_Metodos_OPP\c_Linq_Exemplos\obj\Debug\net7.0\ref\c_Linq_Exemplos.dll

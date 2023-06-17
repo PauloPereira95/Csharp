@@ -1,8 +1,0 @@
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\bin\Debug\exe 10 positivo negativo zero.exe.config
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\bin\Debug\exe 10 positivo negativo zero.exe
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\bin\Debug\exe 10 positivo negativo zero.pdb
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\obj\Debug\exe 10 positivo negativo zero.csproj.AssemblyReference.cache
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\obj\Debug\exe 10 positivo negativo zero.csproj.SuggestedBindingRedirects.cache
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\obj\Debug\exe 10 positivo negativo zero.csproj.CoreCompileInputs.cache
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\obj\Debug\exe 10 positivo negativo zero.exe
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 10 positivo negativo zero\obj\Debug\exe 10 positivo negativo zero.pdb

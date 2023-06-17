@@ -1,8 +1,0 @@
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\bin\Debug\exe 3.exe.config
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\bin\Debug\exe 3.exe
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\bin\Debug\exe 3.pdb
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\obj\Debug\exe 3 Cel-Fah.csproj.AssemblyReference.cache
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\obj\Debug\exe 3 Cel-Fah.csproj.SuggestedBindingRedirects.cache
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\obj\Debug\exe 3 Cel-Fah.csproj.CoreCompileInputs.cache
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\obj\Debug\exe 3.exe
-C:\Users\Paulo\Documents\Code Developer\Csharp\Pseudocodigos\exe 3\obj\Debug\exe 3.pdb
