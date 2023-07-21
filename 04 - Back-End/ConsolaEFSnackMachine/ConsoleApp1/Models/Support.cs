@@ -9,24 +9,27 @@ using System.Threading.Tasks;
 
 namespace ConsoleSnackMachine.Models
 {
-    [Table("Orders")]
-    internal class Orders
+    [Table("Support")]
+    internal class Support
     {
         [Key]
         [DefaultValue(true)]
-        public Guid IDOrder { get; set; }
+        public Guid IDSupport { get; set; }
 
         [MaxLength(255)]
         [Column(TypeName = "varchar")]
         public string Name { get; set; }
 
-        public DateTime Date { get; set; }
+        [MaxLength(255)]
+        [Column(TypeName = "varchar")]
+        public string Nif { get; set; }
 
-        [Required]
-        [ForeignKey("IDPorduto")]
-        public IList<Product> Product { get; set; }
-        [Required]
-        [ForeignKey("IDCostumer")]
-        public IList<Costumer> Costumer { get; set; }
+        [MaxLength(255)]
+        [Column(TypeName = "varchar")]
+        public string Tele { get; set; }
+
+        [MaxLength(255)]
+        [Column(TypeName ="varchar")]
+        public string Adress { get;set; }
     }
 }

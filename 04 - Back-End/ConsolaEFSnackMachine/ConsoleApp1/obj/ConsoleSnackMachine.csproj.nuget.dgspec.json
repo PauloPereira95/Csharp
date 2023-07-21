@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Paulo\\Documents\\Code_Developer\\04 - BackEnd\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj": {}
+    "C:\\Users\\Paulo\\Documents\\Code_Developer\\Csharp - Git\\04 - Back-End\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paulo\\Documents\\Code_Developer\\04 - BackEnd\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj": {
+    "C:\\Users\\Paulo\\Documents\\Code_Developer\\Csharp - Git\\04 - Back-End\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code_Developer\\04 - BackEnd\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj",
+        "projectUniqueName": "C:\\Users\\Paulo\\Documents\\Code_Developer\\Csharp - Git\\04 - Back-End\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj",
         "projectName": "ConsoleSnackMachine",
-        "projectPath": "C:\\Users\\Paulo\\Documents\\Code_Developer\\04 - BackEnd\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj",
+        "projectPath": "C:\\Users\\Paulo\\Documents\\Code_Developer\\Csharp - Git\\04 - Back-End\\ConsolaEFSnackMachine\\ConsoleApp1\\ConsoleSnackMachine.csproj",
         "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paulo\\Documents\\Code_Developer\\04 - BackEnd\\ConsolaEFSnackMachine\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\Users\\Paulo\\Documents\\Code_Developer\\Csharp - Git\\04 - Back-End\\ConsolaEFSnackMachine\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
