@@ -72,3 +72,11 @@ C:\Users\Paulo\Documents\Code_Developer\04 - BackEnd\ConsolaEFSnackMachine\Conso
 C:\Users\Paulo\Documents\Code_Developer\04 - BackEnd\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.pdb
 C:\Users\Paulo\Documents\Code_Developer\04 - BackEnd\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.genruntimeconfig.cache
 C:\Users\Paulo\Documents\Code_Developer\04 - BackEnd\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ref\ConsoleSnackMachine.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.csproj.AssemblyReference.cache
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.AssemblyInfoInputs.cache
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.AssemblyInfo.cs
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\refint\ConsoleSnackMachine.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\04 - Back-End\ConsolaEFSnackMachine\ConsoleApp1\obj\Debug\net7.0\ConsoleSnackMachine.pdb

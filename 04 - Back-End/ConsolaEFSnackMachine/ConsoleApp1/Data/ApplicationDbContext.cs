@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,8 +23,21 @@ namespace ConsoleSnackMachine.Data
             if (!optionsBuilder.IsConfigured)
                 optionsBuilder.UseSqlServer(config.GetConnectionString("SqlServer"));
         }
-       
-       
-        
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<ProductSupplier> ProductSupplier { get; set; }
+        //protected override void OnModelCreating(ModelBuilder mb)
+        //{
+        //    mb.Entity<Employee>()
+        //    .ToTable(“tblEmployees”)
+        //    .HasKey(k => k.Id);
+        //}
+        protected override void OnModelCreating(ModelBuilder mb)
+        {
+            mb.Entity<ProductSupplier>()
+                .HasMany(p => p.Products).WithMany(s => s.Suppliers);
+        }
+
+
     }
 }

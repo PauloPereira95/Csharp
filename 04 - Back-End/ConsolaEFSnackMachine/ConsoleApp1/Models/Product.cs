@@ -14,6 +14,7 @@ namespace ConsoleSnackMachine.Models
         [Key]
         [Required]
         public Guid IDProduct { get; set; }
+
         [MaxLength(255)]
         [Column(TypeName = "varchar")]
         public string Name { get; set; }
