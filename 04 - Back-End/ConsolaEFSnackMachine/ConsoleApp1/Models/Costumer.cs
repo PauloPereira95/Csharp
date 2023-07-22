@@ -25,7 +25,7 @@ namespace ConsoleSnackMachine.Models
         public string Adress { get; set; }
 
         [MaxLength (255)]
-        [Column(TypeName ="vartchar")]
+        [Column(TypeName ="varchar")]
         public string Tele { get; set; }
 
         

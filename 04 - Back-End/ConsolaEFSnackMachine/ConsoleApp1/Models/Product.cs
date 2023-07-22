@@ -26,6 +26,7 @@ namespace ConsoleSnackMachine.Models
         [Column(TypeName ="varchar")]
         public string Ingredients { get; set; }
         public DateTime ExpDate { get; set; }
+        public IList<Position> Positions { get; set; }
 
     }
 }

@@ -26,7 +26,7 @@ namespace ConsoleSnackMachine.Models
         public DateTime Date { get; set; }
 
         [Column(TypeName= "decimal(10,2)")]
-        public string Cost { get; set; }
+        public decimal Cost { get; set; }
 
         [Column(TypeName = "varchar")]
         [MaxLength(255)]

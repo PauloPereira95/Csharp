@@ -23,21 +23,28 @@ namespace ConsoleSnackMachine.Data
             if (!optionsBuilder.IsConfigured)
                 optionsBuilder.UseSqlServer(config.GetConnectionString("SqlServer"));
         }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Costumer> Costumer { get; set; }
+        public DbSet<Intervetion> Intervetion { get; set; }
+        public DbSet<Machine> Machine { get; set; }
+        public DbSet<Money> Money { get; set; }
+        public DbSet<Orders> Order { get; set; }
+        public DbSet<Position> Position { get; set; }
+        public DbSet<Product> Product { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
-        public DbSet<ProductSupplier> ProductSupplier { get; set; }
-        //protected override void OnModelCreating(ModelBuilder mb)
-        //{
-        //    mb.Entity<Employee>()
-        //    .ToTable(“tblEmployees”)
-        //    .HasKey(k => k.Id);
-        //}
+        public DbSet<Support> Support { get; set; }
+
         protected override void OnModelCreating(ModelBuilder mb)
         {
-            mb.Entity<ProductSupplier>()
-                .HasMany(p => p.Products).WithMany(s => s.Suppliers);
+
+            mb.Entity<Product>()
+                .HasMany(p => p.Positions)
+                .WithMany(po => po.Product);
+
+            mb.Entity<ProductPosition>()
+                .Property(p => p.Products).HasColumnName("IDProducts");
+            mb.Entity<ProductPosition>()
+                .Property(p => p.Positions).HasColumnName("IDPosition");
+
         }
-
-
     }
 }

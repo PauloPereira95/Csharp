@@ -4,6 +4,7 @@ using ConsoleSnackMachine.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleSnackMachine.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230721232827_teste 2")]
+    partial class teste2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -259,21 +262,6 @@ namespace ConsoleSnackMachine.Migrations
                     b.ToTable("Support");
                 });
 
-            modelBuilder.Entity("PositionProduct", b =>
-                {
-                    b.Property<Guid>("PositionsIDPosition")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ProductIDProduct")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("PositionsIDPosition", "ProductIDProduct");
-
-                    b.HasIndex("ProductIDProduct");
-
-                    b.ToTable("PositionProduct");
-                });
-
             modelBuilder.Entity("ConsoleSnackMachine.Models.Costumer", b =>
                 {
                     b.HasOne("ConsoleSnackMachine.Models.Orders", null)
@@ -288,21 +276,6 @@ namespace ConsoleSnackMachine.Migrations
                     b.HasOne("ConsoleSnackMachine.Models.Orders", null)
                         .WithMany("Product")
                         .HasForeignKey("IDPorduto");
-                });
-
-            modelBuilder.Entity("PositionProduct", b =>
-                {
-                    b.HasOne("ConsoleSnackMachine.Models.Position", null)
-                        .WithMany()
-                        .HasForeignKey("PositionsIDPosition")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ConsoleSnackMachine.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductIDProduct")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ConsoleSnackMachine.Models.Orders", b =>
