@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ConsoleApp1",
+    "\\ConsoleApp1\\Data",
     "\\ConsoleApp1\\Models"
   ],
-  "SelectedNode": "\\ConsoleApp1\\Models\\Money.cs",
+  "SelectedNode": "\\ConsoleApp1\\ConsoleApp1.sln",
   "PreviewInSolutionExplorer": false
 }

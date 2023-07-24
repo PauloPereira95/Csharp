@@ -14,11 +14,10 @@ namespace ConsoleSnackMachine.Models
 
         [Required]
         [ForeignKey("IDMachine")]
-        public IList<Machine> Machines { get; set; }
+        public IList<Machine> Machine { get; set; }
 
         [Required]
         [ForeignKey("IDIntervetion")]
-
         public IList<Intervetion> Intervetion { get; set; }
     }
 }

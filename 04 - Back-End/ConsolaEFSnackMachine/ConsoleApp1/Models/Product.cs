@@ -26,7 +26,16 @@ namespace ConsoleSnackMachine.Models
         [Column(TypeName ="varchar")]
         public string Ingredients { get; set; }
         public DateTime ExpDate { get; set; }
-        public IList<Position> Positions { get; set; }
+        [ForeignKey("IDPosition")]
+        public IList<Position> Position { get; set; }
+        [ForeignKey("IDMachine")]
+
+        public IList<Machine> Machine { get; set; }
+        [ForeignKey("IDSupplier")]
+
+        public IList<Supplier> Supplier { get; set; }
+
+
 
     }
 }

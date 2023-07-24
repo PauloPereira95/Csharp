@@ -33,18 +33,28 @@ namespace ConsoleSnackMachine.Data
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Support> Support { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder mb)
-        {
+        //protected override void OnModelCreating(ModelBuilder mb)
+        //{
 
-            mb.Entity<Product>()
-                .HasMany(p => p.Positions)
-                .WithMany(po => po.Product);
-
-            mb.Entity<ProductPosition>()
-                .Property(p => p.Products).HasColumnName("IDProducts");
-            mb.Entity<ProductPosition>()
-                .Property(p => p.Positions).HasColumnName("IDPosition");
-
-        }
+        //    mb.Entity<Product>()
+        //        .HasMany(p => p.Positions)
+        //        .WithMany(po => po.Product);
+        //    mb.Entity<Machine>()
+        //        .HasMany(i => i.Intervetion)
+        //        .WithMany(m => m.Machine);
+        //    mb.Entity<Machine>()
+        //        .HasMany(p => p.Position)
+        //        .WithMany(m => m.Machine);
+        //    mb.Entity<Machine>()
+        //       .HasMany(p => p.Product)
+        //       .WithMany(m => m.Machine);
+        //    mb.Entity<Machine>()
+        //       .HasMany(p => p.Product)
+        //       .WithMany(m => m.Machine);
+        //    mb.Entity<Product>()
+        //       .HasMany(s => s.Supplier)
+        //       .WithMany(p => p.Product);
+        //}
     }
+    
 }

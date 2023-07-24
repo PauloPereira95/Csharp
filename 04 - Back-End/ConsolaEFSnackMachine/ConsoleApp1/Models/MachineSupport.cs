@@ -11,13 +11,10 @@ namespace ConsoleSnackMachine.Models
     [Table("MachineSupport")]
     internal class MachineSupport
     {
-        [Required]
         [ForeignKey("IDMachine")]
-        public IList<Machine> Machines { get; set;}
+        public IList<Machine> Machine { get; set;}
 
-        [Required]
         [ForeignKey("IDSupport")]
-
         public IList<Support> Support { get; set;}
     }
 }

@@ -12,11 +12,9 @@ namespace ConsoleSnackMachine.Models
     internal class MachinePosition
     {
 
-        [Required]
         [ForeignKey("IDMachine")]
-        public IList<Machine> Machines { get; set; }
+        public IList<Machine> Machine { get; set; }
 
-        [Required]
         [ForeignKey("IDPosition")]
 
         public IList<Position> Position { get; set; }

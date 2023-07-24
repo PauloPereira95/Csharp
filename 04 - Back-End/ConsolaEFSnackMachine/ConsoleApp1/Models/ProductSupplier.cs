@@ -13,7 +13,7 @@ namespace ConsoleSnackMachine.Models
     {
         [Required]
         [ForeignKey("IDProduct")]
-        public IList<Product> Products { get; set; }
+        public IList<Product> Product { get; set; }
 
         [Required]
         [ForeignKey("IDSupplier")]

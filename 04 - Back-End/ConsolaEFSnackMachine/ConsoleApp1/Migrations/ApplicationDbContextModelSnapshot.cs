@@ -101,7 +101,6 @@ namespace ConsoleSnackMachine.Migrations
             modelBuilder.Entity("ConsoleSnackMachine.Models.Money", b =>
                 {
                     b.Property<Guid>("IDMoney")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("FiveEuro")
@@ -165,14 +164,10 @@ namespace ConsoleSnackMachine.Migrations
             modelBuilder.Entity("ConsoleSnackMachine.Models.Product", b =>
                 {
                     b.Property<Guid>("IDProduct")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("ExpDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("IDPorduto")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ingredients")
                         .IsRequired()
@@ -191,8 +186,6 @@ namespace ConsoleSnackMachine.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("IDProduct");
-
-                    b.HasIndex("IDPorduto");
 
                     b.ToTable("Product");
                 });
@@ -259,19 +252,94 @@ namespace ConsoleSnackMachine.Migrations
                     b.ToTable("Support");
                 });
 
+            modelBuilder.Entity("IntervetionMachine", b =>
+                {
+                    b.Property<Guid>("IDIntervetion")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IDMachine")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IDIntervetion", "IDMachine");
+
+                    b.HasIndex("IDMachine");
+
+                    b.ToTable("IntervetionMachine");
+                });
+
+            modelBuilder.Entity("MachinePosition", b =>
+                {
+                    b.Property<Guid>("IDMachine")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IDPosition")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IDMachine", "IDPosition");
+
+                    b.HasIndex("IDPosition");
+
+                    b.ToTable("MachinePosition");
+                });
+
+            modelBuilder.Entity("MachineProduct", b =>
+                {
+                    b.Property<Guid>("IDMachine")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IDProduct")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IDMachine", "IDProduct");
+
+                    b.HasIndex("IDProduct");
+
+                    b.ToTable("MachineProduct");
+                });
+
+            modelBuilder.Entity("MachineSupport", b =>
+                {
+                    b.Property<Guid>("IDMachine")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IDSupport")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IDMachine", "IDSupport");
+
+                    b.HasIndex("IDSupport");
+
+                    b.ToTable("MachineSupport");
+                });
+
             modelBuilder.Entity("PositionProduct", b =>
                 {
-                    b.Property<Guid>("PositionsIDPosition")
+                    b.Property<Guid>("IDPosition")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ProductIDProduct")
+                    b.Property<Guid>("IDProduct")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("PositionsIDPosition", "ProductIDProduct");
+                    b.HasKey("IDPosition", "IDProduct");
 
-                    b.HasIndex("ProductIDProduct");
+                    b.HasIndex("IDProduct");
 
                     b.ToTable("PositionProduct");
+                });
+
+            modelBuilder.Entity("ProductSupplier", b =>
+                {
+                    b.Property<Guid>("IDProduct")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IDSupplier")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IDProduct", "IDSupplier");
+
+                    b.HasIndex("IDSupplier");
+
+                    b.ToTable("ProductSupplier");
                 });
 
             modelBuilder.Entity("ConsoleSnackMachine.Models.Costumer", b =>
@@ -283,26 +351,117 @@ namespace ConsoleSnackMachine.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ConsoleSnackMachine.Models.Money", b =>
+                {
+                    b.HasOne("ConsoleSnackMachine.Models.Costumer", null)
+                        .WithMany("Money")
+                        .HasForeignKey("IDMoney")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ConsoleSnackMachine.Models.Product", b =>
                 {
                     b.HasOne("ConsoleSnackMachine.Models.Orders", null)
                         .WithMany("Product")
-                        .HasForeignKey("IDPorduto");
+                        .HasForeignKey("IDProduct")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("IntervetionMachine", b =>
+                {
+                    b.HasOne("ConsoleSnackMachine.Models.Machine", null)
+                        .WithMany()
+                        .HasForeignKey("IDIntervetion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConsoleSnackMachine.Models.Intervetion", null)
+                        .WithMany()
+                        .HasForeignKey("IDMachine")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MachinePosition", b =>
+                {
+                    b.HasOne("ConsoleSnackMachine.Models.Position", null)
+                        .WithMany()
+                        .HasForeignKey("IDMachine")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConsoleSnackMachine.Models.Machine", null)
+                        .WithMany()
+                        .HasForeignKey("IDPosition")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MachineProduct", b =>
+                {
+                    b.HasOne("ConsoleSnackMachine.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("IDMachine")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConsoleSnackMachine.Models.Machine", null)
+                        .WithMany()
+                        .HasForeignKey("IDProduct")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MachineSupport", b =>
+                {
+                    b.HasOne("ConsoleSnackMachine.Models.Support", null)
+                        .WithMany()
+                        .HasForeignKey("IDMachine")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConsoleSnackMachine.Models.Machine", null)
+                        .WithMany()
+                        .HasForeignKey("IDSupport")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PositionProduct", b =>
                 {
+                    b.HasOne("ConsoleSnackMachine.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("IDPosition")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ConsoleSnackMachine.Models.Position", null)
                         .WithMany()
-                        .HasForeignKey("PositionsIDPosition")
+                        .HasForeignKey("IDProduct")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ProductSupplier", b =>
+                {
+                    b.HasOne("ConsoleSnackMachine.Models.Supplier", null)
+                        .WithMany()
+                        .HasForeignKey("IDProduct")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ConsoleSnackMachine.Models.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductIDProduct")
+                        .HasForeignKey("IDSupplier")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ConsoleSnackMachine.Models.Costumer", b =>
+                {
+                    b.Navigation("Money");
                 });
 
             modelBuilder.Entity("ConsoleSnackMachine.Models.Orders", b =>

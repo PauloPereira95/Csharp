@@ -31,6 +31,10 @@ namespace ConsoleSnackMachine.Models
         [Column(TypeName = "varchar")]
         [MaxLength(255)]
         public string NameTecnical { get; set; }
+        [ForeignKey("IDMachine")]
+
+        public IList<Machine> Machine { get; set; }
+
 
 
     }

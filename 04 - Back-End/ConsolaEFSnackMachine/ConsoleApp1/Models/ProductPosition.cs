@@ -11,11 +11,13 @@ namespace ConsoleSnackMachine.Models
     [Table("ProductPosition")]
     internal class ProductPosition
     {
-        
+        [Required]
         [ForeignKey("IDProduct")]
-        public Product Products { get; set; }
+        public Product Product { get; set; }
+        [Required]
+
         [ForeignKey("IDPosition")]
-        public Position Positions { get; set; }
+        public Position Position { get; set; }
 
 
     }
