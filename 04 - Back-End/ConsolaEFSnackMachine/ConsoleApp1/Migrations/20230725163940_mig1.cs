@@ -148,28 +148,29 @@ namespace ConsoleSnackMachine.Migrations
                     Price = table.Column<decimal>(type: "decimal(10,3)", nullable: false),
                     Stock = table.Column<int>(type: "int", nullable: false),
                     Ingredients = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
-                    ExpDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IDProduto = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    ExpDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Product", x => x.IDProduct);
                     table.ForeignKey(
-                        name: "FK_Product_Orders_IDProduto",
-                        column: x => x.IDProduto,
+                        name: "FK_Product_Orders_IDProduct",
+                        column: x => x.IDProduct,
                         principalTable: "Orders",
-                        principalColumn: "IDOrder");
+                        principalColumn: "IDOrder",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
                 name: "MachinePosition",
                 columns: table => new
                 {
+                    IDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MachinePosition", x => x.IDPosition);
+                    table.PrimaryKey("PK_MachinePosition", x => new { x.IDMachine, x.IDPosition });
                     table.ForeignKey(
                         name: "FK_MachinePosition_Machine_IDPosition",
                         column: x => x.IDPosition,
@@ -177,8 +178,8 @@ namespace ConsoleSnackMachine.Migrations
                         principalColumn: "IDMachine",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MachinePosition_Position_IDPosition",
-                        column: x => x.IDPosition,
+                        name: "FK_MachinePosition_Position_IDMachine",
+                        column: x => x.IDMachine,
                         principalTable: "Position",
                         principalColumn: "IDPosition",
                         onDelete: ReferentialAction.Cascade);
@@ -259,14 +260,15 @@ namespace ConsoleSnackMachine.Migrations
                 name: "PositionProduct",
                 columns: table => new
                 {
-                    IDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    IDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PositionProduct", x => x.IDPosition);
+                    table.PrimaryKey("PK_PositionProduct", x => new { x.IDPosition, x.IDProduct });
                     table.ForeignKey(
-                        name: "FK_PositionProduct_Position_IDPosition",
-                        column: x => x.IDPosition,
+                        name: "FK_PositionProduct_Position_IDProduct",
+                        column: x => x.IDProduct,
                         principalTable: "Position",
                         principalColumn: "IDPosition",
                         onDelete: ReferentialAction.Cascade);
@@ -308,6 +310,11 @@ namespace ConsoleSnackMachine.Migrations
                 column: "IDMachine");
 
             migrationBuilder.CreateIndex(
+                name: "IX_MachinePosition_IDPosition",
+                table: "MachinePosition",
+                column: "IDPosition");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_MachineProduct_IDProduct",
                 table: "MachineProduct",
                 column: "IDProduct");
@@ -318,9 +325,9 @@ namespace ConsoleSnackMachine.Migrations
                 column: "IDSupport");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_IDProduto",
-                table: "Product",
-                column: "IDProduto");
+                name: "IX_PositionProduct_IDProduct",
+                table: "PositionProduct",
+                column: "IDProduct");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductSupplier_IDSupplier",

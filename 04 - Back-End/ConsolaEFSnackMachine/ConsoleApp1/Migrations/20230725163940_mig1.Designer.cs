@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleSnackMachine.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230724200505_1")]
-    partial class _1
+    [Migration("20230725163940_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
