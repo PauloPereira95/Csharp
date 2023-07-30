@@ -362,11 +362,13 @@ namespace ConsoleSnackMachine.Migrations
 
             modelBuilder.Entity("ConsoleSnackMachine.Models.Product", b =>
                 {
-                    b.HasOne("ConsoleSnackMachine.Models.Orders", null)
+                    b.HasOne("ConsoleSnackMachine.Models.Orders", "Order")
                         .WithMany("Product")
                         .HasForeignKey("IDProduct")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("IntervetionMachine", b =>

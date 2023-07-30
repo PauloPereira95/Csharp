@@ -6,7 +6,7 @@ namespace FirstMVCApp.Controllers
 {
     public class HelloWorldController : Controller
     {
-        private List<DogViewModel> dogs = new List<DogViewModel>();
+        private static List<DogViewModel> dogs = new List<DogViewModel>();
         // usa a view que tem o mesmo nome que o metodo
         // dentro da pasta com o mesmo nome da class (ublic class HelloWorldController)
         // sem o controller

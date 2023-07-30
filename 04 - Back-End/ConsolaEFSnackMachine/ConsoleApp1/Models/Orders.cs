@@ -27,7 +27,7 @@ namespace ConsoleSnackMachine.Models
         public IList<Product> Product { get; set; }
         [Required]
         [ForeignKey("IDCostumer")]
-        public IList<Costumer> Costumer { get; set; }
+        public Costumer Costumer { get; set; }
        
 
     }
