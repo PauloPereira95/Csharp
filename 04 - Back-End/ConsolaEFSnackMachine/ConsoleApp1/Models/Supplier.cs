@@ -31,9 +31,8 @@ namespace ConsoleSnackMachine.Models
         [MaxLength(255)]
         [Column(TypeName = "varchar")]
         public string Adrress { get; set; }
-        [ForeignKey("IDProduct")]
-
-        public IList<Product> Product { get; set; }
+        // FK
+        public IList<Product>? Product { get; set; }
 
 
     }

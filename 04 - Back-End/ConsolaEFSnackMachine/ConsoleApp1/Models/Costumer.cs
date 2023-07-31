@@ -27,8 +27,8 @@ namespace ConsoleSnackMachine.Models
         [MaxLength (255)]
         [Column(TypeName ="varchar")]
         public string Tele { get; set; }
-        [ForeignKey("IDMoney")]
-        public IList<Money> Money { get; set; }
+        // FK
+        public IList<Money>? Money { get; set; }
 
 
 

@@ -16,12 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\Entity Framework - Tutorial\EF - MVC\RazorPizzeria\RazorPizzeria
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Checkout/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Checkout/ThankYou.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRcVGhhbmtZb3UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Forms/CustomPizza.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcQ3VzdG9tUGl6emEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Pizza.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGl6emEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Paulo/Documents/Code_Developer/Csharp - Git/Entity Framework - Tutorial/EF - MVC/RazorPizzeria/RazorPizzeria/Pages/Privacy.cshtml]

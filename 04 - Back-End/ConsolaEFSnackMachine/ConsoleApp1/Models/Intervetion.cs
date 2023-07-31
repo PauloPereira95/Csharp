@@ -28,12 +28,12 @@ namespace ConsoleSnackMachine.Models
         [Column(TypeName= "decimal(10,2)")]
         public decimal Cost { get; set; }
 
-        [Column(TypeName = "varchar")]
+        // FK
         [MaxLength(255)]
         public string NameTecnical { get; set; }
-        [ForeignKey("IDMachine")]
+        // FK
 
-        public IList<Machine> Machine { get; set; }
+        public IList<Machine>? Machine { get; set; }
 
 
 

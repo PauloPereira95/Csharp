@@ -66,29 +66,79 @@ namespace ConsoleSnackMachine
                     //Console.WriteLine("Supplier Entered Successsfully !");
                     // ------------------- SELECT -------------------
                     var query_sup_ext = db.Suppliers.Select(s => new { s.Name, s.NIF, s.Adrress });
-                    
+
                     #endregion
                     #region add product
-                    var sup = db.Suppliers.Where(s => s.Name == "Queiroz Bebidas").Single();
+                    //var sup = db.Suppliers.Where(s => s.Name == "Queiroz Bebidas").Single();
 
-                    db.Product.Add(new()
-                    {
-                        
-                        Name = "Coca-cola",
-                        Price = 2.3m,
-                        Ingredients = "laranja,limao,lavanda",
-                        ExpDate = DateTime.Now,
-                        Position = null,
-                        Machine = null,
-                        Supplier = new[] { sup }
+                    //db.Product.Add(new()
+                    //{
 
-                    });
-                    Console.WriteLine("Product Entered Successsfully !");
-                    db.SaveChanges();
-                    sup.Product = new[] { product };
-                    var product  = db.Product.Where(s => s.Name == "Coca-cola").Single();
-                    db.SaveChanges();
+                    //    Name = "Coca-cola",
+                    //    Price = 2.3m,
+                    //    Stock = 2,
+                    //    Ingredients = "laranja,limao,lavanda",
+                    //    ExpDate = DateTime.Now,
+                    //    Order = null,
+                    //    Supplier = new[] { sup }
+
+                    //});
+                    //db.SaveChanges();
+                    //Console.WriteLine("Product update Successsfully !");
+
                     #endregion
+                    #region add Costumer 
+                    //db.Costumer.Add(new()
+                    //{
+                    //    Name ="Paulo",
+                    //    Adress ="Rua dos nortenhos",
+                    //    Tele = "912345678"
+
+                    //});
+                    //db.SaveChanges();
+                    //Console.WriteLine("Costumer Insert Sucessfuly");
+                    #endregion
+                    #region add Money 
+                    //db.Money.Add(new ()
+                    //{
+                    //    FiveEuro=1,
+                    //    OneCent=1,
+                    //    OneEuro = 1,
+                    //    QuarterCent = 1,
+                    //    TenCent = 1,
+                    //    TwentyCent = 1,
+                    //});
+                    //db.SaveChanges();
+                    //Console.WriteLine("Money Insert Sucessfuly");
+                    #endregion
+                    #region atribui money a costumer com update
+                    //var cost_Money = (from c in db.Costumer
+                    //                  where c.Name == "Paulo"
+                    //                  select c).Single();
+                    //var money = (from m in db.Money
+                    //             select m).Single();
+                    //cost_Money.Money = new[] {money};
+                    //db.SaveChanges();
+                    //Console.WriteLine("money update sucessfuly");
+                    #endregion
+                    #region Add Order
+                    var costumer = (from c in db.Costumer
+                                    where c.Name == "Paulo"
+                                    select c).Single();
+                    var product = (from p in db.Product
+                                   where p.Name == "Coca-cola"
+                                   select p).Single();
+                    db.Order.Add(new()
+                    {
+                        Name = "Encomenda para stock",
+                        Date = DateTime.Now,
+                        Costumer = costumer,
+                        Product = new[] { product }
+                    });
+                    db.SaveChanges();
+                    Console.WriteLine("Order insert sucessfuly");
+                    #endregion
+
                 }
 
             }

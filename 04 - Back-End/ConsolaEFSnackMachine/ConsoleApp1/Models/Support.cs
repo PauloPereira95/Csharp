@@ -29,11 +29,10 @@ namespace ConsoleSnackMachine.Models
         public string Tele { get; set; }
 
         [MaxLength(255)]
-        [Column(TypeName ="varchar")]
-        public string Adress { get;set; }
-        [ForeignKey("IDMachine")]
-
-        public IList<Machine> Machine { get; set; }
+        [Column(TypeName = "varchar")]
+        public string? Adress { get; set; }
+        // FK
+        public IList<Machine>? Machine { get; set; }
 
     }
 }

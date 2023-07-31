@@ -22,12 +22,10 @@ namespace ConsoleSnackMachine.Models
 
         public DateTime Date { get; set; }
 
-        [Required]
-        [ForeignKey("IDProduct")]
-        public IList<Product> Product { get; set; }
-        [Required]
-        [ForeignKey("IDCostumer")]
-        public Costumer Costumer { get; set; }
+        // FK
+        public IList<Product>? Product { get; set; }
+        // FK
+        public Costumer? Costumer { get; set; }
        
 
     }

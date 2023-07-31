@@ -6,11 +6,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ConsoleSnackMachine.Migrations
 {
     /// <inheritdoc />
-    public partial class mig1 : Migration
+    public partial class mig_1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Costumer",
+                columns: table => new
+                {
+                    IDCostumer = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    Adress = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    Tele = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Costumer", x => x.IDCostumer);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Intervetion",
                 columns: table => new
@@ -20,7 +34,7 @@ namespace ConsoleSnackMachine.Migrations
                     Description = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Cost = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    NameTecnical = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                    NameTecnical = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,19 +52,6 @@ namespace ConsoleSnackMachine.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Machine", x => x.IDMachine);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Orders",
-                columns: table => new
-                {
-                    IDOrder = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Orders", x => x.IDOrder);
                 });
 
             migrationBuilder.CreateTable(
@@ -88,125 +89,11 @@ namespace ConsoleSnackMachine.Migrations
                     Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     Nif = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     Tele = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Adress = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                    Adress = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Support", x => x.IDSupport);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "IntervetionMachine",
-                columns: table => new
-                {
-                    IDIntervetion = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IntervetionMachine", x => new { x.IDIntervetion, x.IDMachine });
-                    table.ForeignKey(
-                        name: "FK_IntervetionMachine_Intervetion_IDMachine",
-                        column: x => x.IDMachine,
-                        principalTable: "Intervetion",
-                        principalColumn: "IDIntervetion",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_IntervetionMachine_Machine_IDIntervetion",
-                        column: x => x.IDIntervetion,
-                        principalTable: "Machine",
-                        principalColumn: "IDMachine",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Costumer",
-                columns: table => new
-                {
-                    IDCostumer = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Adress = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Tele = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Costumer", x => x.IDCostumer);
-                    table.ForeignKey(
-                        name: "FK_Costumer_Orders_IDCostumer",
-                        column: x => x.IDCostumer,
-                        principalTable: "Orders",
-                        principalColumn: "IDOrder",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Product",
-                columns: table => new
-                {
-                    IDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(10,3)", nullable: false),
-                    Stock = table.Column<int>(type: "int", nullable: false),
-                    Ingredients = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
-                    ExpDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Product", x => x.IDProduct);
-                    table.ForeignKey(
-                        name: "FK_Product_Orders_IDProduct",
-                        column: x => x.IDProduct,
-                        principalTable: "Orders",
-                        principalColumn: "IDOrder",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "MachinePosition",
-                columns: table => new
-                {
-                    IDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MachinePosition", x => new { x.IDMachine, x.IDPosition });
-                    table.ForeignKey(
-                        name: "FK_MachinePosition_Machine_IDPosition",
-                        column: x => x.IDPosition,
-                        principalTable: "Machine",
-                        principalColumn: "IDMachine",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_MachinePosition_Position_IDMachine",
-                        column: x => x.IDMachine,
-                        principalTable: "Position",
-                        principalColumn: "IDPosition",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "MachineSupport",
-                columns: table => new
-                {
-                    IDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IDSupport = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MachineSupport", x => new { x.IDMachine, x.IDSupport });
-                    table.ForeignKey(
-                        name: "FK_MachineSupport_Machine_IDSupport",
-                        column: x => x.IDSupport,
-                        principalTable: "Machine",
-                        principalColumn: "IDMachine",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_MachineSupport_Support_IDMachine",
-                        column: x => x.IDMachine,
-                        principalTable: "Support",
-                        principalColumn: "IDSupport",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -219,38 +106,151 @@ namespace ConsoleSnackMachine.Migrations
                     OneEuro = table.Column<int>(type: "int", nullable: false),
                     QuarterCent = table.Column<int>(type: "int", nullable: false),
                     TenCent = table.Column<int>(type: "int", nullable: false),
-                    TwentyCent = table.Column<int>(type: "int", nullable: false)
+                    TwentyCent = table.Column<int>(type: "int", nullable: false),
+                    CostumerIDCostumer = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Money", x => x.IDMoney);
                     table.ForeignKey(
-                        name: "FK_Money_Costumer_IDMoney",
-                        column: x => x.IDMoney,
+                        name: "FK_Money_Costumer_CostumerIDCostumer",
+                        column: x => x.CostumerIDCostumer,
                         principalTable: "Costumer",
-                        principalColumn: "IDCostumer",
+                        principalColumn: "IDCostumer");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Orders",
+                columns: table => new
+                {
+                    IDOrder = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CostumerIDCostumer = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.IDOrder);
+                    table.ForeignKey(
+                        name: "FK_Orders_Costumer_CostumerIDCostumer",
+                        column: x => x.CostumerIDCostumer,
+                        principalTable: "Costumer",
+                        principalColumn: "IDCostumer");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "IntervetionMachine",
+                columns: table => new
+                {
+                    IntervetionIDIntervetion = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MachineIDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IntervetionMachine", x => new { x.IntervetionIDIntervetion, x.MachineIDMachine });
+                    table.ForeignKey(
+                        name: "FK_IntervetionMachine_Intervetion_IntervetionIDIntervetion",
+                        column: x => x.IntervetionIDIntervetion,
+                        principalTable: "Intervetion",
+                        principalColumn: "IDIntervetion",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_IntervetionMachine_Machine_MachineIDMachine",
+                        column: x => x.MachineIDMachine,
+                        principalTable: "Machine",
+                        principalColumn: "IDMachine",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MachinePosition",
+                columns: table => new
+                {
+                    MachineIDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PositionIDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MachinePosition", x => new { x.MachineIDMachine, x.PositionIDPosition });
+                    table.ForeignKey(
+                        name: "FK_MachinePosition_Machine_MachineIDMachine",
+                        column: x => x.MachineIDMachine,
+                        principalTable: "Machine",
+                        principalColumn: "IDMachine",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MachinePosition_Position_PositionIDPosition",
+                        column: x => x.PositionIDPosition,
+                        principalTable: "Position",
+                        principalColumn: "IDPosition",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MachineSupport",
+                columns: table => new
+                {
+                    MachineIDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SupportIDSupport = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MachineSupport", x => new { x.MachineIDMachine, x.SupportIDSupport });
+                    table.ForeignKey(
+                        name: "FK_MachineSupport_Machine_MachineIDMachine",
+                        column: x => x.MachineIDMachine,
+                        principalTable: "Machine",
+                        principalColumn: "IDMachine",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MachineSupport_Support_SupportIDSupport",
+                        column: x => x.SupportIDSupport,
+                        principalTable: "Support",
+                        principalColumn: "IDSupport",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    IDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(10,3)", nullable: false),
+                    Stock = table.Column<int>(type: "int", nullable: false),
+                    Ingredients = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: false),
+                    ExpDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    OrderIDOrder = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.IDProduct);
+                    table.ForeignKey(
+                        name: "FK_Product_Orders_OrderIDOrder",
+                        column: x => x.OrderIDOrder,
+                        principalTable: "Orders",
+                        principalColumn: "IDOrder");
                 });
 
             migrationBuilder.CreateTable(
                 name: "MachineProduct",
                 columns: table => new
                 {
-                    IDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    MachineIDMachine = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ProductIDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MachineProduct", x => new { x.IDMachine, x.IDProduct });
+                    table.PrimaryKey("PK_MachineProduct", x => new { x.MachineIDMachine, x.ProductIDProduct });
                     table.ForeignKey(
-                        name: "FK_MachineProduct_Machine_IDProduct",
-                        column: x => x.IDProduct,
+                        name: "FK_MachineProduct_Machine_MachineIDMachine",
+                        column: x => x.MachineIDMachine,
                         principalTable: "Machine",
                         principalColumn: "IDMachine",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MachineProduct_Product_IDMachine",
-                        column: x => x.IDMachine,
+                        name: "FK_MachineProduct_Product_ProductIDProduct",
+                        column: x => x.ProductIDProduct,
                         principalTable: "Product",
                         principalColumn: "IDProduct",
                         onDelete: ReferentialAction.Cascade);
@@ -260,21 +260,21 @@ namespace ConsoleSnackMachine.Migrations
                 name: "PositionProduct",
                 columns: table => new
                 {
-                    IDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    PositionIDPosition = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ProductIDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PositionProduct", x => new { x.IDPosition, x.IDProduct });
+                    table.PrimaryKey("PK_PositionProduct", x => new { x.PositionIDPosition, x.ProductIDProduct });
                     table.ForeignKey(
-                        name: "FK_PositionProduct_Position_IDProduct",
-                        column: x => x.IDProduct,
+                        name: "FK_PositionProduct_Position_PositionIDPosition",
+                        column: x => x.PositionIDPosition,
                         principalTable: "Position",
                         principalColumn: "IDPosition",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PositionProduct_Product_IDPosition",
-                        column: x => x.IDPosition,
+                        name: "FK_PositionProduct_Product_ProductIDProduct",
+                        column: x => x.ProductIDProduct,
                         principalTable: "Product",
                         principalColumn: "IDProduct",
                         onDelete: ReferentialAction.Cascade);
@@ -284,55 +284,70 @@ namespace ConsoleSnackMachine.Migrations
                 name: "ProductSupplier",
                 columns: table => new
                 {
-                    IDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IDSupplier = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    ProductIDProduct = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SupplierIDSupplier = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductSupplier", x => new { x.IDProduct, x.IDSupplier });
+                    table.PrimaryKey("PK_ProductSupplier", x => new { x.ProductIDProduct, x.SupplierIDSupplier });
                     table.ForeignKey(
-                        name: "FK_ProductSupplier_Product_IDSupplier",
-                        column: x => x.IDSupplier,
+                        name: "FK_ProductSupplier_Product_ProductIDProduct",
+                        column: x => x.ProductIDProduct,
                         principalTable: "Product",
                         principalColumn: "IDProduct",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProductSupplier_Supplier_IDProduct",
-                        column: x => x.IDProduct,
+                        name: "FK_ProductSupplier_Supplier_SupplierIDSupplier",
+                        column: x => x.SupplierIDSupplier,
                         principalTable: "Supplier",
                         principalColumn: "IDSupplier",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_IntervetionMachine_IDMachine",
+                name: "IX_IntervetionMachine_MachineIDMachine",
                 table: "IntervetionMachine",
-                column: "IDMachine");
+                column: "MachineIDMachine");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachinePosition_IDPosition",
+                name: "IX_MachinePosition_PositionIDPosition",
                 table: "MachinePosition",
-                column: "IDPosition");
+                column: "PositionIDPosition");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachineProduct_IDProduct",
+                name: "IX_MachineProduct_ProductIDProduct",
                 table: "MachineProduct",
-                column: "IDProduct");
+                column: "ProductIDProduct");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachineSupport_IDSupport",
+                name: "IX_MachineSupport_SupportIDSupport",
                 table: "MachineSupport",
-                column: "IDSupport");
+                column: "SupportIDSupport");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PositionProduct_IDProduct",
+                name: "IX_Money_CostumerIDCostumer",
+                table: "Money",
+                column: "CostumerIDCostumer");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_CostumerIDCostumer",
+                table: "Orders",
+                column: "CostumerIDCostumer");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PositionProduct_ProductIDProduct",
                 table: "PositionProduct",
-                column: "IDProduct");
+                column: "ProductIDProduct");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductSupplier_IDSupplier",
+                name: "IX_Product_OrderIDOrder",
+                table: "Product",
+                column: "OrderIDOrder");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductSupplier_SupplierIDSupplier",
                 table: "ProductSupplier",
-                column: "IDSupplier");
+                column: "SupplierIDSupplier");
         }
 
         /// <inheritdoc />
@@ -369,9 +384,6 @@ namespace ConsoleSnackMachine.Migrations
                 name: "Support");
 
             migrationBuilder.DropTable(
-                name: "Costumer");
-
-            migrationBuilder.DropTable(
                 name: "Position");
 
             migrationBuilder.DropTable(
@@ -382,6 +394,9 @@ namespace ConsoleSnackMachine.Migrations
 
             migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "Costumer");
         }
     }
 }

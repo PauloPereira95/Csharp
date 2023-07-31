@@ -19,12 +19,12 @@ namespace ConsoleSnackMachine.Models
         [MaxLength(255)]
         [Column(TypeName ="varchar")]
         public string Descripiton { get; set; }
-        [ForeignKey("IDProduct")]
+        // FK
 
-        public IList<Product> Product { get; set; }
-        [ForeignKey("IDMachine")]
+        public IList<Product>? Product { get; set; }
+        // FK
 
-        public IList<Machine> Machine { get; set; }
+        public IList<Machine>? Machine { get; set; }
 
 
     }

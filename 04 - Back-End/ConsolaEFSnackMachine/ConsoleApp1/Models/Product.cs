@@ -14,6 +14,7 @@ namespace ConsoleSnackMachine.Models
     {
         [Key]
         [DefaultValue(true)]
+
         public Guid IDProduct { get; set; }
 
         [MaxLength(255)]
@@ -27,16 +28,14 @@ namespace ConsoleSnackMachine.Models
         [Column(TypeName ="varchar")]
         public string Ingredients { get; set; }
         public DateTime ExpDate { get; set; }
-        [ForeignKey("IDPosition")]
-        public IList<Position> Position { get; set; }
-        [ForeignKey("IDMachine")]
-
-        public IList<Machine> Machine { get; set; }
-        [ForeignKey("IDSupplier")]
-
-        public IList<Supplier> Supplier { get; set; }
-
-        public Orders Order { get; set; }
+        // FK
+        public IList<Position>? Position { get; set; }
+        // FK
+        public IList<Machine>? Machine { get; set; }
+        // FK
+        public IList<Supplier>? Supplier { get; set; }
+        // FK
+        public Orders? Order { get; set; }
 
 
     }
