@@ -1,83 +1,60 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SuperHeroAPI.Models;
+using SuperHeroAPI.Services.SuperHeroService;
 
 namespace SuperHeroAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    // apenas chama os metodos
     public class SuperHeroController : ControllerBase
     {
+        private readonly ISuperHeroService _superHeroService;
+        public SuperHeroController(ISuperHeroService superHeroService)
+        {
+            this._superHeroService = superHeroService;
+        }
 
-        private static List<SuperHero> superHeroes = new List<SuperHero>
-            {
-                new SuperHero
-                {
-                    Id = 1,
-                    Name ="Spider-Man",
-                    FirstName ="Peter",
-                    LastName ="Parker",
-                    Place="New York City"
-                },
-                new SuperHero
-                {
-                    Id = 2,
-                    Name ="Iron-Man",
-                    FirstName ="Tony",
-                    LastName ="Stark",
-                    Place="Malibu"
-                }
-            };
         // obtem todos
         [HttpGet]
-        public async Task<ActionResult<List<SuperHero>>> GetAllHeroes()
+        public async Task<ActionResult<List<SuperHero>>> GetAlleHeroes()
         {
-            return Ok(superHeroes);
+            return await _superHeroService.GetAllHeroes();
 
         }
         // obtem com id especifico
         [HttpGet("{id}")]
-        public async Task<ActionResult<SuperHero>> GetAllHeroes(int id)
+        public async Task<ActionResult<SuperHero>> GetSingleHeroes(int id)
         {
-            var hero = superHeroes.Find(x => x.Id == id);
-            if (hero == null) return NotFound("Sorry, but hero dont exist");
-            return Ok(hero);
-
+            var result = await _superHeroService.GetSingleHero(id);
+            if (result == null) return NotFound("Hero not Fund !");
+            return Ok(result);
         }
         // create
         [HttpPost]
         // from body especifica para procurar no body do request
         public async Task<ActionResult<List<SuperHero>>> AddHeroes([FromBody] SuperHero hero)
         {
-            superHeroes.Add(hero);
-            return Ok(superHeroes);
+            var result = await _superHeroService.AddHeroes(hero);
+            return Ok(result);
 
         }
         // update
         [HttpPut("{id}")]
         public async Task<ActionResult<SuperHero>> UpdateHeroes(int id, SuperHero request)
         {
-            var hero = superHeroes.Find(x => x.Id == id);
-            if (hero == null) return NotFound("Sorry, but hero dont exist");
-
-            hero.FirstName = request.FirstName;
-            hero.LastName = request.LastName;
-            hero.Place = request.Place;
-            hero.Name = request.Name;
-
-            return Ok(hero);
+            var result = await _superHeroService.UpdateHeroes(id, request);
+            if (result == null) return NotFound("Hero not Fund !");
+            return Ok(result);
 
         }
         [HttpDelete("{id}")]
-        public async Task<ActionResult<SuperHero>> DeleteHeroes(int id)
+        public async Task<ActionResult<List<SuperHero>>> DeleteHeroes(int id)
         {
-            var hero = superHeroes.Find(x => x.Id == id);
-            if (hero == null) return NotFound("Sorry, but hero dont exist");
-
-            superHeroes.Remove(hero);
-
-            return Ok(hero);
-
+            var result = await _superHeroService.DeleteHeroes(id);
+            if (result == null) return NotFound("Hero not Fund !");
+            return Ok(result);
         }
     }
 }
