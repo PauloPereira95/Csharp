@@ -30,7 +30,7 @@ namespace webApiSnack.Controllers
             return Ok(result);
         }
         // Soft Delete
-        [HttpPut("{nif}")]
+        [HttpDelete("{nif}")]
         public async Task<ActionResult<List<Customer>>> DeleteCustomer(string nif)
         {
             var result = await _customerService.DeleteCustomer(nif);
@@ -54,6 +54,7 @@ namespace webApiSnack.Controllers
                 return BadRequest(ex.Message + " Check NIF !");
             }
         }
+        // Update
         [HttpPut("{nif}")]
         public async Task<ActionResult<List<Customer>>> UpdateCustomer(string nif, [FromBody] Customer request)
         {

@@ -70,6 +70,7 @@ namespace webApiSnack.Services
             customers.Tele = request.Tele;
             customers.Nif = request.Nif;
             customers.LastUpdateAt = DateTime.Now;
+
             await _context.SaveChangesAsync();
 
             return await _context.Customers.ToListAsync();
