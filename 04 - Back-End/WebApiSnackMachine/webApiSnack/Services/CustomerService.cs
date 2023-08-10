@@ -26,10 +26,6 @@ namespace webApiSnack.Services
         }
         public async Task<List<Customer>>? AddCostumer([FromBody] Customer customer)
         {
-
-            var customerList = await _context.Customers.Where(n => n.Nif == customer.Nif).ToListAsync();
-            if (customerList != null) return null;
-            
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
             return await _context.Customers.ToListAsync();
@@ -49,7 +45,7 @@ namespace webApiSnack.Services
 
         public async Task<List<Customer>>? GetAllCustomers()
         {
-            var customers = await _context.Customers.ToListAsync();
+            var customers = await _context.Customers.Where(c => !c.IsDeleted).ToListAsync();
             return customers;
         }
 
