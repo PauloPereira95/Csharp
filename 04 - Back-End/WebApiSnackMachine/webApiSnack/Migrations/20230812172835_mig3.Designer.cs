@@ -12,7 +12,7 @@ using webApiSnack.Data;
 namespace webApiSnack.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230810210034_mig3")]
+    [Migration("20230812172835_mig3")]
     partial class mig3
     {
         /// <inheritdoc />
@@ -62,6 +62,62 @@ namespace webApiSnack.Migrations
                     b.HasKey("IDCostumer");
 
                     b.ToTable("Customer");
+                });
+
+            modelBuilder.Entity("webApiSnack.Models.Money", b =>
+                {
+                    b.Property<Guid>("IDMoney")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FiveEuro")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastUpdateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OneCent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OneEuro")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuarterCent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TenCent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TwentyCent")
+                        .HasColumnType("int");
+
+                    b.HasKey("IDMoney");
+
+                    b.ToTable("Money");
+                });
+
+            modelBuilder.Entity("webApiSnack.Models.Money", b =>
+                {
+                    b.HasOne("webApiSnack.Models.Customer", "Customer")
+                        .WithOne("Money")
+                        .HasForeignKey("webApiSnack.Models.Money", "IDMoney")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("webApiSnack.Models.Customer", b =>
+                {
+                    b.Navigation("Money");
                 });
 #pragma warning restore 612, 618
         }

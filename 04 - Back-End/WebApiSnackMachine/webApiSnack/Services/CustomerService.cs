@@ -26,8 +26,11 @@ namespace webApiSnack.Services
         }
         public async Task<List<Customer>>? AddCostumer([FromBody] Customer customer)
         {
+
             _context.Customers.Add(customer);
+            
             await _context.SaveChangesAsync();
+            
             return await _context.Customers.ToListAsync();
         }
         public async Task<List<Customer>>? DeleteCustomer(string nif)

@@ -12,8 +12,8 @@ using webApiSnack.Data;
 namespace webApiSnack.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230810205836_mig_default_value_deleted")]
-    partial class mig_default_value_deleted
+    [Migration("20230812170830_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,9 @@ namespace webApiSnack.Migrations
                     b.Property<DateTime?>("LastUpdateAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("MoneyIDMoney")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Name")
                         .HasMaxLength(255)
                         .HasColumnType("varchar");
@@ -61,7 +64,59 @@ namespace webApiSnack.Migrations
 
                     b.HasKey("IDCostumer");
 
+                    b.HasIndex("MoneyIDMoney");
+
                     b.ToTable("Customer");
+                });
+
+            modelBuilder.Entity("webApiSnack.Models.Money", b =>
+                {
+                    b.Property<Guid>("IDMoney")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FiveEuro")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastUpdateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OneCent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OneEuro")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuarterCent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TenCent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TwentyCent")
+                        .HasColumnType("int");
+
+                    b.HasKey("IDMoney");
+
+                    b.ToTable("Money");
+                });
+
+            modelBuilder.Entity("webApiSnack.Models.Customer", b =>
+                {
+                    b.HasOne("webApiSnack.Models.Money", "Money")
+                        .WithMany()
+                        .HasForeignKey("MoneyIDMoney");
+
+                    b.Navigation("Money");
                 });
 #pragma warning restore 612, 618
         }

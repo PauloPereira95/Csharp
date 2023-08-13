@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace webApiSnack.Models
 {
@@ -20,8 +21,11 @@ namespace webApiSnack.Models
         public int TenCent { get; set; }
 
         public int TwentyCent { get; set; }
-
-
+        public DateTime? CreateAt { get; set; }
+        public DateTime? LastUpdateAt { get; set; }
+        public DateTime? DeleteAt { get; set; }
+        public bool IsDeleted { get; set; }
+        public Customer? Customer { get; set; }
 
     }
 }

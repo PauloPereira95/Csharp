@@ -16,7 +16,7 @@ namespace webApiSnack.Controllers
         }
         [HttpGet]
 
-        // Get Alll
+        // Get All
         public async Task<ActionResult<List<Customer>>> GetAllCustomers()
         {
             var result = await _customerService.GetAllCustomers();

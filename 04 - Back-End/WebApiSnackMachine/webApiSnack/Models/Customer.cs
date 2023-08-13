@@ -7,6 +7,7 @@ namespace webApiSnack.Models
     [Table("Customer")]
     public class Customer
     {
+        
         [Key]
         [DefaultValue(true)]
 
@@ -29,8 +30,10 @@ namespace webApiSnack.Models
         public DateTime? CreateAt { get; set; }
         public DateTime? LastUpdateAt { get; set; }
         public DateTime? DeleteAt { get; set; }
-        [DefaultValue(true)]
         public bool IsDeleted { get; set; }
+        // FK
+
+        public Money? Money { get; set; }
 
     }
 }
