@@ -31,3 +31,8 @@ C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Fra
 C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\obj\Debug\net7.0\JwtWebApiTutorial.pdb
 C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\obj\Debug\net7.0\JwtWebApiTutorial.genruntimeconfig.cache
 C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\obj\Debug\net7.0\ref\JwtWebApiTutorial.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
