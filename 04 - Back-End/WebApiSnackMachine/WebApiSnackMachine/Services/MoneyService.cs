@@ -26,12 +26,8 @@ namespace WebApiSnackMachine.Services
             return moneys;
         }
 
-        Task<List<Money>>? IMoneyService.DeletMoney(string nif)
-        {
-            throw new NotImplementedException();
-        }
-
-        async Task<List<Money>>? IMoneyService.GetMoneyCostumer(string nif)
+        
+        public async Task<List<Money>>? GetMoneyCostumer(string nif)
         {
             //var cust = await _context.Customers.Where(c => c.Nif == nif).Select( c => c.Money).Include("Money").ToListAsync();
             var moneyCust = await _context.Customers.Where(n => n.Nif == nif)
@@ -40,7 +36,39 @@ namespace WebApiSnackMachine.Services
 
         }
 
-        Task<List<Money>>? IMoneyService.UpdateMoney(string nif, Money money)
+        public async Task<List<Money>>? UpdateMoney(string nif, Money request)
+        {
+            var customers = await _context.Customers.SingleAsync(n => n.Nif == nif);
+            // colect costumer id
+            var moneyCustumer = await _context.Money.FindAsync(customers.IDCostumer);
+            moneyCustumer.FiveEuro = request.FiveEuro;
+            moneyCustumer.OneCent = request.OneCent;
+            moneyCustumer.OneEuro = request.OneEuro;
+            moneyCustumer.QuarterCent = request.QuarterCent;
+            moneyCustumer.TenCent = request.TenCent;
+            moneyCustumer.TwentyCent = request.TwentyCent;
+            moneyCustumer.LastUpdateAt = DateTime.Now;
+
+
+            // UMA SEGUNDA FORMA DE Update
+            #region Metodo 2 UPDATE
+            //await _context.Customers.Where(n => n.Nif == nif).Include("Money")
+            //    .ExecuteUpdateAsync(update =>
+            //    update.SetProperty(money => money.Money.OneEuro, request.OneEuro)
+            //    .SetProperty(money => money.Money.FiveEuro, request.FiveEuro)
+            //    .SetProperty(money => money.Money.OneCent, request.OneCent)
+            //    .SetProperty(money => money.Money.OneEuro, request.OneEuro)
+            //    .SetProperty(money => money.Money.QuarterCent, request.QuarterCent)
+            //    .SetProperty(money => money.Money.TenCent, request.TenCent)
+            //    .SetProperty(money => money.Money.TwentyCent, request.TwentyCent)
+            //    .SetProperty(money => money.Money.LastUpdateAt, (DateTime?)DateTime.Now));
+
+            #endregion
+            await _context.SaveChangesAsync();
+            return await _context.Money.ToListAsync();
+        }
+
+        public Task<List<Money>>? DeletMoney(string nif)
         {
             throw new NotImplementedException();
         }

@@ -34,7 +34,7 @@ namespace WebApiSnackMachine.Models
         public bool IsDeleted { get; set; }
         // FK
 
-        public Money Money { get; set; }
+        public Money? Money { get; set; }
 
     }
 }
