@@ -36,3 +36,10 @@ C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Fra
 C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Scrutor.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Paulo\Documents\Code_Developer\Csharp - Git\.NET 7 Web API & Entity Framework - Tutorial\JwtWebApiTutotial_PG\JwtWebApiTutorial\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JwtWebApiTutorial.Controllers
@@ -17,8 +18,8 @@ namespace JwtWebApiTutorial.Controllers
         {
             _logger = logger;
         }
-
-        [HttpGet(Name = "GetWeatherForecast")]
+      
+        [HttpGet(Name = "GetWeatherForecast"), Authorize]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -29,5 +30,7 @@ namespace JwtWebApiTutorial.Controllers
             })
             .ToArray();
         }
+        //[Authorize] apenas aos que logaram com sucesso
+        //  AllowAnonymous autoriza a todos os user
     }
 }
