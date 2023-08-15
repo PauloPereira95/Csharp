@@ -23,7 +23,7 @@ namespace JwtWebApiTutorial
             {
                 options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
                 {
-                    Description = "Standard Authorization header using the Bearer scheme (\"bearer {token}\")",
+                    Description = "Standard Authorization header using Bearer Scheme(\"bearer {token}\")",
                     In = ParameterLocation.Header,
                     Name = "Authorization",
                     Type = SecuritySchemeType.ApiKey
@@ -38,9 +38,10 @@ namespace JwtWebApiTutorial
                     {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
-                            .GetBytes(builder.Configuration.GetSection("AppSettings:Token").Value)),
+                        .GetBytes(builder.Configuration.GetSection("AppSettings:Token").Value)),
                         ValidateIssuer = false,
                         ValidateAudience = false
+
                     };
                 });
             var app = builder.Build();
