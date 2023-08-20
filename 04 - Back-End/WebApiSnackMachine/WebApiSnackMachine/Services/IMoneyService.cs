@@ -9,6 +9,6 @@ namespace WebApiSnackMachine.Services
         Task<List<Money>>? GetMoneyCostumer(string nif);
         Task<List<Money>>? AddMoney([FromBody] Money money);
         Task<List<Money>>? UpdateMoney(string nif, Money money);
-        Task<List<Money>>? DeletMoney(string nif);
+        Task<List<Money>>? DeleteMoney(string nif);
     }
 }

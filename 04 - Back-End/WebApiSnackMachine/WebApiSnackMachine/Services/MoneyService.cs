@@ -29,18 +29,22 @@ namespace WebApiSnackMachine.Services
         
         public async Task<List<Money>>? GetMoneyCostumer(string nif)
         {
-            //var cust = await _context.Customers.Where(c => c.Nif == nif).Select( c => c.Money).Include("Money").ToListAsync();
-            var moneyCust = await _context.Customers.Where(n => n.Nif == nif)
-                .Select(m => m.Money).ToListAsync();
-            return moneyCust;
+            var cust = await _context.Customers.Include("Money").Where(n => n.Nif == nif).
+                Select(m => m.Money).FirstOrDefaultAsync();
+                             
+            //var moneyCust = await _context.Customers.Include(m => m.Money).Where(n => n.Nif == nif).
+            //   ToListAsync();
 
+            return cust;
+            //throw new NotImplementedException();
         }
 
         public async Task<List<Money>>? UpdateMoney(string nif, Money request)
         {
-            var customers = await _context.Customers.SingleAsync(n => n.Nif == nif);
+            var cust = await _context.Customers.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
+            
             // colect costumer id
-            var moneyCustumer = await _context.Money.FindAsync(customers.IDCostumer);
+            var moneyCustumer = await _context.Money.SingleAsync(i => i.Customer.IDCostumer == cust);
             moneyCustumer.FiveEuro = request.FiveEuro;
             moneyCustumer.OneCent = request.OneCent;
             moneyCustumer.OneEuro = request.OneEuro;
@@ -68,9 +72,20 @@ namespace WebApiSnackMachine.Services
             return await _context.Money.ToListAsync();
         }
 
-        public Task<List<Money>>? DeletMoney(string nif)
+        public async Task<List<Money>>? DeleteMoney(string nif)
         {
-            throw new NotImplementedException();
+            var cust = await _context.Customers.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
+            // colect costumer id
+            var moneyCustumer = await _context.Money.SingleAsync(i => i.Customer.IDCostumer == cust);
+
+            
+            if (moneyCustumer == null) return null;
+
+            moneyCustumer.IsDeleted = true ;
+            moneyCustumer.DeleteAt = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+            return await _context.Money.ToListAsync();
         }
     }
 }

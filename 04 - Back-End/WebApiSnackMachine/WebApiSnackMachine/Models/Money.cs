@@ -25,7 +25,6 @@ namespace WebApiSnackMachine.Models
         public DateTime? LastUpdateAt { get; set; }
         public DateTime? DeleteAt { get; set; }
         public bool IsDeleted { get; set; }
-        public Guid CustomerID { get; set; }
         [JsonIgnore]
         public Customer? Customer { get; set; }
 

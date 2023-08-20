@@ -70,7 +70,7 @@ namespace WebApiSnackMachine.Migrations
                     b.Property<DateTime?>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CustomerID")
+                    b.Property<Guid?>("CustomerIDCostumer")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DeleteAt")
@@ -102,8 +102,7 @@ namespace WebApiSnackMachine.Migrations
 
                     b.HasKey("IDMoney");
 
-                    b.HasIndex("CustomerID")
-                        .IsUnique();
+                    b.HasIndex("CustomerIDCostumer");
 
                     b.ToTable("Money");
                 });
@@ -111,18 +110,15 @@ namespace WebApiSnackMachine.Migrations
             modelBuilder.Entity("WebApiSnackMachine.Models.Money", b =>
                 {
                     b.HasOne("WebApiSnackMachine.Models.Customer", "Customer")
-                        .WithOne("Money")
-                        .HasForeignKey("WebApiSnackMachine.Models.Money", "CustomerID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Money")
+                        .HasForeignKey("CustomerIDCostumer");
 
                     b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("WebApiSnackMachine.Models.Customer", b =>
                 {
-                    b.Navigation("Money")
-                        .IsRequired();
+                    b.Navigation("Money");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.NET 7 Web API & Entity Framework - Tutorial",
+    "\\.NET 7 Web API & Entity Framework - Tutorial\\JwtWebApiTutotial_PG",
+    "\\.NET 7 Web API & Entity Framework - Tutorial\\JwtWebApiTutotial_PG\\JwtWebApiTutorial"
   ],
-  "SelectedNode": "\\12deMaio_POO.sln",
+  "SelectedNode": "\\.NET 7 Web API & Entity Framework - Tutorial\\JwtWebApiTutotial_PG\\JwtWebApiTutorial\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

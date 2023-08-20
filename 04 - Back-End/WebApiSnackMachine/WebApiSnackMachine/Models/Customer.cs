@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace WebApiSnackMachine.Models
 {
@@ -32,9 +33,7 @@ namespace WebApiSnackMachine.Models
         public DateTime? LastUpdateAt { get; set; }
         public DateTime? DeleteAt { get; set; }
         public bool IsDeleted { get; set; }
-        // FK
-
-        public Money? Money { get; set; }
+        public List<Money>? Money { get; set; }
 
     }
 }
