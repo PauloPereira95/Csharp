@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WebApiSnackMachine",
+    "\\WebApiSnackMachine\\Controllers",
     "\\WebApiSnackMachine\\Models",
     "\\WebApiSnackMachine\\Services"
   ],
-  "SelectedNode": "\\WebApiSnackMachine\\Services\\MoneyService.cs",
+  "SelectedNode": "\\WebApiSnackMachine\\Controllers\\MoneyController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -13,11 +13,25 @@ namespace WebApiSnackMachine.Services
             this._context = context;
         }
         // Create Money
-        public async Task<List<Money>>? AddMoney([FromBody] Money money)
+        public async Task<List<Money>>? AddMoney([FromBody] Money money,string nif)
         {
-            _context.Money.Add(money);
-            await _context.SaveChangesAsync();
-            return await _context.Money.ToListAsync();
+            //_context.Money.Add(money,nif);
+            //await _context.SaveChangesAsync();
+            //return await _context.Money.ToListAsync();
+
+            var cust = await _context.Customers.Where(n => n.Nif == nif).Include("Money").SingleOrDefaultAsync();
+            //var moneyCust = await _context.Money.SingleAsync(i => i.Customer.IDCostumer == cust);
+            if (cust != null)
+            {
+                
+                _context.Money.Add(money);
+
+                cust.Money.Add(money);
+                await _context.SaveChangesAsync();
+
+                return await _context.Money.ToListAsync();
+            }
+            return null;
         }
         // Get Money
         public async Task<List<Money>>? GetAllMoney()

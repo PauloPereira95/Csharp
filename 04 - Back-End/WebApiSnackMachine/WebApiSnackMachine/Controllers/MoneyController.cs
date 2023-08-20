@@ -15,25 +15,12 @@ namespace WebApiSnackMachine.Controllers
         {
             this._moneyService = moneyService;
         }
-
-        // Create Money
-        [HttpPost]
-        public async Task<ActionResult<List<Money>>> AddMoney(Money money)
-        {
-            var result = await _moneyService.AddMoney(money);
-            if (result == null) return BadRequest("\"Something goes wrong, check data and try again !\"");
-            return Ok(result);
-        }
-        // Get All
         [HttpGet]
         public async Task<ActionResult<List<Money>>> GetAllMoney()
         {
             var result = await _moneyService.GetAllMoney();
             return Ok(result);
         }
-        #region Add Money (OCULTADO)
-        #endregion
-
         [HttpGet("{nif}")]
         public async Task<ActionResult<List<Money>>> GetMoneyCustomer(string nif)
         {
@@ -41,7 +28,20 @@ namespace WebApiSnackMachine.Controllers
             if (result == null) return BadRequest("\"Something goes wrong, check data and try again !\"");
             return Ok(result);
         }
+
+        // Create Money
+        [HttpPost("{nif}")]
+        public async Task<ActionResult<List<Money>>> AddMoney(Money money,string nif)
+        {
+            var result = await _moneyService.AddMoney(money,nif);
+            if (result == null) return BadRequest("\"Something goes wrong, check data and try again !\"");
+            return Ok(result);
+        }
+        #region Add Money (OCULTADO)
+        #endregion
+
         [HttpPut("{nif}")]
+        // Get All
         public async Task<ActionResult<List<Money>>> UpdateMoney(string nif, [FromBody] Money request)
         {
             var result = await _moneyService.UpdateMoney(nif,request);
