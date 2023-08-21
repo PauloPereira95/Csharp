@@ -12,8 +12,8 @@ using WebApiSnackMachine.Data;
 namespace WebApiSnackMachine.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230821170056_mig3")]
-    partial class mig3
+    [Migration("20230821172835_MIG1")]
+    partial class MIG1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

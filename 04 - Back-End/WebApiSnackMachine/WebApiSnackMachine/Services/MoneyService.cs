@@ -13,7 +13,7 @@ namespace WebApiSnackMachine.Services
             this._context = context;
         }
         // Create Money
-        public async Task<List<Money>>? AddMoney([FromBody] Money money,string nif)
+        public async Task<IList<Money>>? AddMoney([FromBody] Money money,string nif)
         {
             //_context.Money.Add(money,nif);
             //await _context.SaveChangesAsync();
@@ -34,14 +34,14 @@ namespace WebApiSnackMachine.Services
             return null;
         }
         // Get Money
-        public async Task<List<Money>>? GetAllMoney()
+        public async Task<IList<Money>>? GetAllMoney()
         {
             var moneys = await _context.Money.Where(m => !m.IsDeleted).ToListAsync();
             return moneys;
         }
 
         
-        public async Task<List<Money>>? GetMoneyCostumer(string nif)
+        public async Task<IList<Money>>? GetMoneyCostumer(string nif)
         {
             var cust = await _context.Customer.Include("Money").Where(n => n.Nif == nif).
                 Select(m => m.Money).FirstOrDefaultAsync();
@@ -49,11 +49,11 @@ namespace WebApiSnackMachine.Services
             //var moneyCust = await _context.Customer.Include(m => m.Money).Where(n => n.Nif == nif).
             //   ToListAsync();
 
-            return (List<Money>)cust;
+            return cust;
             //throw new NotImplementedException();
         }
 
-        public async Task<List<Money>>? UpdateMoney(string nif, Money request)
+        public async Task<IList<Money>>? UpdateMoney(string nif, Money request)
         {
             var cust = await _context.Customer.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
             
@@ -86,7 +86,7 @@ namespace WebApiSnackMachine.Services
             return await _context.Money.ToListAsync();
         }
 
-        public async Task<List<Money>>? DeleteMoney(string nif)
+        public async Task<IList<Money>>? DeleteMoney(string nif)
         {
             var cust = await _context.Customer.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
             // colect costumer id

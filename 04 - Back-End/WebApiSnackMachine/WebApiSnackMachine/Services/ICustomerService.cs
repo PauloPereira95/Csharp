@@ -5,10 +5,10 @@ namespace WebApiSnackMachine.Services
 {
     public interface ICustomerService
     {
-        Task<List<Customer>>? GetAllCustomer();
+        Task<IList<Customer>>? GetAllCustomer();
         Task<Customer?> GetSingleCostumer(string nif);
-        Task<List<Customer>>? AddCostumer([FromBody] Customer customer);
-        Task<List<Customer>>? UpdateCustomer(string nif, Customer customer);
-        Task<List<Customer>>? DeleteCustomer(string nif);
+        Task<IList<Customer>>? AddCostumer([FromBody] Customer customer);
+        Task<IList<Customer>>? UpdateCustomer(string nif, Customer customer);
+        Task<IList<Customer>>? DeleteCustomer(string nif);
     }
 }

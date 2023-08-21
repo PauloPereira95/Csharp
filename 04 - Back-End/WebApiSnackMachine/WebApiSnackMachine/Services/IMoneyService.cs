@@ -5,10 +5,10 @@ namespace WebApiSnackMachine.Services
 {
     public interface IMoneyService
     {
-        Task<List<Money>>? GetAllMoney();
-        Task<List<Money>>? GetMoneyCostumer(string nif);
-        Task<List<Money>>? AddMoney([FromBody] Money money,string nif);
-        Task<List<Money>>? UpdateMoney(string nif, Money money);
-        Task<List<Money>>? DeleteMoney(string nif);
+        Task<IList<Money>>? GetAllMoney();
+        Task<IList<Money>>? GetMoneyCostumer(string nif);
+        Task<IList<Money>>? AddMoney([FromBody] Money money,string nif);
+        Task<IList<Money>>? UpdateMoney(string nif, Money money);
+        Task<IList<Money>>? DeleteMoney(string nif);
     }
 }

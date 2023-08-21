@@ -7,7 +7,7 @@ namespace WebApiSnackMachine.Services
 {
     public class CustomerService : ICustomerService
     {
-        private static List<Customer> Customer = new List<Customer>
+        private static IList<Customer> Customer = new List<Customer>
         {
             //new Customer
             //{
@@ -26,7 +26,7 @@ namespace WebApiSnackMachine.Services
         {
             this._context = context;
         }
-        public async Task<List<Customer>>? AddCostumer([FromBody] Customer customer)
+        public async Task<IList<Customer>>? AddCostumer([FromBody] Customer customer)
         {
 
             _context.Customer.Add(customer);
@@ -35,7 +35,7 @@ namespace WebApiSnackMachine.Services
 
             return await _context.Customer.ToListAsync();
         }
-        public async Task<List<Customer>>? DeleteCustomer(string nif)
+        public async Task<IList<Customer>>? DeleteCustomer(string nif)
         {
             var customer = await _context.Customer.Where(n => n.Nif == nif).ToListAsync();
             if (customer == null) return null;
@@ -48,7 +48,7 @@ namespace WebApiSnackMachine.Services
 
         }
 
-        public async Task<List<Customer>>? GetAllCustomer()
+        public async Task<IList<Customer>>? GetAllCustomer()
         {
             var Customer = await _context.Customer.Where(c => !c.IsDeleted).Include("Money").ToListAsync();
             return Customer;
@@ -63,7 +63,7 @@ namespace WebApiSnackMachine.Services
 
         }
 
-        public async Task<List<Customer>>? UpdateCustomer(string nif, Customer request)
+        public async Task<IList<Customer>>? UpdateCustomer(string nif, Customer request)
         {
             var Customer = await _context.Customer.SingleAsync(n => n.Nif == nif);
             Customer.Name = request.Name;

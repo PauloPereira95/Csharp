@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebApiSnackMachine.Migrations
 {
     /// <inheritdoc />
-    public partial class mig1 : Migration
+    public partial class MIG1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -111,7 +111,7 @@ namespace WebApiSnackMachine.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    IDIntervection = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IDOrders = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Description = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -126,7 +126,7 @@ namespace WebApiSnackMachine.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Orders", x => x.IDIntervection);
+                    table.PrimaryKey("PK_Orders", x => x.IDOrders);
                     table.ForeignKey(
                         name: "FK_Orders_Customer_CustomerIDCostumer",
                         column: x => x.CustomerIDCostumer,
@@ -145,16 +145,16 @@ namespace WebApiSnackMachine.Migrations
                     LastUpdateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    OrdersIDIntervection = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    OrdersIDOrders = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Machine", x => x.IDMachine);
                     table.ForeignKey(
-                        name: "FK_Machine_Orders_OrdersIDIntervection",
-                        column: x => x.OrdersIDIntervection,
+                        name: "FK_Machine_Orders_OrdersIDOrders",
+                        column: x => x.OrdersIDOrders,
                         principalTable: "Orders",
-                        principalColumn: "IDIntervection");
+                        principalColumn: "IDOrders");
                 });
 
             migrationBuilder.CreateTable(
@@ -171,16 +171,16 @@ namespace WebApiSnackMachine.Migrations
                     LastUpdateAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    OrderIDIntervection = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    OrderIDOrders = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Product", x => x.IDProduct);
                     table.ForeignKey(
-                        name: "FK_Product_Orders_OrderIDIntervection",
-                        column: x => x.OrderIDIntervection,
+                        name: "FK_Product_Orders_OrderIDOrders",
+                        column: x => x.OrderIDOrders,
                         principalTable: "Orders",
-                        principalColumn: "IDIntervection");
+                        principalColumn: "IDOrders");
                 });
 
             migrationBuilder.CreateTable(
@@ -198,7 +198,7 @@ namespace WebApiSnackMachine.Migrations
                     DeleteAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     IntervectionIDIntervection = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    OrdersIDIntervection = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    OrdersIDOrders = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -209,10 +209,10 @@ namespace WebApiSnackMachine.Migrations
                         principalTable: "Intervection",
                         principalColumn: "IDIntervection");
                     table.ForeignKey(
-                        name: "FK_Support_Orders_OrdersIDIntervection",
-                        column: x => x.OrdersIDIntervection,
+                        name: "FK_Support_Orders_OrdersIDOrders",
+                        column: x => x.OrdersIDOrders,
                         principalTable: "Orders",
-                        principalColumn: "IDIntervection");
+                        principalColumn: "IDOrders");
                 });
 
             migrationBuilder.CreateTable(
@@ -365,9 +365,9 @@ namespace WebApiSnackMachine.Migrations
                 column: "MachineIDMachine");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Machine_OrdersIDIntervection",
+                name: "IX_Machine_OrdersIDOrders",
                 table: "Machine",
-                column: "OrdersIDIntervection");
+                column: "OrdersIDOrders");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MachinePosition_PositionIDPosition",
@@ -400,9 +400,9 @@ namespace WebApiSnackMachine.Migrations
                 column: "ProductIDProduct");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_OrderIDIntervection",
+                name: "IX_Product_OrderIDOrders",
                 table: "Product",
-                column: "OrderIDIntervection");
+                column: "OrderIDOrders");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductSupplier_SupplierIDSupplier",
@@ -415,9 +415,9 @@ namespace WebApiSnackMachine.Migrations
                 column: "IntervectionIDIntervection");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Support_OrdersIDIntervection",
+                name: "IX_Support_OrdersIDOrders",
                 table: "Support",
-                column: "OrdersIDIntervection");
+                column: "OrdersIDOrders");
         }
 
         /// <inheritdoc />
