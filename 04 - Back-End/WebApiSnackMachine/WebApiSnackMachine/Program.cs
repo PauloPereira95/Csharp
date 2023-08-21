@@ -19,6 +19,7 @@ namespace WebApiSnackMachine
             builder.Services.AddDbContext<DataContext>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
             builder.Services.AddScoped<IMoneyService, MoneyService>();
+            builder.Services.AddScoped<IMachineService, MachineSerice>();
 
             var app = builder.Build();
 

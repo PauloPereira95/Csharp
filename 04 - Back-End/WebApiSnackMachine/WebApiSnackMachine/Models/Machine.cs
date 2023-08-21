@@ -11,6 +11,9 @@ namespace WebApiSnackMachine.Models
         [Key]
         [DefaultValue(true)]
         public Guid IDMachine { get; set; }
+        [MaxLength(255)]
+        [Column(TypeName ="varchar")]
+        public string? MachineName { get; set; }
         [Precision(10,3)]
         public decimal Size { get; set; }
         [MaxLength(255)]
@@ -20,7 +23,7 @@ namespace WebApiSnackMachine.Models
         public DateTime? LastUpdateAt { get; set; }
         public DateTime? DeleteAt { get; set; }
         public bool IsDeleted { get; set; }
-        public IList<Intervection>? Interaction { get; set; }
+        public IList<Intervection>? Intervection { get; set; }
         public IList<Support>? Support { get; set; }
         public IList<Product>? Product { get; set; }
         public IList<Position>? Position { get; set; }

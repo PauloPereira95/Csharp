@@ -14,17 +14,16 @@ namespace WebApiSnackMachine.Controllers
         {
             this._customerService = customerService;
         }
-        [HttpGet]
-
         // Get All
-        public async Task<ActionResult<List<Customer>>> GetAllCustomers()
+        [HttpGet]
+        public async Task<ActionResult<IList<Customer>>> GetAllCustomers()
         {
             var result = await _customerService.GetAllCustomer();
 
             return Ok(result);
         }
         [HttpGet("{nif}")]
-        public async Task<ActionResult<List<Customer>>> GetSingleCostumer(string nif)
+        public async Task<ActionResult<IList<Customer>>> GetSingleCostumer(string nif)
         {
             try
             {
@@ -41,7 +40,7 @@ namespace WebApiSnackMachine.Controllers
         }
         // Create   
         [HttpPost]
-        public async Task<ActionResult<List<Customer>>> AddCustomer([FromBody] Customer customer)
+        public async Task<ActionResult<IList<Customer>>> AddCustomer([FromBody] Customer customer)
         {
             var result = await _customerService.AddCostumer(customer);
             if (result == null) return BadRequest("Something goes wrong, check data and try again !");
@@ -50,7 +49,7 @@ namespace WebApiSnackMachine.Controllers
         
         // Update
         [HttpPut("{nif}")]
-        public async Task<ActionResult<List<Customer>>> UpdateCustomer(string nif, [FromBody] Customer request)
+        public async Task<ActionResult<IList<Customer>>> UpdateCustomer(string nif, [FromBody] Customer request)
         {
             var result = await _customerService.UpdateCustomer(nif, request);
             if (result == null) return NotFound("Customer Not Fund ! Check Data !");
@@ -59,7 +58,7 @@ namespace WebApiSnackMachine.Controllers
         }
         // Soft Delete
         [HttpDelete("{nif}")]
-        public async Task<ActionResult<List<Customer>>> DeleteCustomer(string nif)
+        public async Task<ActionResult<IList<Customer>>> DeleteCustomer(string nif)
         {
             var result = await _customerService.DeleteCustomer(nif);
             if (result == null) return NotFound("Customer Not Fund ! Check Data !");

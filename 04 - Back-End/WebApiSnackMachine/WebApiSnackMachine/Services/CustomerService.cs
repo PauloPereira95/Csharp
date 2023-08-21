@@ -7,20 +7,7 @@ namespace WebApiSnackMachine.Services
 {
     public class CustomerService : ICustomerService
     {
-        private static IList<Customer> Customer = new List<Customer>
-        {
-            //new Customer
-            //{
-            //    Name = "Joaquim",
-            //    Adress = "Rua de cima n252",
-            //    Tele = "915133435345",
-            //    CreateAt = DateTime.Now,
-            //    LastUpdateAt = DateTime.Now,
-            //    DeleteAt = null,
-            //    IsDeleted = false,
-
-            //}
-        };
+        
         private readonly DataContext _context;
         public CustomerService(DataContext context)
         {
@@ -42,6 +29,7 @@ namespace WebApiSnackMachine.Services
             foreach (var item in customer)
             {
                 item.IsDeleted = true;
+                item.DeleteAt = DateTime.Now;
             }
             await _context.SaveChangesAsync();
             return await _context.Customer.ToListAsync();

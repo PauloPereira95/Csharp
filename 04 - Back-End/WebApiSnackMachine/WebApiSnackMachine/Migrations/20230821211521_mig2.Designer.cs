@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiSnackMachine.Data;
 
@@ -11,9 +12,11 @@ using WebApiSnackMachine.Data;
 namespace WebApiSnackMachine.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230821211521_mig2")]
+    partial class mig2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,13 +27,13 @@ namespace WebApiSnackMachine.Migrations
 
             modelBuilder.Entity("IntervectionMachine", b =>
                 {
-                    b.Property<Guid>("IntervectionIDIntervection")
+                    b.Property<Guid>("InteractionIDIntervection")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("MachineIDMachine")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("IntervectionIDIntervection", "MachineIDMachine");
+                    b.HasKey("InteractionIDIntervection", "MachineIDMachine");
 
                     b.HasIndex("MachineIDMachine");
 
@@ -483,7 +486,7 @@ namespace WebApiSnackMachine.Migrations
                 {
                     b.HasOne("WebApiSnackMachine.Models.Intervection", null)
                         .WithMany()
-                        .HasForeignKey("IntervectionIDIntervection")
+                        .HasForeignKey("InteractionIDIntervection")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
