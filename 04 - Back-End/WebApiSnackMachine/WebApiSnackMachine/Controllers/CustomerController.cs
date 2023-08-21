@@ -19,7 +19,7 @@ namespace WebApiSnackMachine.Controllers
         // Get All
         public async Task<ActionResult<List<Customer>>> GetAllCustomers()
         {
-            var result = await _customerService.GetAllCustomers();
+            var result = await _customerService.GetAllCustomer();
 
             return Ok(result);
         }

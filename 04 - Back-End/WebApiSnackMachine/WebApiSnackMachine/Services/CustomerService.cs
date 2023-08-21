@@ -7,7 +7,7 @@ namespace WebApiSnackMachine.Services
 {
     public class CustomerService : ICustomerService
     {
-        private static List<Customer> customers = new List<Customer>
+        private static List<Customer> Customer = new List<Customer>
         {
             //new Customer
             //{
@@ -29,52 +29,52 @@ namespace WebApiSnackMachine.Services
         public async Task<List<Customer>>? AddCostumer([FromBody] Customer customer)
         {
 
-            _context.Customers.Add(customer);
+            _context.Customer.Add(customer);
 
             await _context.SaveChangesAsync();
 
-            return await _context.Customers.ToListAsync();
+            return await _context.Customer.ToListAsync();
         }
         public async Task<List<Customer>>? DeleteCustomer(string nif)
         {
-            var customer = await _context.Customers.Where(n => n.Nif == nif).ToListAsync();
+            var customer = await _context.Customer.Where(n => n.Nif == nif).ToListAsync();
             if (customer == null) return null;
             foreach (var item in customer)
             {
                 item.IsDeleted = true;
             }
             await _context.SaveChangesAsync();
-            return await _context.Customers.ToListAsync();
+            return await _context.Customer.ToListAsync();
 
         }
 
-        public async Task<List<Customer>>? GetAllCustomers()
+        public async Task<List<Customer>>? GetAllCustomer()
         {
-            var customers = await _context.Customers.Where(c => !c.IsDeleted).ToListAsync();
-            return customers;
+            var Customer = await _context.Customer.Where(c => !c.IsDeleted).Include("Money").ToListAsync();
+            return Customer;
         }
 
         public async Task<Customer?> GetSingleCostumer(string nif)
         {
-            var customers = await _context.Customers.SingleAsync(n => n.Nif == nif);
-            if (customers == null) return null;
+            var Customer = await _context.Customer.Include("Money").SingleAsync(n => n.Nif == nif);
+            if (Customer == null) return null;
 
-            return customers;
+            return Customer;
 
         }
 
         public async Task<List<Customer>>? UpdateCustomer(string nif, Customer request)
         {
-            var customers = await _context.Customers.SingleAsync(n => n.Nif == nif);
-            customers.Name = request.Name;
-            customers.Adress = request.Adress;
-            customers.Tele = request.Tele;
-            customers.Nif = request.Nif;
-            customers.LastUpdateAt = DateTime.Now;
+            var Customer = await _context.Customer.SingleAsync(n => n.Nif == nif);
+            Customer.Name = request.Name;
+            Customer.Adress = request.Adress;
+            Customer.Tele = request.Tele;
+            Customer.Nif = request.Nif;
+            Customer.LastUpdateAt = DateTime.Now;
 
             await _context.SaveChangesAsync();
 
-            return await _context.Customers.ToListAsync();
+            return await _context.Customer.ToListAsync();
         }
     }
 }

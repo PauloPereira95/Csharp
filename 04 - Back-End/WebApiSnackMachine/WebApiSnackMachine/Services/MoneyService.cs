@@ -19,7 +19,7 @@ namespace WebApiSnackMachine.Services
             //await _context.SaveChangesAsync();
             //return await _context.Money.ToListAsync();
 
-            var cust = await _context.Customers.Where(n => n.Nif == nif).Include("Money").SingleOrDefaultAsync();
+            var cust = await _context.Customer.Where(n => n.Nif == nif).Include("Money").SingleOrDefaultAsync();
             //var moneyCust = await _context.Money.SingleAsync(i => i.Customer.IDCostumer == cust);
             if (cust != null)
             {
@@ -43,19 +43,19 @@ namespace WebApiSnackMachine.Services
         
         public async Task<List<Money>>? GetMoneyCostumer(string nif)
         {
-            var cust = await _context.Customers.Include("Money").Where(n => n.Nif == nif).
+            var cust = await _context.Customer.Include("Money").Where(n => n.Nif == nif).
                 Select(m => m.Money).FirstOrDefaultAsync();
                              
-            //var moneyCust = await _context.Customers.Include(m => m.Money).Where(n => n.Nif == nif).
+            //var moneyCust = await _context.Customer.Include(m => m.Money).Where(n => n.Nif == nif).
             //   ToListAsync();
 
-            return cust;
+            return (List<Money>)cust;
             //throw new NotImplementedException();
         }
 
         public async Task<List<Money>>? UpdateMoney(string nif, Money request)
         {
-            var cust = await _context.Customers.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
+            var cust = await _context.Customer.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
             
             // colect costumer id
             var moneyCustumer = await _context.Money.SingleAsync(i => i.Customer.IDCostumer == cust);
@@ -70,7 +70,7 @@ namespace WebApiSnackMachine.Services
 
             // UMA SEGUNDA FORMA DE Update
             #region Metodo 2 UPDATE
-            //await _context.Customers.Where(n => n.Nif == nif).Include("Money")
+            //await _context.Customer.Where(n => n.Nif == nif).Include("Money")
             //    .ExecuteUpdateAsync(update =>
             //    update.SetProperty(money => money.Money.OneEuro, request.OneEuro)
             //    .SetProperty(money => money.Money.FiveEuro, request.FiveEuro)
@@ -88,7 +88,7 @@ namespace WebApiSnackMachine.Services
 
         public async Task<List<Money>>? DeleteMoney(string nif)
         {
-            var cust = await _context.Customers.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
+            var cust = await _context.Customer.Where(n => n.Nif == nif).Select(n => n.IDCostumer).SingleOrDefaultAsync();
             // colect costumer id
             var moneyCustumer = await _context.Money.SingleAsync(i => i.Customer.IDCostumer == cust);
 

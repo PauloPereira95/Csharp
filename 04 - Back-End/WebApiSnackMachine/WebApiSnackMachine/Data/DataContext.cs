@@ -12,19 +12,16 @@ namespace WebApiSnackMachine.Data
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=db_snack_teste;Trusted_Connection=true;TrustServerCertificate=true;");
         }
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Customer> Customer { get; set; }
         public DbSet<Money> Money { get; set; }
+        public DbSet<Intervection> Intervection { get; set; }
+        public DbSet<Machine> Machine { get; set; }
+        public DbSet<Orders> Order { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Position> Position { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
+        public DbSet<Support> Support { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Customer>()
-        //        .HasOne(m => m.Money)
-        //        .WithOne(c => c.Customer)
-        //        .HasForeignKey<Money>(m => m.IDCostumer);
-        //    modelBuilder.Entity<Money>()
-        //        .HasOne(m => m.Customer)
-        //        .WithOne(c => c.Money)
-        //        .HasForeignKey<Customer>(m => m.IDMoney);
-        //}
+       
     }
 }

@@ -1,0 +1,27 @@
+using (ApplicationDbContext db = new ApplicationDbContext())
+                    {
+                        // Insert
+                        db.Suppliers.Add(new()
+                        {
+
+                            Name = "Que",
+                            NIF = "nif 152",
+                            Tele = "tele 152",
+                            Adrress = "addres 152"
+                        });
+                        db.SaveChanges();
+                        Console.WriteLine(" Inserido com Sucesso");
+                        // delete
+                        //db.SaveChanges();
+                        //var last = db.Suppliers.Where(p => p.Name == "Test 52").FirstOrDefault();
+                        //var sup = db.Suppliers.Where(p => p.Name == "teste 32").First();
+                        //db.Suppliers.Remove(sup);
+
+
+                        //// update
+                        //last.Name = "zero";
+
+                    }
+
+
+                }

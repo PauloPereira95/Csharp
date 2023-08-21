@@ -33,7 +33,8 @@ namespace WebApiSnackMachine.Models
         public DateTime? LastUpdateAt { get; set; }
         public DateTime? DeleteAt { get; set; }
         public bool IsDeleted { get; set; }
-        public List<Money>? Money { get; set; }
+        public IList<Money>? Money { get; set; }
+        public IList<Orders>? Order { get; set; }
 
     }
 }
