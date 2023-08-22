@@ -30,5 +30,6 @@ namespace WebApiSnackMachine.Models
         public DateTime? DeleteAt { get; set; }
         public bool IsDeleted { get; set; }
         public IList<Machine>? Machine { get; set; }
+        public IList<Intervection>? Intervection { get; set; }
     }
 }

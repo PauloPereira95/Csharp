@@ -6,6 +6,6 @@
     "\\WebApiSnackMachine\\Models",
     "\\WebApiSnackMachine\\Services"
   ],
-  "SelectedNode": "\\WebApiSnackMachine\\WebApiSnackMachine.sln",
+  "SelectedNode": "\\WebApiSnackMachine\\Services\\MoneyService.cs",
   "PreviewInSolutionExplorer": false
 }
